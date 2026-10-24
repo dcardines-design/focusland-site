@@ -105,10 +105,11 @@
   .crowd { display:flex; flex-wrap:wrap; justify-content:center; gap:6px 0; margin-top:36px; }
   .crowd img { width:clamp(92px, 12vw, 140px); }
 
-  .features { display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; margin-top:36px; }
-  .feature h3 { font-size:20px; margin:8px 0 4px; }
-  .feature p { margin:0; font-size:15px; color:var(--muted); }
-  .feature .ic { height:64px; width:auto; margin:0 auto; }
+  .features { display:grid; grid-template-columns:repeat(4, 1fr); gap:24px; margin:44px auto 0; width:min(1400px, 100%); }
+  .feature { padding:40px 26px 44px; min-height:360px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .feature h3 { font-size:26px; margin:20px 0 8px; }
+  .feature p { margin:0; font-size:17px; color:var(--muted); }
+  .feature .ic { height:120px; width:auto; margin:0 auto; }
 
   /* Focusland+ */
   .plus { background:var(--night); color:var(--cream); }
@@ -239,13 +240,13 @@
 </section>
 
 <section>
-  <div class="wrap center">
+  <div class="wrap center" style="max-width:1400px">
     <div class="eyebrow">Everything you need, nothing you don't</div>
     <h2>Simple on purpose</h2>
     <div class="features">
-      <div class="card feature"><img class="ic" src="img/IconTimer.webp" alt=""><h3>Pomodoro timer</h3><p>Focus, short breaks and long breaks, with a soft chime.</p></div>
-      <div class="card feature"><img class="ic" src="img/IconCheck.webp" alt=""><h3>A plain task list</h3><p>Tick things off and your cat does a little hop.</p></div>
-      <div class="card feature"><img class="ic" src="img/IconFlame.webp" alt=""><h3>Daily streak</h3><p>Finish one session a day. Giving up early never breaks it.</p></div>
+      <div class="card feature"><img class="ic loop" data-base="img/IconTimer" src="img/IconTimer0.webp" alt=""><h3>Pomodoro timer</h3><p>Focus, short breaks and long breaks, with a soft chime.</p></div>
+      <div class="card feature"><img class="ic loop" data-base="img/IconCheck" src="img/IconCheck0.webp" alt=""><h3>A plain task list</h3><p>Tick things off and your cat does a little hop.</p></div>
+      <div class="card feature"><img class="ic loop" data-base="img/IconFlame" src="img/IconFlame0.webp" alt=""><h3>Daily streak</h3><p>Finish one session a day. Giving up early never breaks it.</p></div>
       <div class="card feature"><img class="ic loop" data-base="img/WearPartyHat" src="img/WearPartyHat0.webp" alt=""><h3>Dress up your cat</h3><p>Colors, hats, glasses and little decor for your table.</p></div>
     </div>
   </div>
