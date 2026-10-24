@@ -400,7 +400,6 @@
   // Each picture starts on a different frame so they don't move in sync. Pictures added
   // later (like the room below) join in automatically.
   (function () {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var count = 0;
     setInterval(function () {
       document.querySelectorAll('img.loop').forEach(function (img) {
