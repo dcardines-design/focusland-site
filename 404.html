@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>
+  // Friend room invites (focusland.co/r/k7f2q) have no page of their own; send them to the invite page.
+  (function () {
+    var m = location.pathname.match(/^\/r\/([A-Za-z0-9]+)\/?$/);
+    if (m) location.replace('/r/?c=' + m[1]);
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found | Focusland</title>
 <meta name="robots" content="noindex">

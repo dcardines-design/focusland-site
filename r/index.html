@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're invited | Focusland</title>
+<meta name="description" content="A friend saved you a seat in their Focusland room. Open it in the app to focus together.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFF7EA">
+<meta name="apple-itunes-app" content="app-id=6826302927">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#3B2614; --cream:#FFF7EA; --white:#FFFFFF; --orange:#F4A340; --green:#9BD06E; --sky:#BDE2F2; --muted:#5A3C22; }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; background:var(--sky); color:var(--ink); font-family:Nunito, system-ui, sans-serif; font-weight:700; line-height:1.5;
+         display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px 16px; }
+  h1 { font-family:Fredoka, system-ui, sans-serif; font-weight:700; font-size:clamp(32px, 8vw, 44px); line-height:1.1; margin:0; }
+  .card { width:100%; max-width:440px; background:var(--cream); border:3px solid var(--ink); border-radius:28px; box-shadow:0 6px 0 var(--ink);
+          padding:28px 22px; text-align:center; }
+  .building { width:220px; height:220px; margin:-90px auto 4px; }
+  .building img { width:100%; height:100%; object-fit:contain; display:none; }
+  .building img.on { display:block; }
+  p { margin:10px 0 0; color:var(--muted); font-size:17px; }
+  .code { display:inline-block; margin-top:14px; background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:2px 14px; font-size:15px; color:var(--ink); }
+  .btn { display:flex; justify-content:center; align-items:center; width:100%; margin-top:22px; padding:16px 20px; border:3px solid var(--ink); border-radius:18px;
+         background:var(--orange); color:var(--ink); font-family:Fredoka, sans-serif; font-weight:600; font-size:20px; text-decoration:none;
+         box-shadow:0 6px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
+  .btn.white { background:var(--white); margin-top:16px; }
+  .small { font-size:14px; margin-top:18px; }
+  a.home { margin-top:24px; color:var(--ink); font-size:15px; }
+  @media (prefers-reduced-motion: no-preference) { }
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="building" aria-hidden="true">
+    <img class="on" src="/img/BuildingFriends0.webp" alt=""><img src="/img/BuildingFriends1.webp" alt=""><img src="/img/BuildingFriends2.webp" alt=""><img src="/img/BuildingFriends3.webp" alt="">
+  </div>
+  <h1>A friend saved you a seat</h1>
+  <p>Come focus together in their private Focusland room. It's free to join.</p>
+  <span class="code" id="code" hidden></span>
+  <a class="btn" id="open" href="focusland://">Open in Focusland</a>
+  <a class="btn white" href="https://apps.apple.com/app/id6826302927">Get Focusland on the App Store</a>
+  <p class="small">New to Focusland? Get the app, set up your cat, then tap the invite link again.</p>
+</main>
+<a class="home" href="/">focusland.co</a>
+<script>
+  // Invite links look like focusland.co/r/k7f2q. GitHub Pages sends those here as /r/?c=k7f2q.
+  var code = new URLSearchParams(location.search).get('c') || '';
+  code = code.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 12);
+  if (code) {
+    document.getElementById('open').href = 'focusland://r/' + code;
+    var tag = document.getElementById('code');
+    tag.textContent = 'Room code ' + code;
+    tag.hidden = false;
+  }
+  // The treehouse moves at 4 frames a second, like in the app.
+  var frames = document.querySelectorAll('.building img'), i = 0;
+  setInterval(function () { frames[i].classList.remove('on'); i = (i + 1) % frames.length; frames[i].classList.add('on'); }, 250);
+</script>
+</body>
+</html>

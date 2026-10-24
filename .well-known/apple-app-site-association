@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["8Q3Z8WY5D9.com.dantecardines.Focusland"],
+        "components": [
+          { "/": "/r/*", "comment": "Friend room invites, like focusland.co/r/k7f2q" }
+        ]
+      }
+    ]
+  }
+}
