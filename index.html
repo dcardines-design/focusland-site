@@ -49,17 +49,13 @@
   .hero p.lede { font-size:clamp(17px, 2.2vw, 21px); max-width:560px; margin:14px auto 26px; }
   .pill { display:inline-block; background:var(--cream); border:2.5px solid var(--ink); border-radius:999px; padding:4px 14px; font-size:14px; margin-bottom:12px; }
   .soon { font-size:14px; margin-top:12px; }
-  .village { display:flex; align-items:flex-end; justify-content:center; gap:0; width:100%; max-width:1100px; margin-top:auto; }
-  .village img { width:min(26vw, 260px); margin:0 -1.5vw; }
-  .village img:nth-child(2) { width:min(32vw, 320px); z-index:1; }
-  .hill { width:140%; height:90px; margin-top:-46px; background:var(--green); border-radius:50% 50% 0 0 / 100% 100% 0 0; }
-  /* Cats studying at their little tables on the hill, in front of the buildings */
-  .lawn { width:calc(100% + 32px); margin:0 -16px; background:var(--green); padding:0 16px 26px; display:flex; justify-content:center; }
-  .studiers { display:flex; justify-content:center; align-items:flex-end; gap:clamp(4px, 2vw, 28px); width:100%; max-width:1000px;
-              margin-top:-60px; }
-  .studiers img { width:clamp(86px, 13vw, 150px); }
-  .studiers img:nth-child(odd) { margin-bottom:22px; }
-  @media (max-width:600px) { .studiers img:nth-child(n+4) { display:none; } }
+  /* Cats studying on the painted grass: solo spots, tables for 2 and a table for 4, like Garden Café */
+  .studiers { display:flex; justify-content:center; align-items:flex-end; gap:clamp(0px, 1.5vw, 22px); width:100%; max-width:1100px;
+              margin-top:auto; padding:40px 0 22px; }
+  .studiers .solo { width:clamp(70px, 10vw, 128px); margin-bottom:26px; }
+  .studiers .duo  { width:clamp(84px, 12vw, 150px); }
+  .studiers .quad { width:clamp(150px, 22vw, 270px); margin-bottom:10px; }
+  @media (max-width:600px) { .studiers .solo { display:none; } .studiers .duo { width:27vw; } .studiers .quad { width:46vw; } }
 
   section { padding:84px 16px; }
   .wrap { max-width:1080px; margin:0 auto; }
@@ -143,26 +139,20 @@
     Coming soon on iPhone
   </a>
   <p class="soon">Free to download. No ads, no account needed.</p>
-  <div class="village" aria-hidden="true">
-    <img class="loop" data-base="img/BuildingIsland" src="img/BuildingIsland0.webp" alt="">
-    <img class="loop" data-base="img/BuildingGarden" src="img/BuildingGarden0.webp" alt="">
-    <img class="loop" data-base="img/BuildingLibrary" src="img/BuildingLibrary0.webp" alt="">
+  <div class="studiers" aria-label="Cats focusing at their tables">
+    <img class="solo loop" data-base="img/StudyTabby" src="img/StudyTabby0.webp" alt="A tabby cat studying at its own little table">
+    <img class="duo loop" data-base="img/DuoA" src="img/DuoA0.webp" alt="Two cats studying at a table for two">
+    <img class="quad loop" data-base="img/Quad" src="img/Quad0.webp" alt="Four cats studying at a big table">
+    <img class="duo loop" data-base="img/DuoB" src="img/DuoB0.webp" alt="Two cats studying at a table for two">
+    <img class="solo loop" data-base="img/StudyOrange" src="img/StudyOrange0.webp" alt="An orange cat studying at its own little table">
   </div>
-  <div class="hill"></div>
-  <div class="lawn"><div class="studiers" aria-label="Cats focusing at their tables">
-    <img class="loop" data-base="img/StudyTabby" src="img/StudyTabby0.webp" alt="A tabby cat studying at a little table">
-    <img class="loop" data-base="img/StudyOrange" src="img/StudyOrange0.webp" alt="An orange cat studying at a little table">
-    <img class="loop" data-base="img/StudyGrey" src="img/StudyGrey0.webp" alt="A grey cat studying at a little table">
-    <img class="loop" data-base="img/StudySiamese" src="img/StudySiamese0.webp" alt="A Siamese cat studying at a little table">
-    <img class="loop" data-base="img/StudyPink" src="img/StudyPink0.webp" alt="A pink cat studying at a little table">
-  </div></div>
 </header>
 
 <section id="how">
   <div class="wrap center">
     <div class="eyebrow">Body doubling, made cozy</div>
     <h2>Can't focus alone? Neither can we.</h2>
-    <p class="sub">Working next to someone else makes it easier to start and keep going. Focusland gives you a room full of cats to sit with, any time you need it.</p>
+    <p class="sub">Working next to someone else makes it easier to start and keep going. Focusland gives you a room of others to focus with, any time you need it.</p>
     <div class="grid3">
       <div class="card step"><div class="num">1</div>
         <img class="loop" data-base="img/LibraryNook" src="img/LibraryNook0.webp" alt="A cat dozing by the fire in an armchair">
