@@ -64,6 +64,9 @@
   .contact h2 { font-size:24px; }
   .contact p { margin:4px 0 0; color:var(--muted); }
 
+  .contact { scroll-margin-top:96px; }
+  .email { color:var(--ink); word-break:break-all; }
+  .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
   h2.faqhead { font-size:30px; margin:56px 0 16px; }
   .faq { display:flex; flex-direction:column; gap:14px; }
   details { background:var(--white); border:3px solid var(--ink); border-radius:20px; box-shadow:0 4px 0 var(--ink); }
@@ -116,10 +119,10 @@
     </div>
   </div>
 
-  <div class="card contact">
+  <div class="card contact" id="contact">
     <div>
       <h2>Talk to us</h2>
-      <p>Bugs, ideas, or questions about a purchase.</p>
+      <p>Bugs, ideas, or questions about a purchase. Write to <b class="email">dcardinesiii@gmail.com</b> <button class="copy" type="button">Copy</button></p>
     </div>
     <a class="btn" href="mailto:dcardinesiii@gmail.com?subject=Focusland%20support">Email support</a>
   </div>
@@ -201,7 +204,7 @@
     <nav class="footcol" aria-label="Help">
       <b>Help</b>
       <a href="support.html">Support</a>
-      <a href="mailto:dcardinesiii@gmail.com?subject=Focusland">Contact</a>
+      <a href="#contact">Contact</a>
       <a href="https://dcardines-design.github.io/focusland-legal/">Privacy</a>
       <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
     </nav>
@@ -222,6 +225,14 @@
     document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
   })();
+
+  // Copy button next to the email address, for computers with no mail app set up.
+  document.querySelector('.copy').addEventListener('click', function () {
+    var b = this;
+    navigator.clipboard.writeText('dcardinesiii@gmail.com').then(function () {
+      b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy'; }, 1800);
+    });
+  });
 
   // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
   (function () {
