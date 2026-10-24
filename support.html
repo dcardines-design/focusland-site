@@ -7,7 +7,11 @@
 <meta name="description" content="Help with Focusland, the cozy focus timer where everyone is a cat: purchases, Focusland+, coins, streaks, your data, and how to reach us.">
 <meta property="og:title" content="Focusland Support">
 <meta property="og:description" content="Answers to common questions, and how to reach us.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Focusland">
+<meta property="og:url" content="https://focusland.co/support.html">
 <meta property="og:image" content="https://focusland.co/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://focusland.co/support.html">
 <meta name="theme-color" content="#FFF7EA">
 <link rel="icon" href="img/favicon.png">
@@ -229,6 +233,17 @@
     menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
     document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Hands the questions and answers on this page to Google as FAQ data.
+  (function () {
+    var faq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [] };
+    document.querySelectorAll('.faq details').forEach(function (d) {
+      faq.mainEntity.push({ '@type': 'Question', name: d.querySelector('summary').textContent.trim(),
+        acceptedAnswer: { '@type': 'Answer', text: d.querySelector('.a').textContent.trim().replace(/\s+/g, ' ') } });
+    });
+    var el = document.createElement('script'); el.type = 'application/ld+json'; el.textContent = JSON.stringify(faq);
+    document.head.appendChild(el);
   })();
 
   // Copy button next to the email address, for computers with no mail app set up.
