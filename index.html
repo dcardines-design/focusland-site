@@ -50,12 +50,24 @@
   .pill { display:inline-block; background:var(--cream); border:2.5px solid var(--ink); border-radius:999px; padding:4px 14px; font-size:14px; margin-bottom:12px; }
   .soon { font-size:14px; margin-top:12px; }
   /* Cats studying on the painted grass: solo spots, tables for 2 and a table for 4, like Garden Café */
-  .studiers { display:flex; justify-content:center; align-items:flex-end; gap:clamp(0px, 1.5vw, 22px); width:100%; max-width:1100px;
-              margin-top:auto; padding:40px 0 22px; }
+  .studiers { display:flex; justify-content:center; align-items:flex-end; gap:clamp(6px, 2.4vw, 34px); width:100%; max-width:1150px;
+              margin-top:auto; padding:70px 0 74px; }
+  .spot { position:relative; }
+  .spot img { width:100%; }
   .studiers .solo { width:clamp(70px, 10vw, 128px); margin-bottom:26px; }
   .studiers .duo  { width:clamp(84px, 12vw, 150px); }
   .studiers .quad { width:clamp(150px, 22vw, 270px); margin-bottom:10px; }
-  @media (max-width:600px) { .studiers .solo { display:none; } .studiers .duo { width:27vw; } .studiers .quad { width:46vw; } }
+  /* The app's seat chips: timer and country flag, with the task on a strip (above for cats
+     facing us, below for cats with their backs to us). Breaks tint them green. */
+  .seat { position:absolute; transform:translate(-50%, -100%); display:flex; flex-direction:column; align-items:center; gap:3px;
+          font-size:clamp(9px, 0.95vw, 11px); font-weight:800; white-space:nowrap; pointer-events:none; }
+  .seat.near { transform:translate(-50%, 0); flex-direction:column-reverse; }
+  .seat .pill { display:flex; align-items:center; gap:4px; background:var(--cream); border:2px solid var(--ink); border-radius:999px;
+                padding:1px 7px; font-variant-numeric:tabular-nums; }
+  .seat .task { background:rgba(255,247,234,.92); color:var(--muted); border-radius:999px; padding:1px 9px; font-size:.92em; }
+  .seat.short .pill, .seat.short .task { background:#D4EBC2; }
+  @media (max-width:600px) { .studiers .solo { display:none; } .studiers .duo { width:27vw; } .studiers .quad { width:46vw; }
+                             .seat { font-size:8.5px; } .seat .task { display:none; } }
 
   section { padding:84px 16px; }
   .wrap { max-width:1080px; margin:0 auto; }
@@ -139,12 +151,12 @@
     Coming soon on iPhone
   </a>
   <p class="soon">Free to download. No ads, no account needed.</p>
-  <div class="studiers" aria-label="Cats focusing at their tables">
-    <img class="solo loop" data-base="img/StudyTabby" src="img/StudyTabby0.webp" alt="A tabby cat studying at its own little table">
-    <img class="duo loop" data-base="img/DuoA" src="img/DuoA0.webp" alt="Two cats studying at a table for two">
-    <img class="quad loop" data-base="img/Quad" src="img/Quad0.webp" alt="Four cats studying at a big table">
-    <img class="duo loop" data-base="img/DuoB" src="img/DuoB0.webp" alt="Two cats studying at a table for two">
-    <img class="solo loop" data-base="img/StudyOrange" src="img/StudyOrange0.webp" alt="An orange cat studying at its own little table">
+  <div class="studiers" aria-label="Cats focusing at their tables, with their timers and tasks">
+    <div class="spot solo"><img class="loop" data-base="img/StudyTabby" src="img/StudyTabby0.webp" alt="A tabby cat studying at its own little table"><div class="seat far focus" style="left:60.8%;top:-9.8%" data-t="42:29" data-cc="JP" data-task="Designing a logo"></div></div>
+    <div class="spot duo"><img class="loop" data-base="img/DuoA" src="img/DuoA0.webp" alt="Two cats studying at a table for two"><div class="seat far focus" style="left:55.6%;top:-6.6%" data-t="18:07" data-cc="BR" data-task="Learning Japanese"></div><div class="seat near focus" style="left:47.2%;top:104%" data-t="33:30" data-cc="FR" data-task="Editing a podcast"></div></div>
+    <div class="spot quad"><img class="loop" data-base="img/Quad" src="img/Quad0.webp" alt="Four cats studying at a big table"><div class="seat far focus" style="left:25%;top:-5.7%" data-t="46:07" data-cc="US" data-task="Studying for finals"></div><div class="seat far focus" style="left:77%;top:-5.7%" data-t="30:15" data-cc="ES" data-task="Learning SwiftUI"></div><div class="seat near focus" style="left:25%;top:103.5%" data-t="12:44" data-cc="PH" data-task="Thesis, chapter 2"></div><div class="seat near focus" style="left:76%;top:103.5%" data-t="24:51" data-cc="DE" data-task="Inbox zero"></div></div>
+    <div class="spot duo"><img class="loop" data-base="img/DuoB" src="img/DuoB0.webp" alt="Two cats studying at a table for two"><div class="seat far focus" style="left:55.6%;top:-6.6%" data-t="05:12" data-cc="KR" data-task="Reading"></div><div class="seat near short" style="left:47.2%;top:104%" data-t="03:20" data-cc="GB" data-task="Short break"></div></div>
+    <div class="spot solo"><img class="loop" data-base="img/StudyOrange" src="img/StudyOrange0.webp" alt="An orange cat studying at its own little table"><div class="seat far focus" style="left:60.8%;top:-9.8%" data-t="26:13" data-cc="IN" data-task="Practicing guitar"></div></div>
   </div>
 </header>
 
@@ -261,6 +273,28 @@
 </footer>
 
 <script>
+  // Seat chips: timer plus flag, and the task. Timers count down like in the app.
+  (function () {
+    function flag(cc) { return cc.replace(/./g, function (c) { return String.fromCodePoint(127397 + c.charCodeAt(0)); }); }
+    var seats = Array.prototype.slice.call(document.querySelectorAll('.seat'));
+    seats.forEach(function (el) {
+      var p = el.dataset.t.split(':'); el._left = (+p[0]) * 60 + (+p[1]);
+      el.innerHTML = '<span class="task"></span><span class="pill"><span class="t"></span><span>' + flag(el.dataset.cc) + '</span></span>';
+      el.querySelector('.task').textContent = el.dataset.task;
+    });
+    function draw() {
+      seats.forEach(function (el) {
+        var m = Math.floor(el._left / 60), s = el._left % 60;
+        el.querySelector('.t').textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+      });
+    }
+    draw();
+    setInterval(function () {
+      seats.forEach(function (el) { el._left = el._left > 0 ? el._left - 1 : 25 * 60; });
+      draw();
+    }, 1000);
+  })();
+
   // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
   // Each picture starts on a different frame so they don't move in sync.
   (function () {
