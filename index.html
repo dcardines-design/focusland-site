@@ -135,25 +135,17 @@
                              .perks { text-align:left; max-width:460px; margin:22px auto 0; } }
   @media (max-width:600px) { .plans { grid-template-columns:1fr; } .plan.best { order:-1; } }
   .cta { position:relative; overflow:hidden; padding:0; min-height:100vh; min-height:100svh; background:var(--green); }
-  .map { position:absolute; inset:0; overflow:hidden; cursor:grab; touch-action:pan-y; user-select:none; -webkit-user-select:none; }
-  .map.dragging { cursor:grabbing; }
-  .world { position:absolute; left:0; top:0; background-repeat:repeat; background-size:512px 512px; will-change:transform; }
+  .map { position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+  .world { position:absolute; left:0; top:0; background-repeat:repeat; background-size:512px 512px; transform-origin:0 0; }
   .world img { position:absolute; pointer-events:none; -webkit-user-drag:none; }
   .world .edge { position:absolute; left:0; top:0; display:flex; }
   .world .edge img { position:static; }
   .world .spot { position:absolute; }
   .world .spot img { position:static; width:100%; }
-  .roomtabs { position:absolute; top:22px; left:50%; transform:translateX(-50%); display:flex; gap:6px; padding:5px; background:var(--cream);
-              border:3px solid var(--ink); border-radius:999px; box-shadow:0 4px 0 var(--ink); z-index:3; white-space:nowrap; }
-  .roomtabs button { font:inherit; font-size:15px; color:var(--ink); background:transparent; border:0; border-radius:999px; padding:8px 14px; cursor:pointer; }
-  .roomtabs button[aria-selected="true"] { background:var(--orange); }
-  .hint { position:absolute; top:86px; left:50%; transform:translateX(-50%); background:var(--cream); border:2.5px solid var(--ink); border-radius:999px;
-          padding:4px 14px; font-size:14px; z-index:3; pointer-events:none; transition:opacity .4s; }
   .ctacard { position:absolute; left:50%; bottom:32px; transform:translateX(-50%); width:min(520px, calc(100% - 32px)); text-align:center; z-index:3;
              background:var(--cream); border:3px solid var(--ink); border-radius:26px; box-shadow:0 6px 0 var(--ink); padding:24px 22px 26px; }
   .ctacard h2 { margin:0 0 6px; }
   .ctacard p { margin:0 0 18px; color:var(--muted); font-size:17px; }
-  @media (max-width:600px) { .roomtabs button { font-size:13px; padding:7px 10px; } .hint { top:80px; } }
 
   footer { background:var(--ink); color:var(--cream); padding:30px 16px; font-size:15px; }
   footer .wrap { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
@@ -309,16 +301,10 @@
 </section>
 
 <section id="get" class="cta">
-  <!-- A room you can drag around, like the room map in the app -->
-  <div class="map" aria-label="A Focusland room full of cats focusing. Drag to look around.">
+  <!-- The Garden Café, zoomed out like the app's room map -->
+  <div class="map" aria-label="A Focusland room full of cats focusing.">
     <div class="world"></div>
   </div>
-  <div class="roomtabs" role="tablist" aria-label="Rooms">
-    <button role="tab" data-room="garden" aria-selected="true">Garden Café</button>
-    <button role="tab" data-room="coast">Coastal Grounds</button>
-    <button role="tab" data-room="library">Rainy Library</button>
-  </div>
-  <div class="hint">Drag to look around</div>
   <div class="ctacard">
     <h2>Pull up a chair.</h2>
     <p>Focusland is coming soon to the App Store for iPhone.</p>
@@ -469,38 +455,13 @@
       center();
     }
 
-    function clamp() {
-      var vw = map.clientWidth, vh = map.clientHeight;
-      pan.x = Math.min(0, Math.max(vw - W, pan.x)); pan.y = Math.min(0, Math.max(vh - H, pan.y));
-      world.style.transform = 'translate(' + pan.x + 'px,' + pan.y + 'px)';
-    }
-    // Start looking at the first big table, a little above the card at the bottom.
+    // Zoomed out to fill the whole section, like zooming out on the room map in the app.
     function center() {
-      var big = [].find.call(world.querySelectorAll('.spot'), function (s) { return /Quad|Six/.test(s.firstChild.dataset.base); });
-      var x = big ? big.offsetLeft + big.offsetWidth / 2 : W / 2, y = big ? big.offsetTop + 120 : H / 2;
-      pan.x = map.clientWidth / 2 - x; pan.y = map.clientHeight * 0.38 - y; clamp();
+      var vw = map.clientWidth, vh = map.clientHeight, z = Math.max(vw / W, vh / H);
+      world.style.transform = 'translate(' + (vw - W * z) / 2 + 'px,' + (vh - H * z) / 2 + 'px) scale(' + z + ')';
     }
+    addEventListener('resize', center);
 
-    var drag = null;
-    map.addEventListener('pointerdown', function (e) {
-      drag = { x: e.clientX, y: e.clientY, px: pan.x, py: pan.y, touch: e.pointerType === 'touch' };
-      map.classList.add('dragging'); document.querySelector('.hint').style.opacity = 0;
-    });
-    addEventListener('pointermove', function (e) {
-      if (!drag) return;
-      pan.x = drag.px + e.clientX - drag.x;
-      if (!drag.touch) pan.y = drag.py + e.clientY - drag.y;  // on phones, up and down still scrolls the page
-      clamp();
-    });
-    addEventListener('pointerup', function () { drag = null; map.classList.remove('dragging'); });
-    addEventListener('resize', clamp);
-
-    document.querySelectorAll('.roomtabs button').forEach(function (b) {
-      b.addEventListener('click', function () {
-        document.querySelectorAll('.roomtabs button').forEach(function (o) { o.setAttribute('aria-selected', o === b); });
-        build(b.dataset.room);
-      });
-    });
     build('garden');
   })();
 </script>
