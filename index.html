@@ -33,6 +33,7 @@
   .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
   .btn.white { background:var(--white); }
   .btn svg { width:22px; height:22px; }
+  @media (max-width:420px) { .btn { font-size:17px; padding:14px 20px; white-space:nowrap; } }
 
   /* Hero: the Welcome screen's painted sky with the buildings */
   .hero { position:relative; overflow:hidden; min-height:92vh; display:flex; flex-direction:column; align-items:center; text-align:center;
@@ -52,6 +53,13 @@
   .village img { width:min(26vw, 260px); margin:0 -1.5vw; }
   .village img:nth-child(2) { width:min(32vw, 320px); z-index:1; }
   .hill { width:140%; height:90px; margin-top:-46px; background:var(--green); border-radius:50% 50% 0 0 / 100% 100% 0 0; }
+  /* Cats studying at their little tables on the hill, in front of the buildings */
+  .lawn { width:calc(100% + 32px); margin:0 -16px; background:var(--green); padding:0 16px 26px; display:flex; justify-content:center; }
+  .studiers { display:flex; justify-content:center; align-items:flex-end; gap:clamp(4px, 2vw, 28px); width:100%; max-width:1000px;
+              margin-top:-60px; }
+  .studiers img { width:clamp(86px, 13vw, 150px); }
+  .studiers img:nth-child(odd) { margin-bottom:22px; }
+  @media (max-width:600px) { .studiers img:nth-child(n+4) { display:none; } }
 
   section { padding:84px 16px; }
   .wrap { max-width:1080px; margin:0 auto; }
@@ -141,6 +149,13 @@
     <img class="loop" data-base="img/BuildingLibrary" src="img/BuildingLibrary0.webp" alt="">
   </div>
   <div class="hill"></div>
+  <div class="lawn"><div class="studiers" aria-label="Cats focusing at their tables">
+    <img class="loop" data-base="img/StudyTabby" src="img/StudyTabby0.webp" alt="A tabby cat studying at a little table">
+    <img class="loop" data-base="img/StudyOrange" src="img/StudyOrange0.webp" alt="An orange cat studying at a little table">
+    <img class="loop" data-base="img/StudyGrey" src="img/StudyGrey0.webp" alt="A grey cat studying at a little table">
+    <img class="loop" data-base="img/StudySiamese" src="img/StudySiamese0.webp" alt="A Siamese cat studying at a little table">
+    <img class="loop" data-base="img/StudyPink" src="img/StudyPink0.webp" alt="A pink cat studying at a little table">
+  </div></div>
 </header>
 
 <section id="how">
