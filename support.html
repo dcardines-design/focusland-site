@@ -65,6 +65,8 @@
   .contact p { margin:4px 0 0; color:var(--muted); }
 
   .contact { scroll-margin-top:96px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn.white { background:var(--white); }
   .email { color:var(--ink); word-break:break-all; }
   .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
   h2.faqhead { font-size:30px; margin:56px 0 16px; }
@@ -94,7 +96,7 @@
   .footbottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:44px; padding-top:18px; border-top:2px solid rgba(255,247,234,.18); color:#C9BBA6; font-size:14px; }
   .verse { font-style:italic; }
   @media (max-width:600px) { .footgrid { grid-template-columns:1fr 1fr; } .footbrand { grid-column:1 / -1; }
-    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .contact .btn { width:100%; justify-content:center; } }
+    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .btns { width:100%; flex-direction:column; } .contact .btn { width:100%; justify-content:center; } }
 </style>
 </head>
 <body>
@@ -124,7 +126,10 @@
       <h2>Talk to us</h2>
       <p>Bugs, ideas, or questions about a purchase. Write to <b class="email">dcardinesiii@gmail.com</b> <button class="copy" type="button">Copy</button></p>
     </div>
-    <a class="btn" href="mailto:dcardinesiii@gmail.com?subject=Focusland%20support">Email support</a>
+    <div class="btns">
+      <a class="btn" href="mailto:dcardinesiii@gmail.com?subject=Focusland%20support">Email support</a>
+      <a class="btn white" href="https://mail.google.com/mail/?view=cm&amp;to=dcardinesiii@gmail.com&amp;su=Focusland%20support" target="_blank" rel="noopener">Open in Gmail</a>
+    </div>
   </div>
 
   <h2 class="faqhead">Common questions</h2>
