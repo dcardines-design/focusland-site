@@ -1,0 +1,260 @@
+{
+  "account": "focusland.app",
+  "timezone": "Asia/Manila",
+  "media_base": "https://focusland.co/social/",
+  "slots": {
+    "am": "8:00 AM Manila (US evening)",
+    "pm": "8:00 PM Manila (US morning)"
+  },
+  "items": [
+    {
+      "date": "2026-10-25",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/focusland-meme-2026-10-24-01-locked-in.jpg"
+      ],
+      "caption": "delulu is the solulu\n\nwhat time are you \"definitely\" starting today\n\n#procrastination #studytok #studentlife #relatable #lockin #studygram #pomodoro #focus",
+      "posted": false
+    },
+    {
+      "date": "2026-10-26",
+      "slot": "am",
+      "kind": "carousel",
+      "files": [
+        "media/b1-timer-tragedy-01.jpg",
+        "media/b1-timer-tragedy-02.jpg",
+        "media/b1-timer-tragedy-03.jpg",
+        "media/b1-timer-tragedy-04.jpg",
+        "media/b1-timer-tragedy-05.jpg",
+        "media/b1-timer-tragedy-06.jpg"
+      ],
+      "caption": "the 25 min pomodoro, a documentary in 4 parts\n\nwhich part are you in rn\n\n#pomodoro #studytok #studentlife #relatable #lockin #studygram #focus #productivity",
+      "posted": false
+    },
+    {
+      "date": "2026-10-26",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/focusland-meme-2026-10-24-03-minute-3.jpg"
+      ],
+      "caption": "time works different when there's a timer on\n\n#pomodoro #studywithme #studentlife #relatable #focus #studygram #productivity #lockin",
+      "posted": false
+    },
+    {
+      "date": "2026-10-27",
+      "slot": "am",
+      "kind": "reel",
+      "files": [
+        "media/focusland-reel-rate-study-spots.mp4"
+      ],
+      "caption": "rated purely on vibes. the pom at the front desk is not taking questions\n\nwhere are you sitting\n\n#studywithme #studyspot #studytok #cozy #productivity #studygram #focus #bodydoubling",
+      "posted": false,
+      "cover": "media/cover-rate-study-spots.jpg"
+    },
+    {
+      "date": "2026-10-27",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/focusland-meme-2026-10-24-04-todo-list.jpg"
+      ],
+      "caption": "writing the list counts as studying. we checked (we didn't)\n\n#todolist #procrastination #studentlife #relatable #productivity #studygram #focus #adhd",
+      "posted": false
+    },
+    {
+      "date": "2026-10-28",
+      "slot": "am",
+      "kind": "carousel",
+      "files": [
+        "media/b2-which-cat-01.jpg",
+        "media/b2-which-cat-02.jpg",
+        "media/b2-which-cat-03.jpg",
+        "media/b2-which-cat-04.jpg",
+        "media/b2-which-cat-05.jpg",
+        "media/b2-which-cat-06.jpg"
+      ],
+      "caption": "comment your number. we already know you're a 2\n\n#studentlife #relatable #procrastination #studygram #productivity #focus #lockin #studytok",
+      "posted": false
+    },
+    {
+      "date": "2026-10-28",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/focusland-meme-2026-10-24-05-one-email.jpg"
+      ],
+      "caption": "one (1) email and the victory lap is fully earned\n\n#relatable #productivity #studentlife #wfh #procrastination #focus #studygram #corporatelife",
+      "posted": false
+    },
+    {
+      "date": "2026-10-29",
+      "slot": "am",
+      "kind": "image",
+      "files": [
+        "media/a-send-this.jpg"
+      ],
+      "caption": "you know exactly who. send it\n\n(studying next to someone is called body doubling and it works embarrassingly well)\n\n#bodydoubling #studybuddy #studytok #studygram #productivity #focus #relatable #lockin",
+      "posted": false
+    },
+    {
+      "date": "2026-10-29",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/focusland-meme-2026-10-24-06-streak-1158.jpg"
+      ],
+      "caption": "11:58pm is still today. technically\n\n#streak #lockin #studywithme #pomodoro #relatable #studentlife #productivity #studygram",
+      "posted": false
+    },
+    {
+      "date": "2026-10-30",
+      "slot": "am",
+      "kind": "reel",
+      "files": [
+        "media/focusland-reel-halloween.mp4"
+      ],
+      "caption": "ghosts are fine. the syllabus is not\n\nwhat's the scariest thing on your to-do list\n\n#halloween #spookyseason #studentlife #relatable #studytok #studygram #productivity #focus",
+      "posted": false,
+      "cover": "media/cover-halloween.jpg"
+    },
+    {
+      "date": "2026-10-30",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/meme-group-project.jpg"
+      ],
+      "caption": "if you can't tell who the brain cell is, it's you\n\n#groupproject #studentlife #relatable #college #studygram #productivity #focus #uni",
+      "posted": false
+    },
+    {
+      "date": "2026-10-31",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/meme-halloween.jpg"
+      ],
+      "caption": "genuinely terrifying 💀\n\n#halloween #halloweencostume #studentlife #relatable #procrastination #studygram #college #focus",
+      "posted": false
+    },
+    {
+      "date": "2026-11-01",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/meme-sunday.jpg"
+      ],
+      "caption": "the sunday reset (derogatory)\n\n#sundayreset #relatable #studentlife #productivity #planner #studygram #focus #sunday",
+      "posted": false
+    },
+    {
+      "date": "2026-11-02",
+      "slot": "am",
+      "kind": "carousel",
+      "files": [
+        "media/b2-how-to-start-01.jpg",
+        "media/b2-how-to-start-02.jpg",
+        "media/b2-how-to-start-03.jpg",
+        "media/b2-how-to-start-04.jpg",
+        "media/b2-how-to-start-05.jpg",
+        "media/b2-how-to-start-06.jpg"
+      ],
+      "caption": "we tried every productivity hack so you don't have to. it was this\n\nsave it for the next time you're staring at a blank doc\n\n#procrastination #studytips #studytok #pomodoro #bodydoubling #studentlife #productivity #focus",
+      "posted": false
+    },
+    {
+      "date": "2026-11-02",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/a2-minute-4.jpg"
+      ],
+      "caption": "the brain really said \"you know what would help right now\"\n\n#relatable #studentlife #focus #adhd #studytok #overthinking #studygram #productivity",
+      "posted": false
+    },
+    {
+      "date": "2026-11-03",
+      "slot": "am",
+      "kind": "reel",
+      "files": [
+        "media/focusland-reel-room-pov.mp4"
+      ],
+      "caption": "peer pressure but make it productive\n\n#bodydoubling #studywithme #studytok #studentlife #relatable #productivity #focus #studygram",
+      "posted": false,
+      "cover": "media/cover-room-pov.jpg"
+    },
+    {
+      "date": "2026-11-03",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/a5-green-flags.jpg"
+      ],
+      "caption": "the bar is on the floor and they still clear it\n\n#studybuddy #bodydoubling #greenflags #studentlife #relatable #studytok #studygram #focus",
+      "posted": false
+    },
+    {
+      "date": "2026-11-04",
+      "slot": "am",
+      "kind": "carousel",
+      "files": [
+        "media/b3-study-spot-01.jpg",
+        "media/b3-study-spot-02.jpg",
+        "media/b3-study-spot-03.jpg",
+        "media/b3-study-spot-04.jpg",
+        "media/b3-study-spot-05.jpg",
+        "media/b3-study-spot-06.jpg"
+      ],
+      "caption": "choose carefully. it's a personality test now\n\n#studyspot #studywithme #studytok #studentlife #relatable #cozy #studygram #focus",
+      "posted": false
+    },
+    {
+      "date": "2026-11-04",
+      "slot": "pm",
+      "kind": "image",
+      "files": [
+        "media/a3-pressure.jpg"
+      ],
+      "caption": "diamonds are made under pressure. so are typos\n\n#deadline #procrastination #studentlife #relatable #studytok #studygram #productivity #focus",
+      "posted": false
+    },
+    {
+      "date": "2026-11-06",
+      "slot": "am",
+      "kind": "reel",
+      "files": [
+        "media/focusland-reel-speedrun.mp4"
+      ],
+      "caption": "submitting this run for verification. the phone check was skipped, the judges can confirm\n\n#pomodoro #speedrun #studywithme #studytok #studentlife #productivity #focus #relatable",
+      "posted": false,
+      "cover": "media/cover-speedrun.jpg"
+    },
+    {
+      "date": "2026-11-07",
+      "slot": "am",
+      "kind": "carousel",
+      "files": [
+        "media/b4-biscuit-01.jpg",
+        "media/b4-biscuit-02.jpg",
+        "media/b4-biscuit-03.jpg",
+        "media/b4-biscuit-04.jpg",
+        "media/b4-biscuit-05.jpg"
+      ],
+      "caption": "biscuit is fine. biscuit is resting. biscuit will be back\n\n#procrastination #studentlife #relatable #studytok #studygram #productivity #focus #weekend",
+      "posted": false
+    },
+    {
+      "date": "2026-11-08",
+      "slot": "am",
+      "kind": "reel",
+      "files": [
+        "media/focusland-reel-toast.mp4"
+      ],
+      "caption": "one minute changes everything\n\n#deadline #studentlife #relatable #procrastination #studytok #studygram #productivity #focus",
+      "posted": false,
+      "cover": "media/cover-toast.jpg"
+    }
+  ]
+}
