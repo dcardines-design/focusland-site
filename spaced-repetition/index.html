@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spaced Repetition: How to Remember More Without Cramming | Focusland</title>
+<meta name="description" content="Spaced repetition helps you remember more by studying in short sessions with gaps between. What the research says, a simple schedule, and cozy tips.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Focusland">
+<meta property="og:url" content="https://focusland.co/spaced-repetition/">
+<meta property="og:title" content="Spaced repetition: how to remember more without cramming">
+<meta property="og:description" content="Why studying in short, spaced sessions beats cramming, and a simple schedule to try.">
+<meta property="og:image" content="https://focusland.co/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://focusland.co/spaced-repetition/">
+<meta name="theme-color" content="#FFF7EA">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Spaced repetition: how to remember more without cramming",
+  "description": "Spaced repetition helps you remember more by studying in short sessions with gaps between. What the research says, a simple schedule, and cozy tips.",
+  "image": "https://focusland.co/img/og.png",
+  "datePublished": "2026-10-25",
+  "dateModified": "2026-10-25",
+  "mainEntityOfPage": "https://focusland.co/spaced-repetition/",
+  "author": { "@type": "Organization", "name": "Rosebud Studio", "url": "https://focusland.co/" },
+  "publisher": { "@type": "Organization", "name": "Rosebud Studio", "logo": { "@type": "ImageObject", "url": "https://focusland.co/img/icon.png" } }
+}
+</script>
+<style>
+  :root {
+    --ink:#3B2614; --cream:#FFF7EA; --white:#FFFFFF; --orange:#F4A340; --green:#9BD06E;
+    --coin:#F6C443; --sky:#BDE2F2; --soft:#E6D6C1; --muted:#5A3C22;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family:Nunito, system-ui, sans-serif; font-weight:700; line-height:1.55; }
+  h1, h2, h3 { font-family:Fredoka, system-ui, sans-serif; font-weight:700; line-height:1.1; margin:0; }
+  a { color:inherit; }
+  img { display:block; max-width:100%; }
+  .wrap { max-width:760px; margin:0 auto; }
+
+  /* Chunky button, like the app's */
+  .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border:3px solid var(--ink); border-radius:18px;
+         background:var(--orange); color:var(--ink); font-family:Fredoka, sans-serif; font-weight:600; font-size:19px;
+         text-decoration:none; box-shadow:0 6px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  .btn:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--ink); }
+  .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
+
+  /* Header, like the app's: cream, full width, a brown line along the bottom */
+  header { background:var(--cream); border-bottom:3px solid var(--ink); padding:14px 16px; position:sticky; top:0; z-index:10; }
+  nav { max-width:1080px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; position:relative; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:Fredoka, sans-serif; font-size:26px; text-decoration:none; }
+  .logo img { width:42px; height:42px; border-radius:11px; border:2.5px solid var(--ink); }
+  nav .links { display:flex; gap:20px; font-size:15px; }
+  nav .links a { text-decoration:none; }
+  nav .links a[aria-current] { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; }
+  .menubtn { display:none; width:46px; height:46px; border:3px solid var(--ink); border-radius:50%; background:var(--cream); color:var(--ink);
+             box-shadow:0 4px 0 var(--ink); padding:0; place-items:center; cursor:pointer; transition:transform .08s, box-shadow .08s; }
+  .menubtn:active { transform:translateY(3px); box-shadow:0 1px 0 var(--ink); }
+  .menubtn svg { width:22px; height:22px; }
+  .menu { position:absolute; top:58px; right:0; width:min(260px, calc(100vw - 32px)); display:flex; flex-direction:column; text-align:left;
+          background:var(--cream); border:3px solid var(--ink); border-radius:22px; box-shadow:0 6px 0 var(--ink); padding:8px; }
+  .menu[hidden] { display:none; }
+  .menu a { font-family:Fredoka, sans-serif; font-weight:600; font-size:20px; text-decoration:none; padding:12px 14px; border-radius:14px; }
+  .menu a + a { border-top:2px solid var(--soft); border-radius:0 0 14px 14px; }
+  .menu a:active { background:#F1E4D3; }
+  @media (max-width:820px) { nav .links { display:none; } .menubtn { display:grid; } }
+
+  main { padding:56px 16px 96px; }
+  .intro { display:flex; align-items:center; gap:22px; }
+  .intro img { width:120px; flex-shrink:0; }
+  h1 { font-size:clamp(40px, 7vw, 60px); }
+  .intro p { margin:8px 0 0; font-size:18px; color:var(--muted); }
+
+  .card { background:var(--white); border:3px solid var(--ink); border-radius:24px; box-shadow:0 6px 0 var(--ink); padding:22px; }
+  .contact { margin-top:36px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+  .contact h2 { font-size:24px; }
+  .contact p { margin:4px 0 0; color:var(--muted); }
+
+  .contact { scroll-margin-top:96px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn.white { background:var(--white); }
+  .email { color:var(--ink); word-break:break-all; }
+  .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
+  h2.faqhead { font-size:30px; margin:56px 0 16px; }
+  .faq { display:flex; flex-direction:column; gap:14px; }
+  details { background:var(--white); border:3px solid var(--ink); border-radius:20px; box-shadow:0 4px 0 var(--ink); }
+  summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px;
+            padding:16px 18px; font-family:Fredoka, sans-serif; font-weight:600; font-size:19px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:""; width:12px; height:12px; flex-shrink:0; border-right:3px solid var(--ink); border-bottom:3px solid var(--ink);
+                   margin-top:-6px; transform:rotate(45deg); transition:transform .15s; }
+  details[open] summary::after { margin-top:6px; transform:rotate(-135deg); }
+  details .a { border-top:2px solid var(--soft); margin:0 18px; padding:14px 0 18px; }
+  details .a p { margin:0; }
+  details .a p + p { margin-top:10px; }
+  .path { background:#F1E4D3; border-radius:8px; padding:1px 7px; white-space:nowrap; }
+
+  footer { background:var(--ink); color:var(--cream); padding:48px 16px 28px; font-size:15px; }
+  footer .wrap { max-width:1080px; }
+  .footgrid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; }
+  .footbrand .logo { color:var(--cream); }
+  .footbrand .logo img { border-color:var(--cream); }
+  .footbrand p { margin:10px 0 0; color:#E9DCC8; font-size:17px; }
+  .footcol { display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+  .footcol b { font-family:Fredoka, sans-serif; font-size:18px; margin-bottom:4px; }
+  .footcol a { color:#E9DCC8; text-decoration:none; }
+  .footcol a:hover { color:var(--cream); text-decoration:underline; }
+  .footbottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:44px; padding-top:18px; border-top:2px solid rgba(255,247,234,.18); color:#C9BBA6; font-size:14px; }
+  .verse { font-style:italic; }
+  @media (max-width:600px) { .footgrid { grid-template-columns:1fr 1fr; } .footbrand { grid-column:1 / -1; }
+    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .btns { width:100%; flex-direction:column; } .contact .btn { width:100%; justify-content:center; } }
+
+  .article { padding:48px 16px 96px; max-width:700px; }
+  .eyebrow { font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+  .article h1 { font-size:clamp(34px, 6vw, 50px); }
+  .article .lede { font-size:20px; margin:18px 0 0; }
+  .article h2 { font-size:clamp(26px, 4vw, 32px); margin:48px 0 12px; }
+  .article h3 { font-size:21px; margin:26px 0 6px; }
+  .article p, .article li { font-size:18px; }
+  .article p { margin:0 0 14px; }
+  .article ul, .article ol { padding-left:22px; margin:0 0 14px; }
+  .article li { margin-bottom:10px; }
+  .article figure { margin:32px auto; max-width:440px; }
+  .card.cta { text-align:center; margin:40px 0 0; }
+  .card.cta h2 { margin:0 0 6px; }
+  .card.cta p { color:var(--muted); }
+  .byline { font-size:15px; color:var(--muted); margin:12px 0 0 !important; }
+  .article sup { font-size:.7em; line-height:0; }
+  .article sup a { text-decoration:none; color:var(--muted); padding:0 1px; }
+  .article p a, .sources a { text-decoration-thickness:2px; text-underline-offset:3px; }
+  .sources li { font-size:15px !important; color:var(--muted); word-break:break-word; scroll-margin-top:96px; }
+</style>
+<script src="/analytics.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+    <div class="links"><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+    <button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="menu" id="menu" hidden><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+  </nav>
+</header>
+
+<main class="article wrap">
+  <p class="eyebrow"><a href="/articles/">Articles</a></p>
+  <h1>Spaced repetition: how to remember more without cramming</h1>
+  <p class="byline">By Rosebud Studio, the makers of Focusland. Updated October 25, 2026.</p>
+  <p class="lede">Cramming feels like it works. You read the notes five times the night before, they feel familiar, and you walk into the test feeling ready. Then a week later it's mostly gone. Spaced repetition is the gentler, slower way: you study the same thing a few times, with gaps in between, so it sticks for much longer.</p>
+
+  <figure><img class="loop" data-base="/img/ArtSpacedRepetition" src="/img/ArtSpacedRepetition0.webp" alt="An orange cat holding up a flashcard next to a stack of cards and a little desk calendar" style="max-width:320px;margin:0 auto"></figure>
+
+  <h2>What spaced repetition is</h2>
+  <p>Spaced repetition means coming back to the same material several times, spread out over days or weeks, instead of packing all your study into one long sitting. Psychologists call the benefit the spacing effect. The opposite, studying it all at once, is called massed practice. Cramming is massed practice the night before a test.</p>
+  <p>The idea is simple. Each time you return to something after a gap, you have to work a little to pull it back up. That small effort seems to be what helps the memory last.</p>
+
+  <h2>What the research says</h2>
+  <p>The spacing effect is one of the best tested ideas in learning research. A large review by Nicholas Cepeda and colleagues pulled together studies of people learning words and facts, and found that spreading study out beat massing it together again and again.<sup><a href="#s1">1</a></sup></p>
+  <p>A later study by the same group taught more than 1,350 people a set of facts, gave them one review after a gap of up to three and a half months, then tested them up to a year later. The best gap depended on how far away the test was. For a test one week away, the best gap was about 20 to 40% of that week, so roughly a day or two. For a test a year away, the best gap was about 5 to 10% of the year, so a few weeks.<sup><a href="#s2">2</a></sup> In plain words: the further away the test, the longer you can leave between reviews.</p>
+  <p>Spacing also works with flashcards. Nate Kornell had students learn vocabulary either in one big stack (more space between seeing each card) or in four small stacks (less space). The big stack won, and spacing also beat cramming on the last day before the test. Spacing helped for 90% of the students, yet after the first session 72% of them believed the massed way had worked better.<sup><a href="#s3">3</a></sup></p>
+  <p>That last part matters. Spacing often <em>feels</em> worse while you do it. In another study, people learned painting styles better when different artists' paintings were mixed and spaced, but still rated the bunched-up way as more effective, even after their own test scores showed the opposite.<sup><a href="#s4">4</a></sup> If spaced study feels a bit clumsy, that's normal. It doesn't mean it isn't working.</p>
+
+  <h2>Pair it with testing yourself</h2>
+  <p>Spacing works best when each review is a little quiz, not a reread. Henry Roediger and Jeffrey Karpicke had students read short passages and then either reread them or try to write down what they remembered. When the final test came five minutes later, rereading did a bit better. When it came two days or a week later, the students who had tested themselves remembered much more, even though the rereaders felt more confident.<sup><a href="#s5">5</a></sup></p>
+  <p>A big review of ten popular study methods by John Dunlosky and colleagues rated just two as high utility: spreading practice out over time and practice testing. Rereading and highlighting, the two things most students do, were rated low.<sup><a href="#s6">6</a></sup></p>
+
+  <h2>A simple spaced repetition schedule</h2>
+  <p>You don't need a perfect formula. A common rule of thumb is to review on day 1, day 3, day 7 and day 14, with each gap a little longer than the last. Think of it as a starting point, not a law: the research shows the best gap depends on when you need the material, and no single schedule has been proven best for everyone.</p>
+  <ol>
+    <li><b>Day 1:</b> learn the material, then close your notes and write down what you remember.</li>
+    <li><b>Day 3:</b> quiz yourself before you look. Mark what you missed.</li>
+    <li><b>Day 7:</b> quiz again, spending most of your time on the misses.</li>
+    <li><b>Day 14 and after:</b> keep going with longer gaps until the test, or for as long as you want to remember it.</li>
+  </ol>
+  <p>If your exam is close, shrink the gaps. If it's months away, stretch them out.</p>
+
+  <h2>Practical tips</h2>
+  <ul>
+    <li><b>Start earlier than feels needed.</b> Spacing needs days to work with. Even two short sessions a few days apart beat one long one.</li>
+    <li><b>Keep sessions short.</b> Twenty to twenty-five minutes of quizzing is plenty. A timer helps, which is the idea behind <a href="/pomodoro-technique/">the Pomodoro Technique</a>.</li>
+    <li><b>Use one big flashcard stack.</b> Shuffle it, and don't drop a card the first time you get it right. Bring it back a few more times.</li>
+    <li><b>Mix topics.</b> Going back and forth between subjects or chapters spaces each one out naturally.</li>
+    <li><b>Write the plan down.</b> Put review days in your calendar or task list so you don't have to remember to remember.</li>
+    <li><b>Let apps help, if you like.</b> Flashcard apps can schedule reviews for you. Paper works fine too.</li>
+  </ul>
+  <p>The hardest part is usually starting the first session, not the method. If that's where you get stuck, <a href="/how-to-stop-procrastinating/">these small tricks for procrastination</a> can help.</p>
+
+  <h2>What the research doesn't say</h2>
+  <p>Most spacing studies use word lists, facts, vocabulary or short passages, often in a lab. The effect is strong for that kind of memory. There's less research on things like solving new kinds of problems or writing essays, so expect spacing to help most with what you need to recall. Exact schedules and big percentage claims you see online usually come from apps or blogs, not from studies, so take them lightly.</p>
+
+  <h2>Spaced study in Focusland</h2>
+  <p>Focusland won't schedule your flashcards, but it makes the little sessions easier to show up for. You pick a cozy room, sit at a little table next to other cats, write the topic you're reviewing in the task box, and start a 25 minute, 50 minute or no-timer session. Focus rounds have a Short break (5 minutes) and a Long break (15 minutes) built in. Each session you finish earns coins and keeps your daily streak, which is a nice nudge to come back on day 3 and day 7. And if a session goes sideways, Hold to Give Up lets you leave with your streak safe.</p>
+  <figure><img class="loop" data-base="/img/StudyTabby" src="/img/StudyTabby0.webp" alt="A tabby cat studying at its little table"></figure>
+
+  <div class="card cta">
+    <h2>Pull up a chair.</h2>
+    <p>Focusland is coming soon to the App Store for iPhone.</p>
+    <a class="btn" href="/">See Focusland</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <h3>Is spaced repetition better than cramming?</h3>
+  <p>For remembering things longer than a day or two, yes. Cramming can get you through a test tomorrow, but spaced study holds up much better a week or more later.</p>
+  <h3>How long should the gaps be?</h3>
+  <p>It depends on when you need the material. For a test about a week away, a day or two between reviews is a good start. For something you want to keep for months, gaps of a few weeks work well.</p>
+  <h3>Does spaced repetition work for studying for exams?</h3>
+  <p>It works best for facts, terms, formulas and ideas you need to recall. Combine it with practice questions, and start at least a week or two before the exam.</p>
+  <h3>Why does spacing feel less effective than rereading?</h3>
+  <p>Rereading makes material feel familiar, which is easy to mistake for knowing it. Spaced quizzing feels harder because you're actually pulling the memory back up, and that effort is what helps it stick.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ol class="sources">
+    <li id="s1">Cepeda, N., Pashler, H., Vul, E., Wixted, J., &amp; Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. <i>Psychological Bulletin</i>, 132(3), 354–380. <a href="https://doi.org/10.1037/0033-2909.132.3.354">doi.org/10.1037/0033-2909.132.3.354</a></li>
+    <li id="s2">Cepeda, N., Vul, E., Rohrer, D., Wixted, J., &amp; Pashler, H. (2008). Spacing effects in learning: A temporal ridgeline of optimal retention. <i>Psychological Science</i>, 19(11), 1095–1102. <a href="https://doi.org/10.1111/j.1467-9280.2008.02209.x">doi.org/10.1111/j.1467-9280.2008.02209.x</a></li>
+    <li id="s3">Kornell, N. (2009). Optimising learning using flashcards: Spacing is more effective than cramming. <i>Applied Cognitive Psychology</i>, 23(9), 1297–1317. <a href="https://doi.org/10.1002/acp.1537">doi.org/10.1002/acp.1537</a></li>
+    <li id="s4">Kornell, N., &amp; Bjork, R. (2008). Learning concepts and categories: Is spacing the "enemy of induction"? <i>Psychological Science</i>, 19(6), 585–592. <a href="https://doi.org/10.1111/j.1467-9280.2008.02127.x">doi.org/10.1111/j.1467-9280.2008.02127.x</a></li>
+    <li id="s5">Roediger, H., &amp; Karpicke, J. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <i>Psychological Science</i>, 17(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">doi.org/10.1111/j.1467-9280.2006.01693.x</a></li>
+    <li id="s6">Dunlosky, J., Rawson, K., Marsh, E., Nathan, M., &amp; Willingham, D. (2013). Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. <i>Psychological Science in the Public Interest</i>, 14(1), 4–58. <a href="https://doi.org/10.1177/1529100612453266">doi.org/10.1177/1529100612453266</a></li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap footgrid">
+    <div class="footbrand">
+      <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+      <p>Never focus alone.</p>
+    </div>
+    <nav class="footcol" aria-label="Product">
+      <b>Focusland</b>
+      <a href="/#how">How it works</a>
+      <a href="/#rooms">Rooms</a>
+      <a href="/#plus">Focusland+</a>
+      <a href="/articles/">Articles</a>
+    </nav>
+    <nav class="footcol" aria-label="Help">
+      <b>Help</b>
+      <a href="/support.html">Support</a>
+      <a href="/support.html#contact">Contact</a>
+      <a href="https://dcardines-design.github.io/focusland-legal/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
+      <a href="https://www.instagram.com/focusland.app/" rel="me">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap footbottom">
+    <span>© 2026 Focusland. Made with love by Rosebud Studio.</span>
+    <span class="verse">Matthew 6:34. Live it one day at a time, and trust God for tomorrow.</span>
+  </div>
+</footer>
+
+<script>
+  // Phone menu: the round button opens the links card; tapping a link or anywhere else closes it.
+  (function () {
+    var btn = document.querySelector('.menubtn'), menu = document.getElementById('menu');
+    function set(open) { menu.hidden = !open; btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); set(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
+  (function () {
+    var count = 0;
+    setInterval(function () {
+      document.querySelectorAll('img.loop').forEach(function (img) {
+        if (img._frame === undefined) {
+          img._frame = count++ % 4;
+          for (var k = 0; k < 4; k++) { new Image().src = img.dataset.base + k + '.webp'; }
+        }
+        img._frame = (img._frame + 1) % 4;
+        img.src = img.dataset.base + img._frame + '.webp';
+      });
+    }, 250);
+  })();
+</script>
+</body>
+</html>
