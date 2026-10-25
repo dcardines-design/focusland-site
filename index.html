@@ -209,6 +209,16 @@
   .ctaart { width:min(340px, 80%); margin:0 auto 6px; }
   .ctacard h2 { margin:0 0 8px; font-size:clamp(38px, 6vw, 60px); }
   .ctacard p { margin:0 0 22px; color:var(--muted); font-size:19px; }
+  /* Waitlist: one email when Focusland is on the App Store (saved in Supabase through join_waitlist) */
+  .wl { display:flex; gap:10px; max-width:500px; margin:0 auto; }
+  .wl input { flex:1; min-width:0; padding:14px 16px; border:3px solid var(--ink); border-radius:16px; background:var(--white);
+              font:inherit; font-size:18px; color:var(--ink); }
+  .wl input:focus { outline:3px solid var(--orange); outline-offset:1px; }
+  .wl .btn { border-width:3px; cursor:pointer; }
+  .wlnote { font-size:14px !important; margin:12px 0 0 !important; }
+  .wlnote a { color:var(--ink); }
+  .wldone { font-family:Fredoka, sans-serif; font-weight:600; font-size:21px; color:var(--ink) !important; }
+  @media (max-width:520px) { .wl { flex-direction:column; } }
 
   footer { position:relative; background:var(--ink); color:var(--cream); padding:64px 16px 28px; font-size:15px; }
   .footgrid { text-align:left; display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; }
@@ -385,8 +395,12 @@
   <div class="ctacard">
     <img class="ctaart loop" data-base="img/CtaChair" src="img/CtaChair0.webp" alt="An orange cat pulling out a seat for you at its table">
     <h2>Pull up a chair.</h2>
-    <p>Focusland is coming soon to the App Store for iPhone.</p>
-    <a class="btn" href="support.html#contact">Say hi</a>
+    <p>Focusland is coming soon to the App Store for iPhone. Leave your email and we'll tell you the day it's out.</p>
+    <form class="wl" id="waitlist" novalidate>
+      <input type="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-label="Your email">
+      <button class="btn" type="submit">Tell me</button>
+    </form>
+    <p class="wlnote" id="wlnote">One email when it launches. No spam. Also on <a href="https://www.producthunt.com/products/focusland">Product Hunt</a> Nov 10.</p>
   </div>
 </section>
 
@@ -570,6 +584,31 @@
     addEventListener('resize', center);
 
     build('garden');
+  })();
+
+  // Waitlist form: saves the email through Supabase's join_waitlist function (the public key can only add, never read).
+  (function () {
+    var form = document.getElementById('waitlist'), note = document.getElementById('wlnote');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = form.email.value.trim(), btn = form.querySelector('button');
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { note.textContent = 'That email looks off. Try again?'; form.email.focus(); return; }
+      btn.disabled = true; btn.textContent = 'Saving...';
+      var src = new URLSearchParams(location.search).get('ref') || document.referrer.replace(/^https?:\/\//, '').split('/')[0] || 'direct';
+      fetch('https://rdhkkeaubawmeoxsgmkw.supabase.co/rest/v1/rpc/join_waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', apikey: 'sb_publishable_XxSwtAkG8olAO7lU1dzEww_bAWVVea5' },
+        body: JSON.stringify({ p_email: email, p_source: src })
+      }).then(function (r) { return r.ok ? r.json() : false; }).then(function (ok) {
+        if (!ok) throw 0;
+        form.outerHTML = '<p class="wldone">You\'re on the list. See you at the table.</p>';
+        if (window.posthog) posthog.capture('joined waitlist', { source: src });
+      }).catch(function () {
+        btn.disabled = false; btn.textContent = 'Tell me';
+        note.textContent = 'Something went wrong. Try again in a moment?';
+      });
+    });
   })();
 </script>
 </body>
