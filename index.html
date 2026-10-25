@@ -211,10 +211,11 @@
   .ctacard p { margin:0 0 22px; color:var(--muted); font-size:19px; }
   /* Waitlist: one email when Focusland is on the App Store (saved in Supabase through join_waitlist) */
   .wl { display:flex; gap:10px; max-width:500px; margin:0 auto; }
+  .hero .wl { width:min(520px, 100%); }
   .wl input { flex:1; min-width:0; padding:14px 16px; border:3px solid var(--ink); border-radius:16px; background:var(--white);
               font:inherit; font-size:18px; color:var(--ink); }
   .wl input:focus { outline:3px solid var(--orange); outline-offset:1px; }
-  .wl .btn { border-width:3px; cursor:pointer; }
+  .wl .btn { border-width:3px; cursor:pointer; justify-content:center; }
   .wlnote { font-size:14px !important; margin:12px 0 0 !important; }
   .wlnote a { color:var(--ink); }
   .wldone { font-family:Fredoka, sans-serif; font-weight:600; font-size:21px; color:var(--ink) !important; }
@@ -262,11 +263,11 @@
   </nav>
   <h1>Never focus alone.</h1>
   <p class="lede">A cozy focus timer. Pick a room, sit down, and get things done next to others.</p>
-  <a class="btn" href="#get">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.6-4zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>
-    Coming soon on iPhone
-  </a>
-  <p class="soon">Free to download. No ads, no account needed.</p>
+  <form class="wl" data-note="heroNote" novalidate>
+    <input type="email" name="email" placeholder="Your email, for launch day" autocomplete="email" required aria-label="Your email" id="heroEmail">
+    <button class="btn" type="submit">Tell me</button>
+  </form>
+  <p class="soon" id="heroNote">Coming soon on iPhone. Free, no ads, no account needed.</p>
   <div class="studiers" aria-label="Cats focusing at their tables, with their timers and tasks">
     <div class="spot solo"><img class="loop" data-base="img/StudyTabby" src="img/StudyTabby0.webp" alt="A tabby cat studying at its own little table"><div class="seat far focus" style="left:60.8%;top:-9.8%" data-t="42:29" data-cc="JP" data-task="Designing a logo"></div></div>
     <div class="spot duo"><img class="loop" data-base="img/DuoA" src="img/DuoA0.webp" alt="Two cats studying at a table for two"><div class="seat far focus" style="left:55.6%;top:-6.6%" data-t="18:07" data-cc="BR" data-task="Learning Japanese"></div><div class="seat near focus" style="left:47.2%;top:104%" data-t="33:30" data-cc="FR" data-task="Editing a podcast"></div></div>
@@ -396,8 +397,8 @@
     <img class="ctaart loop" data-base="img/CtaChair" src="img/CtaChair0.webp" alt="An orange cat pulling out a seat for you at its table">
     <h2>Pull up a chair.</h2>
     <p>Focusland is coming soon to the App Store for iPhone. Leave your email and we'll tell you the day it's out.</p>
-    <form class="wl" id="waitlist" novalidate>
-      <input type="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-label="Your email">
+    <form class="wl" data-note="wlnote" novalidate>
+      <input type="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-label="Your email" id="ctaEmail">
       <button class="btn" type="submit">Tell me</button>
     </form>
     <p class="wlnote" id="wlnote">One email when it launches. No spam. Also on <a href="https://www.producthunt.com/products/focusland">Product Hunt</a> Nov 10.</p>
@@ -588,25 +589,26 @@
 
   // Waitlist form: saves the email through Supabase's join_waitlist function (the public key can only add, never read).
   (function () {
-    var form = document.getElementById('waitlist'), note = document.getElementById('wlnote');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var email = form.email.value.trim(), btn = form.querySelector('button');
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { note.textContent = 'That email looks off. Try again?'; form.email.focus(); return; }
-      btn.disabled = true; btn.textContent = 'Saving...';
-      var src = new URLSearchParams(location.search).get('ref') || document.referrer.replace(/^https?:\/\//, '').split('/')[0] || 'direct';
-      fetch('https://rdhkkeaubawmeoxsgmkw.supabase.co/rest/v1/rpc/join_waitlist', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', apikey: 'sb_publishable_XxSwtAkG8olAO7lU1dzEww_bAWVVea5' },
-        body: JSON.stringify({ p_email: email, p_source: src })
-      }).then(function (r) { return r.ok ? r.json() : false; }).then(function (ok) {
-        if (!ok) throw 0;
-        form.outerHTML = '<p class="wldone">You\'re on the list. See you at the table.</p>';
-        if (window.posthog) posthog.capture('joined waitlist', { source: src });
-      }).catch(function () {
-        btn.disabled = false; btn.textContent = 'Tell me';
-        note.textContent = 'Something went wrong. Try again in a moment?';
+    document.querySelectorAll('form.wl').forEach(function (form) {
+      var note = document.getElementById(form.dataset.note), spot = form.closest('.hero') ? 'hero' : 'bottom';
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = form.email.value.trim(), btn = form.querySelector('button');
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { note.textContent = 'That email looks off. Try again?'; form.email.focus(); return; }
+        btn.disabled = true; btn.textContent = 'Saving...';
+        var src = new URLSearchParams(location.search).get('ref') || document.referrer.replace(/^https?:\/\//, '').split('/')[0] || 'direct';
+        fetch('https://rdhkkeaubawmeoxsgmkw.supabase.co/rest/v1/rpc/join_waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', apikey: 'sb_publishable_XxSwtAkG8olAO7lU1dzEww_bAWVVea5' },
+          body: JSON.stringify({ p_email: email, p_source: src })
+        }).then(function (r) { return r.ok ? r.json() : false; }).then(function (ok) {
+          if (!ok) throw 0;
+          document.querySelectorAll('form.wl').forEach(function (f) { f.outerHTML = '<p class="wldone">You\'re on the list. See you at the table.</p>'; });
+          if (window.posthog) posthog.capture('joined waitlist', { source: src, spot: spot });
+        }).catch(function () {
+          btn.disabled = false; btn.textContent = 'Tell me';
+          note.textContent = 'Something went wrong. Try again in a moment?';
+        });
       });
     });
   })();
