@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Build a Study Habit That Sticks | Focusland</title>
+<meta name="description" content="Habits take longer than 21 days to form. Here is what research says about building a study habit that sticks, with 7 small steps and tips on streaks.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Focusland">
+<meta property="og:url" content="https://focusland.co/how-to-build-a-study-habit/">
+<meta property="og:title" content="How to build a study habit that sticks">
+<meta property="og:description" content="What research says about forming habits, and 7 small steps to make studying automatic.">
+<meta property="og:image" content="https://focusland.co/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://focusland.co/how-to-build-a-study-habit/">
+<meta name="theme-color" content="#FFF7EA">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to build a study habit that sticks",
+  "description": "What research says about how habits form, and 7 small steps to build a study habit that sticks.",
+  "image": "https://focusland.co/img/og.png",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "mainEntityOfPage": "https://focusland.co/how-to-build-a-study-habit/",
+  "author": { "@type": "Organization", "name": "Rosebud Studio", "url": "https://focusland.co/" },
+  "publisher": { "@type": "Organization", "name": "Rosebud Studio", "logo": { "@type": "ImageObject", "url": "https://focusland.co/img/icon.png" } }
+}
+</script>
+<style>
+  :root {
+    --ink:#3B2614; --cream:#FFF7EA; --white:#FFFFFF; --orange:#F4A340; --green:#9BD06E;
+    --coin:#F6C443; --sky:#BDE2F2; --soft:#E6D6C1; --muted:#5A3C22;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family:Nunito, system-ui, sans-serif; font-weight:700; line-height:1.55; }
+  h1, h2, h3 { font-family:Fredoka, system-ui, sans-serif; font-weight:700; line-height:1.1; margin:0; }
+  a { color:inherit; }
+  img { display:block; max-width:100%; }
+  .wrap { max-width:760px; margin:0 auto; }
+
+  /* Chunky button, like the app's */
+  .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border:3px solid var(--ink); border-radius:18px;
+         background:var(--orange); color:var(--ink); font-family:Fredoka, sans-serif; font-weight:600; font-size:19px;
+         text-decoration:none; box-shadow:0 6px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  .btn:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--ink); }
+  .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
+
+  /* Header, like the app's: cream, full width, a brown line along the bottom */
+  header { background:var(--cream); border-bottom:3px solid var(--ink); padding:14px 16px; position:sticky; top:0; z-index:10; }
+  nav { max-width:1080px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; position:relative; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:Fredoka, sans-serif; font-size:26px; text-decoration:none; }
+  .logo img { width:42px; height:42px; border-radius:11px; border:2.5px solid var(--ink); }
+  nav .links { display:flex; gap:20px; font-size:15px; }
+  nav .links a { text-decoration:none; }
+  nav .links a[aria-current] { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; }
+  .menubtn { display:none; width:46px; height:46px; border:3px solid var(--ink); border-radius:50%; background:var(--cream); color:var(--ink);
+             box-shadow:0 4px 0 var(--ink); padding:0; place-items:center; cursor:pointer; transition:transform .08s, box-shadow .08s; }
+  .menubtn:active { transform:translateY(3px); box-shadow:0 1px 0 var(--ink); }
+  .menubtn svg { width:22px; height:22px; }
+  .menu { position:absolute; top:58px; right:0; width:min(260px, calc(100vw - 32px)); display:flex; flex-direction:column; text-align:left;
+          background:var(--cream); border:3px solid var(--ink); border-radius:22px; box-shadow:0 6px 0 var(--ink); padding:8px; }
+  .menu[hidden] { display:none; }
+  .menu a { font-family:Fredoka, sans-serif; font-weight:600; font-size:20px; text-decoration:none; padding:12px 14px; border-radius:14px; }
+  .menu a + a { border-top:2px solid var(--soft); border-radius:0 0 14px 14px; }
+  .menu a:active { background:#F1E4D3; }
+  @media (max-width:820px) { nav .links { display:none; } .menubtn { display:grid; } }
+
+  main { padding:56px 16px 96px; }
+  .intro { display:flex; align-items:center; gap:22px; }
+  .intro img { width:120px; flex-shrink:0; }
+  h1 { font-size:clamp(40px, 7vw, 60px); }
+  .intro p { margin:8px 0 0; font-size:18px; color:var(--muted); }
+
+  .card { background:var(--white); border:3px solid var(--ink); border-radius:24px; box-shadow:0 6px 0 var(--ink); padding:22px; }
+  .contact { margin-top:36px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+  .contact h2 { font-size:24px; }
+  .contact p { margin:4px 0 0; color:var(--muted); }
+
+  .contact { scroll-margin-top:96px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn.white { background:var(--white); }
+  .email { color:var(--ink); word-break:break-all; }
+  .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
+  h2.faqhead { font-size:30px; margin:56px 0 16px; }
+  .faq { display:flex; flex-direction:column; gap:14px; }
+  details { background:var(--white); border:3px solid var(--ink); border-radius:20px; box-shadow:0 4px 0 var(--ink); }
+  summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px;
+            padding:16px 18px; font-family:Fredoka, sans-serif; font-weight:600; font-size:19px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:""; width:12px; height:12px; flex-shrink:0; border-right:3px solid var(--ink); border-bottom:3px solid var(--ink);
+                   margin-top:-6px; transform:rotate(45deg); transition:transform .15s; }
+  details[open] summary::after { margin-top:6px; transform:rotate(-135deg); }
+  details .a { border-top:2px solid var(--soft); margin:0 18px; padding:14px 0 18px; }
+  details .a p { margin:0; }
+  details .a p + p { margin-top:10px; }
+  .path { background:#F1E4D3; border-radius:8px; padding:1px 7px; white-space:nowrap; }
+
+  footer { background:var(--ink); color:var(--cream); padding:48px 16px 28px; font-size:15px; }
+  footer .wrap { max-width:1080px; }
+  .footgrid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; }
+  .footbrand .logo { color:var(--cream); }
+  .footbrand .logo img { border-color:var(--cream); }
+  .footbrand p { margin:10px 0 0; color:#E9DCC8; font-size:17px; }
+  .footcol { display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+  .footcol b { font-family:Fredoka, sans-serif; font-size:18px; margin-bottom:4px; }
+  .footcol a { color:#E9DCC8; text-decoration:none; }
+  .footcol a:hover { color:var(--cream); text-decoration:underline; }
+  .footbottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:44px; padding-top:18px; border-top:2px solid rgba(255,247,234,.18); color:#C9BBA6; font-size:14px; }
+  .verse { font-style:italic; }
+  @media (max-width:600px) { .footgrid { grid-template-columns:1fr 1fr; } .footbrand { grid-column:1 / -1; }
+    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .btns { width:100%; flex-direction:column; } .contact .btn { width:100%; justify-content:center; } }
+
+  .article { padding:48px 16px 96px; max-width:700px; }
+  .eyebrow { font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+  .article h1 { font-size:clamp(34px, 6vw, 50px); }
+  .article .lede { font-size:20px; margin:18px 0 0; }
+  .article h2 { font-size:clamp(26px, 4vw, 32px); margin:48px 0 12px; }
+  .article h3 { font-size:21px; margin:26px 0 6px; }
+  .article p, .article li { font-size:18px; }
+  .article p { margin:0 0 14px; }
+  .article ul, .article ol { padding-left:22px; margin:0 0 14px; }
+  .article li { margin-bottom:10px; }
+  .article figure { margin:32px auto; max-width:440px; }
+  .card.cta { text-align:center; margin:40px 0 0; }
+  .card.cta h2 { margin:0 0 6px; }
+  .card.cta p { color:var(--muted); }
+  .byline { font-size:15px; color:var(--muted); margin:12px 0 0 !important; }
+  .article sup { font-size:.7em; line-height:0; }
+  .article sup a { text-decoration:none; color:var(--muted); padding:0 1px; }
+  .article p a, .sources a { text-decoration-thickness:2px; text-underline-offset:3px; }
+  .sources li { font-size:15px !important; color:var(--muted); word-break:break-word; scroll-margin-top:96px; }
+</style>
+<script src="/analytics.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+    <div class="links"><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+    <button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="menu" id="menu" hidden><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+  </nav>
+</header>
+
+<main class="article wrap">
+  <p class="eyebrow"><a href="/articles/">Articles</a></p>
+  <h1>How to build a study habit that sticks</h1>
+  <p class="byline">By Rosebud Studio, the makers of Focusland. Updated October 30, 2026.</p>
+  <p class="lede">Most study plans start strong and fade by week two. That's not a character flaw. Habits grow from small actions repeated in the same place and at the same time, and they take longer to form than most people expect. Here's what the research says, and how to make studying something you just do.</p>
+
+  <figure><img class="loop" data-base="/img/ArtStudyHabit" src="/img/ArtStudyHabit0.webp" alt="An orange tabby cat reading at a low desk on a round rug, with a mug and a calendar of checked-off days" style="max-width:320px;margin:0 auto"></figure>
+
+  <h2>What a habit really is</h2>
+  <p>In everyday talk, a habit is anything you do often. Psychologists mean something narrower: a behavior that starts almost on its own when you meet a familiar cue, like a place, a time of day or the thing you just finished. Wendy Wood and David Neal describe habits as links between a context and a response, built up through repetition. Once the link is strong, the context starts the behavior without much thinking or deciding.<sup><a href="#s1">1</a></sup></p>
+  <p>That matters for studying. Motivation goes up and down every day. A habit doesn't need motivation to get going, because the cue does the starting for you. The goal isn't to feel like studying more often. It's to make sitting down to study the normal thing that happens after a certain cue.</p>
+
+  <h2>How long it takes</h2>
+  <p>You've probably heard that it takes 21 days to build a habit. The best-known study on this points to something slower. Phillippa Lally and her colleagues asked 96 volunteers to pick one healthy eating, drinking or exercise behavior and do it daily in the same situation, logging each day how automatic it felt.<sup><a href="#s2">2</a></sup></p>
+  <p>For the people whose results could be modeled, it took a median of 66 days for the behavior to level off at its most automatic. The range was huge, from 18 to 254 days. Simpler behaviors, like drinking a glass of water with breakfast, tended to get automatic faster than harder ones, like doing sit-ups. The study was small and about health habits, not studying, so treat these numbers as a rough guide rather than a rule.</p>
+  <p>The honest takeaway: plan for a couple of months, not a couple of weeks. If studying still feels like effort on day 20, nothing has gone wrong.</p>
+
+  <h2>1. Start smaller than feels useful</h2>
+  <p>A habit forms through repetition, so the best first version is the one you'll actually repeat. Ten minutes of flashcards every evening beats a two-hour session you skip three days a week. Benjamin Gardner, Phillippa Lally and Jane Wardle, writing advice for doctors helping patients build healthy habits, suggest choosing a simple action and doing it consistently in the same context.<sup><a href="#s3">3</a></sup> You can grow the session once the starting part feels easy.</p>
+
+  <h2>2. Tie it to a cue you already have</h2>
+  <p>Pick a moment that already happens every day and attach studying to it. Write it as an if-then plan: "After I finish dinner, I'll sit at my desk and open my notes." Peter Gollwitzer and Paschal Sheeran reviewed 94 tests of these plans and found they gave a medium-to-large boost to reaching goals compared with just intending to.<sup><a href="#s4">4</a></sup> The plan works partly because it hands the decision to the cue, so you don't have to decide again each day.</p>
+
+  <h2>3. Keep the place the same</h2>
+  <p>Context is half of a habit. Studying at the same desk, the same café table or the same corner of the library helps that place become a signal for work. If you can, keep your study spot for studying, and do your scrolling somewhere else.</p>
+
+  <h2>4. Give each session a clear finish line</h2>
+  <p>"Study tonight" has no end, which makes it easy to put off. "Study for 25 minutes" does. A timer makes the session feel small enough to start and gives you a finish to look forward to. That's the idea behind <a href="/pomodoro-technique/">the Pomodoro Technique</a>, and it pairs well with <a href="/how-long-should-study-breaks-be/">short, planned breaks</a> so you don't burn out.</p>
+
+  <h2>5. Know your first step before you sit down</h2>
+  <p>The hardest part of a session is often deciding what to do. Write one specific task before you start: "Make 10 flashcards for chapter 4," not "study biology." A clear first step makes the habit easier to start, and it gives you something to check off at the end.</p>
+
+  <h2>6. Track it, but go easy on yourself</h2>
+  <p>A simple log, like checking off days on a calendar, can help. Jackie Silverman and Alixandra Barasch ran seven studies on streaks shown in logs and apps. When people's logs showed an unbroken streak, they were more likely to keep doing the behavior than when their logs showed a broken one, even when their actual past behavior was the same. Keeping a streak alive became a small goal of its own.<sup><a href="#s5">5</a></sup></p>
+  <p>There's a catch. In the same research, a broken streak made people less likely to carry on, especially when they blamed themselves for the break. The effect was smaller when people could repair the streak. So use streaks as a nudge, not a judge. And remember what the habit study found: missing a single day didn't really slow habit formation down.<sup><a href="#s2">2</a></sup> Missing one day is normal. Missing two in a row is the moment to get back on track.</p>
+
+  <h2>7. Study next to someone</h2>
+  <p>Having someone else working nearby, even in silence, can make it easier to start and keep going. It adds a little gentle accountability and makes the hours feel less lonely. This is often called <a href="/what-is-body-doubling/">body doubling</a>, and a regular study buddy or library spot can become part of the cue for your habit.</p>
+
+  <h2>If it isn't working</h2>
+  <p>If your habit keeps falling apart, look at the setup before you blame yourself. Is the session too long? Is the cue something that happens every day? Is your study spot full of distractions? Change one thing and give it a few more weeks. If trouble focusing affects most of your days, at school, work and home, it can be worth talking to a doctor, since things like ADHD, anxiety or poor sleep can make studying harder. These tips aren't a treatment for any of them.</p>
+
+  <h2>How Focusland helps</h2>
+  <p>Focusland is built around this kind of daily rhythm. You pick a cozy room, sit down at a little table next to others, write the one task you're working on, and start a 25 minute, 50 minute or no-timer session, with a 5 minute short break and a 15 minute long break. Finishing a session earns coins, which unlock new rooms, and keeps your daily streak going. If you have to stop early, you can hold to give up, and your streak stays safe.</p>
+  <figure><img class="loop" data-base="/img/StudyTabby" src="/img/StudyTabby0.webp" alt="A tabby cat studying at its own little table"></figure>
+
+  <div class="card cta">
+    <h2>Pull up a chair.</h2>
+    <p>Focusland is coming soon to the App Store for iPhone.</p>
+    <a class="btn" href="/">See Focusland</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <h3>How long does it take to build a study habit?</h3>
+  <p>Longer than 21 days for most people. In the best-known study, daily habits took a median of 66 days to become as automatic as they would get, with a range of 18 to 254 days. Simpler habits tend to form faster.</p>
+  <h3>How long should a daily study session be?</h3>
+  <p>When you're building the habit, short is better. Start with 10 to 25 minutes, the same time every day. Once it feels easy to start, add more time or a second session.</p>
+  <h3>What if I miss a day?</h3>
+  <p>Carry on the next day. In the habit study, missing a single day didn't really slow things down. What matters is getting back to your cue as soon as you can.</p>
+  <h3>Is it better to study in the morning or at night?</h3>
+  <p>Pick the time you can protect most days. A steady cue matters more for the habit than the hour on the clock.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ol class="sources">
+    <li id="s1">Wood, W., &amp; Neal, D. T. (2007). A new look at habits and the habit-goal interface. <i>Psychological Review</i>, 114(4), 843–863. <a href="https://doi.org/10.1037/0033-295X.114.4.843">doi.org/10.1037/0033-295X.114.4.843</a></li>
+    <li id="s2">Lally, P., van Jaarsveld, C. H. M., Potts, H. W. W., &amp; Wardle, J. (2010). How are habits formed: Modelling habit formation in the real world. <i>European Journal of Social Psychology</i>, 40(6), 998–1009. <a href="https://doi.org/10.1002/ejsp.674">doi.org/10.1002/ejsp.674</a></li>
+    <li id="s3">Gardner, B., Lally, P., &amp; Wardle, J. (2012). Making health habitual: The psychology of 'habit-formation' and general practice. <i>British Journal of General Practice</i>, 62(605), 664–666. <a href="https://doi.org/10.3399/bjgp12X659466">doi.org/10.3399/bjgp12X659466</a></li>
+    <li id="s4">Gollwitzer, P. M., &amp; Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. <i>Advances in Experimental Social Psychology</i>, 38, 69–119. <a href="https://doi.org/10.1016/S0065-2601(06)38002-1">doi.org/10.1016/S0065-2601(06)38002-1</a></li>
+    <li id="s5">Silverman, J., &amp; Barasch, A. (2023). On or off track: How (broken) streaks affect consumer decisions. <i>Journal of Consumer Research</i>, 49(6), 1095–1117. <a href="https://doi.org/10.1093/jcr/ucac029">doi.org/10.1093/jcr/ucac029</a></li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap footgrid">
+    <div class="footbrand">
+      <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+      <p>Never focus alone.</p>
+    </div>
+    <nav class="footcol" aria-label="Product">
+      <b>Focusland</b>
+      <a href="/#how">How it works</a>
+      <a href="/#rooms">Rooms</a>
+      <a href="/#plus">Focusland+</a>
+      <a href="/articles/">Articles</a>
+    </nav>
+    <nav class="footcol" aria-label="Help">
+      <b>Help</b>
+      <a href="/support.html">Support</a>
+      <a href="/support.html#contact">Contact</a>
+      <a href="https://dcardines-design.github.io/focusland-legal/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
+      <a href="https://www.instagram.com/focusland.app/" rel="me">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap footbottom">
+    <span>© 2026 Focusland. Made with love by Rosebud Studio.</span>
+    <span class="verse">Matthew 6:34. Live it one day at a time, and trust God for tomorrow.</span>
+  </div>
+</footer>
+
+<script>
+  // Phone menu: the round button opens the links card; tapping a link or anywhere else closes it.
+  (function () {
+    var btn = document.querySelector('.menubtn'), menu = document.getElementById('menu');
+    function set(open) { menu.hidden = !open; btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); set(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
+  (function () {
+    var count = 0;
+    setInterval(function () {
+      document.querySelectorAll('img.loop').forEach(function (img) {
+        if (img._frame === undefined) {
+          img._frame = count++ % 4;
+          for (var k = 0; k < 4; k++) { new Image().src = img.dataset.base + k + '.webp'; }
+        }
+        img._frame = (img._frame + 1) % 4;
+        img.src = img.dataset.base + img._frame + '.webp';
+      });
+    }, 250);
+  })();
+</script>
+</body>
+</html>
