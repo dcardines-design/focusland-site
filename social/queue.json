@@ -212,8 +212,10 @@
         "media/focusland-reel-room-pov.mp4"
       ],
       "caption": "peer pressure but make it productive\n\n#bodydoubling #studywithme #studytok #studentlife #relatable #productivity #focus #studygram",
-      "posted": false,
-      "cover": "media/cover-room-pov.jpg"
+      "posted": true,
+      "cover": "media/cover-room-pov.jpg",
+      "posted_at": "2026-11-03T08:11+08:00",
+      "media_id": "18340220530276836"
     },
     {
       "date": "2026-11-03",
