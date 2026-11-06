@@ -266,8 +266,10 @@
         "media/focusland-reel-speedrun.mp4"
       ],
       "caption": "submitting this run for verification. the phone check was skipped, the judges can confirm\n\n#pomodoro #speedrun #studywithme #studytok #studentlife #productivity #focus #relatable",
-      "posted": false,
-      "cover": "media/cover-speedrun.jpg"
+      "posted": true,
+      "cover": "media/cover-speedrun.jpg",
+      "posted_at": "2026-11-06T08:12+08:00",
+      "media_id": "17916139932282067"
     },
     {
       "date": "2026-11-07",
