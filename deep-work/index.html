@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deep Work Explained: What It Is and How to Start Small | Focusland</title>
+<meta name="description" content="What deep work means, why switching tasks makes it hard, how many hours you can really do, and 6 small research-backed steps to start today.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Focusland">
+<meta property="og:url" content="https://focusland.co/deep-work/">
+<meta property="og:title" content="Deep work explained: what it is and how to start small">
+<meta property="og:description" content="What deep work really means, what the research says, and 6 small steps to start.">
+<meta property="og:image" content="https://focusland.co/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://focusland.co/deep-work/">
+<meta name="theme-color" content="#FFF7EA">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Deep work explained: what it is and how to start small",
+  "description": "What deep work means, what the research says about switching tasks and daily limits, and 6 small steps to start.",
+  "image": "https://focusland.co/img/og.png",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "mainEntityOfPage": "https://focusland.co/deep-work/",
+  "author": { "@type": "Organization", "name": "Rosebud Studio", "url": "https://focusland.co/" },
+  "publisher": { "@type": "Organization", "name": "Rosebud Studio", "logo": { "@type": "ImageObject", "url": "https://focusland.co/img/icon.png" } }
+}
+</script>
+<style>
+  :root {
+    --ink:#3B2614; --cream:#FFF7EA; --white:#FFFFFF; --orange:#F4A340; --green:#9BD06E;
+    --coin:#F6C443; --sky:#BDE2F2; --soft:#E6D6C1; --muted:#5A3C22;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family:Nunito, system-ui, sans-serif; font-weight:700; line-height:1.55; }
+  h1, h2, h3 { font-family:Fredoka, system-ui, sans-serif; font-weight:700; line-height:1.1; margin:0; }
+  a { color:inherit; }
+  img { display:block; max-width:100%; }
+  .wrap { max-width:760px; margin:0 auto; }
+
+  /* Chunky button, like the app's */
+  .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border:3px solid var(--ink); border-radius:18px;
+         background:var(--orange); color:var(--ink); font-family:Fredoka, sans-serif; font-weight:600; font-size:19px;
+         text-decoration:none; box-shadow:0 6px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  .btn:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--ink); }
+  .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
+
+  /* Header, like the app's: cream, full width, a brown line along the bottom */
+  header { background:var(--cream); border-bottom:3px solid var(--ink); padding:14px 16px; position:sticky; top:0; z-index:10; }
+  nav { max-width:1080px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; position:relative; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:Fredoka, sans-serif; font-size:26px; text-decoration:none; }
+  .logo img { width:42px; height:42px; border-radius:11px; border:2.5px solid var(--ink); }
+  nav .links { display:flex; gap:20px; font-size:15px; }
+  nav .links a { text-decoration:none; }
+  nav .links a[aria-current] { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; }
+  .menubtn { display:none; width:46px; height:46px; border:3px solid var(--ink); border-radius:50%; background:var(--cream); color:var(--ink);
+             box-shadow:0 4px 0 var(--ink); padding:0; place-items:center; cursor:pointer; transition:transform .08s, box-shadow .08s; }
+  .menubtn:active { transform:translateY(3px); box-shadow:0 1px 0 var(--ink); }
+  .menubtn svg { width:22px; height:22px; }
+  .menu { position:absolute; top:58px; right:0; width:min(260px, calc(100vw - 32px)); display:flex; flex-direction:column; text-align:left;
+          background:var(--cream); border:3px solid var(--ink); border-radius:22px; box-shadow:0 6px 0 var(--ink); padding:8px; }
+  .menu[hidden] { display:none; }
+  .menu a { font-family:Fredoka, sans-serif; font-weight:600; font-size:20px; text-decoration:none; padding:12px 14px; border-radius:14px; }
+  .menu a + a { border-top:2px solid var(--soft); border-radius:0 0 14px 14px; }
+  .menu a:active { background:#F1E4D3; }
+  @media (max-width:820px) { nav .links { display:none; } .menubtn { display:grid; } }
+
+  main { padding:56px 16px 96px; }
+  .intro { display:flex; align-items:center; gap:22px; }
+  .intro img { width:120px; flex-shrink:0; }
+  h1 { font-size:clamp(40px, 7vw, 60px); }
+  .intro p { margin:8px 0 0; font-size:18px; color:var(--muted); }
+
+  .card { background:var(--white); border:3px solid var(--ink); border-radius:24px; box-shadow:0 6px 0 var(--ink); padding:22px; }
+  .contact { margin-top:36px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+  .contact h2 { font-size:24px; }
+  .contact p { margin:4px 0 0; color:var(--muted); }
+
+  .contact { scroll-margin-top:96px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn.white { background:var(--white); }
+  .email { color:var(--ink); word-break:break-all; }
+  .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
+  h2.faqhead { font-size:30px; margin:56px 0 16px; }
+  .faq { display:flex; flex-direction:column; gap:14px; }
+  details { background:var(--white); border:3px solid var(--ink); border-radius:20px; box-shadow:0 4px 0 var(--ink); }
+  summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px;
+            padding:16px 18px; font-family:Fredoka, sans-serif; font-weight:600; font-size:19px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:""; width:12px; height:12px; flex-shrink:0; border-right:3px solid var(--ink); border-bottom:3px solid var(--ink);
+                   margin-top:-6px; transform:rotate(45deg); transition:transform .15s; }
+  details[open] summary::after { margin-top:6px; transform:rotate(-135deg); }
+  details .a { border-top:2px solid var(--soft); margin:0 18px; padding:14px 0 18px; }
+  details .a p { margin:0; }
+  details .a p + p { margin-top:10px; }
+  .path { background:#F1E4D3; border-radius:8px; padding:1px 7px; white-space:nowrap; }
+
+  footer { background:var(--ink); color:var(--cream); padding:48px 16px 28px; font-size:15px; }
+  footer .wrap { max-width:1080px; }
+  .footgrid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; }
+  .footbrand .logo { color:var(--cream); }
+  .footbrand .logo img { border-color:var(--cream); }
+  .footbrand p { margin:10px 0 0; color:#E9DCC8; font-size:17px; }
+  .footcol { display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+  .footcol b { font-family:Fredoka, sans-serif; font-size:18px; margin-bottom:4px; }
+  .footcol a { color:#E9DCC8; text-decoration:none; }
+  .footcol a:hover { color:var(--cream); text-decoration:underline; }
+  .footbottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:44px; padding-top:18px; border-top:2px solid rgba(255,247,234,.18); color:#C9BBA6; font-size:14px; }
+  .verse { font-style:italic; }
+  @media (max-width:600px) { .footgrid { grid-template-columns:1fr 1fr; } .footbrand { grid-column:1 / -1; }
+    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .btns { width:100%; flex-direction:column; } .contact .btn { width:100%; justify-content:center; } }
+
+  .article { padding:48px 16px 96px; max-width:700px; }
+  .eyebrow { font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+  .article h1 { font-size:clamp(34px, 6vw, 50px); }
+  .article .lede { font-size:20px; margin:18px 0 0; }
+  .article h2 { font-size:clamp(26px, 4vw, 32px); margin:48px 0 12px; }
+  .article h3 { font-size:21px; margin:26px 0 6px; }
+  .article p, .article li { font-size:18px; }
+  .article p { margin:0 0 14px; }
+  .article ul, .article ol { padding-left:22px; margin:0 0 14px; }
+  .article li { margin-bottom:10px; }
+  .article figure { margin:32px auto; max-width:440px; }
+  .card.cta { text-align:center; margin:40px 0 0; }
+  .card.cta h2 { margin:0 0 6px; }
+  .card.cta p { color:var(--muted); }
+  .byline { font-size:15px; color:var(--muted); margin:12px 0 0 !important; }
+  .article sup { font-size:.7em; line-height:0; }
+  .article sup a { text-decoration:none; color:var(--muted); padding:0 1px; }
+  .article p a, .sources a { text-decoration-thickness:2px; text-underline-offset:3px; }
+  .sources li { font-size:15px !important; color:var(--muted); word-break:break-word; scroll-margin-top:96px; }
+</style>
+<script src="/analytics.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+    <div class="links"><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+    <button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="menu" id="menu" hidden><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+  </nav>
+</header>
+
+<main class="article wrap">
+  <p class="eyebrow"><a href="/articles/">Articles</a></p>
+  <h1>Deep work explained: what it is and how to start small</h1>
+  <p class="byline">By Rosebud Studio, the makers of Focusland. Updated November 8, 2026.</p>
+  <p class="lede">Deep work is a fancy name for a plain idea: one hard thing, no distractions, for a set stretch of time. You don't need a cabin in the woods or a perfect morning routine to do it. You need one clear task, a bit of protected time, and a kind way to start small.</p>
+
+  <figure><img class="loop" data-base="/img/ArtDeepWork" src="/img/ArtDeepWork0.webp" alt="A grey tabby cat writing in a big notebook at a low desk, with a candle lit and the phone set aside" style="max-width:320px;margin:0 auto"></figure>
+
+  <h2>What is deep work?</h2>
+  <p>The term comes from Cal Newport, a computer science professor, and his 2016 book <i>Deep Work</i>. He uses it for focused, distraction-free effort on something mentally demanding, the kind of task that stretches what you can do. Writing an essay, solving a tricky problem, learning a hard chapter and designing something new all count.</p>
+  <p>Its opposite is shallow work: small, easy tasks you can do while half distracted, like answering messages, filing things or tidying your notes. Shallow work isn't bad. Plenty of it has to get done. The trouble is that it fills the day by itself, while deep work only happens if you make room for it.</p>
+  <p>Newport's main claim is that this skill is getting more valuable as it gets more rare.<sup><a href="#s1">1</a></sup> That's an argument from a book, not a lab result, so take it as a useful way to think. The research below supports parts of the idea, and it's mixed on others.</p>
+
+  <h2>Why it's so hard to stay on one thing</h2>
+  <p>Switching tasks has a price. In lab experiments, people who switched between two tasks were slower than people who stayed with one, and the cost grew as the tasks got more complex.<sup><a href="#s2">2</a></sup> A quick check of a message feels free, but your brain has to find its place again when you come back.</p>
+  <p>Part of your mind can also stay behind. Business professor Sophie Leroy called this attention residue. In her experiments, people who moved on from an unfinished task did worse on the next one, because their thoughts stayed on the first. Even finishing wasn't always enough: people who finished without time pressure also did worse than people who finished under a deadline.<sup><a href="#s3">3</a></sup> These were short lab tasks, so we can't say how much residue a real workday leaves. Still, it matches what many of us feel after "just checking" something.</p>
+  <p>For more on why attention drifts in the first place, see <a href="/how-to-focus-when-studying/">how to focus when studying</a>.</p>
+
+  <h2>How much deep work can you do in a day?</h2>
+  <p>Less than you'd think, and that's fine. A classic 1993 paper on expert performance, built around student violinists, argued that this kind of effortful practice has a daily limit, with little extra benefit past about four hours, and that people need regular rest to recover.<sup><a href="#s4">4</a></sup> This is where the popular "four hours of deep work" number comes from.</p>
+  <p>Two cautions. That paper was about practice, not office work or studying, so four hours is a rough ceiling and not a target. And when researchers repeated the violin study in 2019, they did not reproduce its core finding that total practice lined up with each skill level. Practice still mattered, but the effect was considerably smaller than the original.<sup><a href="#s5">5</a></sup></p>
+  <p>If you're new to this, one good hour is a real win. Many people will do better aiming for that than failing at four.</p>
+
+  <h2>How to do deep work, in 6 small steps</h2>
+  <p>These are practical ideas, not proven formulas. Try them and keep what fits your life.</p>
+
+  <h3>1. Pick one task and write it down</h3>
+  <p>"Work on my thesis" is too foggy. "Write the first draft of the methods section" tells you when you're done. Decide before you sit down, so you don't spend your best minutes choosing.</p>
+
+  <h3>2. Put it on the calendar</h3>
+  <p>Treat it like an appointment with yourself. The same time each day works well, since you stop having to decide at all. Here's more on <a href="/how-to-build-a-study-habit/">building a study habit that sticks</a>.</p>
+
+  <h3>3. Give it an end time</h3>
+  <p>A clear finish makes hard work feel less endless. It may help you let go afterwards too, given Leroy's finding about deadlines, though nobody has tested a personal timer in quite that way. A 25 or 50 minute block is a friendly place to begin. The <a href="/pomodoro-technique/">Pomodoro technique</a> gives you a simple shape for it.</p>
+
+  <h3>4. Clear small loose ends first</h3>
+  <p>Before you start, spend a couple of minutes on anything nagging at you. Answer the one message, or write the thought on paper for later. When you have to stop mid-task, leave yourself a short note about what comes next, so the task feels parked instead of hanging open.</p>
+
+  <h3>5. Make your phone hard to reach</h3>
+  <p>The evidence here is less tidy than the headlines. A meta-analysis of the "brain drain" idea, covering more than 7,000 participants, found a small effect on working memory from a phone simply being nearby and no effect on other kinds of thinking, and it warned that many of the studies were weak.<sup><a href="#s6">6</a></sup> The simpler reason still holds: if the phone is across the room, you can't pick it up on autopilot.</p>
+
+  <h3>6. Start short, then rest for real</h3>
+  <p>Focus is something you can build up gently. Start with one block a day. Add a second when the first feels normal. Between blocks, get up and move rather than scrolling. Here's <a href="/how-long-should-study-breaks-be/">how long study breaks should be</a>.</p>
+
+  <h2>When deep work isn't the answer</h2>
+  <p>Some jobs and some seasons of life don't allow long quiet stretches, and caring for kids or working shifts doesn't mean you've failed at focus. Twenty honest minutes still count. If trouble focusing is constant or gets in the way of daily life, it's worth talking to a doctor. Nothing here is a treatment for ADHD or any other condition.</p>
+
+  <h2>How Focusland helps</h2>
+  <p>Focusland is a cozy focus timer for iPhone, and it's built around this kind of block. You pick a room, sit at a little table next to others, write what you're working on in the task box, and start a 25 minute, 50 minute or no-timer session. Short breaks (5 minutes) and long breaks (15 minutes) are built in, so resting is part of the plan.</p>
+  <p>Finishing sessions earns coins and keeps your daily streak going, and coins open new rooms. If a session goes badly, Hold to Give Up lets you stop without losing your streak, so one rough hour doesn't undo a good week.</p>
+
+  <div class="card cta">
+    <h2>Pull up a chair.</h2>
+    <p>Focusland is coming soon to the App Store for iPhone.</p>
+    <a class="btn" href="/">See Focusland</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <h3>How long should a deep work session be?</h3>
+  <p>There's no proven best length. Many people start with 25 to 50 minutes and build up to 60 or 90 if that feels good. Pick a length you can finish, then adjust.</p>
+  <h3>Is deep work the same as flow?</h3>
+  <p>They're related, but not the same. Deep work is something you choose and set up. Flow is the feeling of being fully absorbed, and it may or may not show up. You can do good deep work without it.</p>
+  <h3>Can students use deep work?</h3>
+  <p>Yes. Studying is a natural fit, especially hard reading, practice problems and self-quizzing. Pair your blocks with <a href="/spaced-repetition/">spaced repetition</a> so the time goes further.</p>
+  <h3>Can I listen to music during deep work?</h3>
+  <p>It depends on you and the task. Lyrics tend to get in the way of reading and writing, while steady background sound suits some people. Here's our guide to <a href="/best-sounds-for-focus/">the best sounds for focus</a>.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ol class="sources">
+    <li id="s1">Newport, C. (2016). <i>Deep Work: Rules for Focused Success in a Distracted World</i>. Grand Central Publishing. Author's page: <a href="https://calnewport.com/deep-work-rules-for-focused-success-in-a-distracted-world/">calnewport.com</a></li>
+    <li id="s2">Rubinstein, J. S., Meyer, D. E., &amp; Evans, J. E. (2001). Executive control of cognitive processes in task switching. <i>Journal of Experimental Psychology: Human Perception and Performance</i>, 27(4), 763–797. <a href="https://doi.org/10.1037/0096-1523.27.4.763">doi.org/10.1037/0096-1523.27.4.763</a></li>
+    <li id="s3">Leroy, S. (2009). Why is it so hard to do my work? The challenge of attention residue when switching between work tasks. <i>Organizational Behavior and Human Decision Processes</i>, 109(2), 168–181. <a href="https://doi.org/10.1016/j.obhdp.2009.04.002">doi.org/10.1016/j.obhdp.2009.04.002</a></li>
+    <li id="s4">Ericsson, K. A., Krampe, R. T., &amp; Tesch-Römer, C. (1993). The role of deliberate practice in the acquisition of expert performance. <i>Psychological Review</i>, 100(3), 363–406. <a href="https://doi.org/10.1037/0033-295X.100.3.363">doi.org/10.1037/0033-295X.100.3.363</a></li>
+    <li id="s5">Macnamara, B. N., &amp; Maitra, M. (2019). The role of deliberate practice in expert performance: Revisiting Ericsson, Krampe &amp; Tesch-Römer (1993). <i>Royal Society Open Science</i>, 6(8), 190327. <a href="https://doi.org/10.1098/rsos.190327">doi.org/10.1098/rsos.190327</a></li>
+    <li id="s6">Parry, D. A. (2024). Does the mere presence of a smartphone impact cognitive performance? A meta-analysis of the "brain drain effect". <i>Media Psychology</i>, 27(5), 737–762. <a href="https://doi.org/10.1080/15213269.2023.2286647">doi.org/10.1080/15213269.2023.2286647</a></li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap footgrid">
+    <div class="footbrand">
+      <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+      <p>Never focus alone.</p>
+    </div>
+    <nav class="footcol" aria-label="Product">
+      <b>Focusland</b>
+      <a href="/#how">How it works</a>
+      <a href="/#rooms">Rooms</a>
+      <a href="/#plus">Focusland+</a>
+      <a href="/articles/">Articles</a>
+    </nav>
+    <nav class="footcol" aria-label="Help">
+      <b>Help</b>
+      <a href="/support.html">Support</a>
+      <a href="/support.html#contact">Contact</a>
+      <a href="https://dcardines-design.github.io/focusland-legal/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
+      <a href="https://www.instagram.com/focusland.app/" rel="me">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap footbottom">
+    <span>© 2026 Focusland. Made with love by Rosebud Studio.</span>
+    <span class="verse">Matthew 6:34. Live it one day at a time, and trust God for tomorrow.</span>
+  </div>
+</footer>
+
+<script>
+  // Phone menu: the round button opens the links card; tapping a link or anywhere else closes it.
+  (function () {
+    var btn = document.querySelector('.menubtn'), menu = document.getElementById('menu');
+    function set(open) { menu.hidden = !open; btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); set(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
+  (function () {
+    var count = 0;
+    setInterval(function () {
+      document.querySelectorAll('img.loop').forEach(function (img) {
+        if (img._frame === undefined) {
+          img._frame = count++ % 4;
+          for (var k = 0; k < 4; k++) { new Image().src = img.dataset.base + k + '.webp'; }
+        }
+        img._frame = (img._frame + 1) % 4;
+        img.src = img.dataset.base + img._frame + '.webp';
+      });
+    }, 250);
+  })();
+</script>
+</body>
+</html>
