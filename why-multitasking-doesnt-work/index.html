@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Multitasking Doesn't Work (and What to Do Instead) | Focusland</title>
+<meta name="description" content="Multitasking feels productive, but research shows switching tasks costs time and focus. What studies say, and simple ways to do one thing at a time.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Focusland">
+<meta property="og:url" content="https://focusland.co/why-multitasking-doesnt-work/">
+<meta property="og:title" content="Why multitasking doesn't work (and what to do instead)">
+<meta property="og:description" content="What research says about switching between tasks, and gentle ways to focus on one thing at a time.">
+<meta property="og:image" content="https://focusland.co/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://focusland.co/why-multitasking-doesnt-work/">
+<meta name="theme-color" content="#FFF7EA">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why multitasking doesn't work (and what to do instead)",
+  "description": "What research says about switching between tasks, and gentle ways to focus on one thing at a time.",
+  "image": "https://focusland.co/img/og.png",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "mainEntityOfPage": "https://focusland.co/why-multitasking-doesnt-work/",
+  "author": { "@type": "Organization", "name": "Rosebud Studio", "url": "https://focusland.co/" },
+  "publisher": { "@type": "Organization", "name": "Rosebud Studio", "logo": { "@type": "ImageObject", "url": "https://focusland.co/img/icon.png" } }
+}
+</script>
+<style>
+  :root {
+    --ink:#3B2614; --cream:#FFF7EA; --white:#FFFFFF; --orange:#F4A340; --green:#9BD06E;
+    --coin:#F6C443; --sky:#BDE2F2; --soft:#E6D6C1; --muted:#5A3C22;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family:Nunito, system-ui, sans-serif; font-weight:700; line-height:1.55; }
+  h1, h2, h3 { font-family:Fredoka, system-ui, sans-serif; font-weight:700; line-height:1.1; margin:0; }
+  a { color:inherit; }
+  img { display:block; max-width:100%; }
+  .wrap { max-width:760px; margin:0 auto; }
+
+  /* Chunky button, like the app's */
+  .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border:3px solid var(--ink); border-radius:18px;
+         background:var(--orange); color:var(--ink); font-family:Fredoka, sans-serif; font-weight:600; font-size:19px;
+         text-decoration:none; box-shadow:0 6px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  .btn:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--ink); }
+  .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
+
+  /* Header, like the app's: cream, full width, a brown line along the bottom */
+  header { background:var(--cream); border-bottom:3px solid var(--ink); padding:14px 16px; position:sticky; top:0; z-index:10; }
+  nav { max-width:1080px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; position:relative; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:Fredoka, sans-serif; font-size:26px; text-decoration:none; }
+  .logo img { width:42px; height:42px; border-radius:11px; border:2.5px solid var(--ink); }
+  nav .links { display:flex; gap:20px; font-size:15px; }
+  nav .links a { text-decoration:none; }
+  nav .links a[aria-current] { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; }
+  .menubtn { display:none; width:46px; height:46px; border:3px solid var(--ink); border-radius:50%; background:var(--cream); color:var(--ink);
+             box-shadow:0 4px 0 var(--ink); padding:0; place-items:center; cursor:pointer; transition:transform .08s, box-shadow .08s; }
+  .menubtn:active { transform:translateY(3px); box-shadow:0 1px 0 var(--ink); }
+  .menubtn svg { width:22px; height:22px; }
+  .menu { position:absolute; top:58px; right:0; width:min(260px, calc(100vw - 32px)); display:flex; flex-direction:column; text-align:left;
+          background:var(--cream); border:3px solid var(--ink); border-radius:22px; box-shadow:0 6px 0 var(--ink); padding:8px; }
+  .menu[hidden] { display:none; }
+  .menu a { font-family:Fredoka, sans-serif; font-weight:600; font-size:20px; text-decoration:none; padding:12px 14px; border-radius:14px; }
+  .menu a + a { border-top:2px solid var(--soft); border-radius:0 0 14px 14px; }
+  .menu a:active { background:#F1E4D3; }
+  @media (max-width:820px) { nav .links { display:none; } .menubtn { display:grid; } }
+
+  main { padding:56px 16px 96px; }
+  .intro { display:flex; align-items:center; gap:22px; }
+  .intro img { width:120px; flex-shrink:0; }
+  h1 { font-size:clamp(40px, 7vw, 60px); }
+  .intro p { margin:8px 0 0; font-size:18px; color:var(--muted); }
+
+  .card { background:var(--white); border:3px solid var(--ink); border-radius:24px; box-shadow:0 6px 0 var(--ink); padding:22px; }
+  .contact { margin-top:36px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+  .contact h2 { font-size:24px; }
+  .contact p { margin:4px 0 0; color:var(--muted); }
+
+  .contact { scroll-margin-top:96px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn.white { background:var(--white); }
+  .email { color:var(--ink); word-break:break-all; }
+  .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
+  h2.faqhead { font-size:30px; margin:56px 0 16px; }
+  .faq { display:flex; flex-direction:column; gap:14px; }
+  details { background:var(--white); border:3px solid var(--ink); border-radius:20px; box-shadow:0 4px 0 var(--ink); }
+  summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px;
+            padding:16px 18px; font-family:Fredoka, sans-serif; font-weight:600; font-size:19px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:""; width:12px; height:12px; flex-shrink:0; border-right:3px solid var(--ink); border-bottom:3px solid var(--ink);
+                   margin-top:-6px; transform:rotate(45deg); transition:transform .15s; }
+  details[open] summary::after { margin-top:6px; transform:rotate(-135deg); }
+  details .a { border-top:2px solid var(--soft); margin:0 18px; padding:14px 0 18px; }
+  details .a p { margin:0; }
+  details .a p + p { margin-top:10px; }
+  .path { background:#F1E4D3; border-radius:8px; padding:1px 7px; white-space:nowrap; }
+
+  footer { background:var(--ink); color:var(--cream); padding:48px 16px 28px; font-size:15px; }
+  footer .wrap { max-width:1080px; }
+  .footgrid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; }
+  .footbrand .logo { color:var(--cream); }
+  .footbrand .logo img { border-color:var(--cream); }
+  .footbrand p { margin:10px 0 0; color:#E9DCC8; font-size:17px; }
+  .footcol { display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+  .footcol b { font-family:Fredoka, sans-serif; font-size:18px; margin-bottom:4px; }
+  .footcol a { color:#E9DCC8; text-decoration:none; }
+  .footcol a:hover { color:var(--cream); text-decoration:underline; }
+  .footbottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:44px; padding-top:18px; border-top:2px solid rgba(255,247,234,.18); color:#C9BBA6; font-size:14px; }
+  .verse { font-style:italic; }
+  @media (max-width:600px) { .footgrid { grid-template-columns:1fr 1fr; } .footbrand { grid-column:1 / -1; }
+    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .btns { width:100%; flex-direction:column; } .contact .btn { width:100%; justify-content:center; } }
+
+  .article { padding:48px 16px 96px; max-width:700px; }
+  .eyebrow { font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+  .article h1 { font-size:clamp(34px, 6vw, 50px); }
+  .article .lede { font-size:20px; margin:18px 0 0; }
+  .article h2 { font-size:clamp(26px, 4vw, 32px); margin:48px 0 12px; }
+  .article h3 { font-size:21px; margin:26px 0 6px; }
+  .article p, .article li { font-size:18px; }
+  .article p { margin:0 0 14px; }
+  .article ul, .article ol { padding-left:22px; margin:0 0 14px; }
+  .article li { margin-bottom:10px; }
+  .article figure { margin:32px auto; max-width:440px; }
+  .card.cta { text-align:center; margin:40px 0 0; }
+  .card.cta h2 { margin:0 0 6px; }
+  .card.cta p { color:var(--muted); }
+  .byline { font-size:15px; color:var(--muted); margin:12px 0 0 !important; }
+  .article sup { font-size:.7em; line-height:0; }
+  .article sup a { text-decoration:none; color:var(--muted); padding:0 1px; }
+  .article p a, .sources a { text-decoration-thickness:2px; text-underline-offset:3px; }
+  .sources li { font-size:15px !important; color:var(--muted); word-break:break-word; scroll-margin-top:96px; }
+</style>
+<script src="/analytics.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+    <div class="links"><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+    <button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="menu" id="menu" hidden><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+  </nav>
+</header>
+
+<main class="article wrap">
+  <p class="eyebrow"><a href="/articles/">Articles</a></p>
+  <h1>Why multitasking doesn't work (and what to do instead)</h1>
+  <p class="byline">By Rosebud Studio, the makers of Focusland. Updated November 15, 2026.</p>
+  <p class="lede">Notes open, a lecture playing, a group chat buzzing, a show in the corner of the screen. It feels like you're getting a lot done at once. Research tells a different story: most of the time your brain isn't doing two things together, it's hopping between them, and every hop costs a little. Here's what the studies say, where the evidence is still mixed, and some gentle ways to do one thing at a time.</p>
+
+  <figure><img class="loop" data-base="/img/ArtOneThing" src="/img/ArtOneThing0.webp" alt="An orange tabby cat reading one open book at a small wooden table, with a mug of tea beside it and a phone lying face down on the grass" style="max-width:320px;margin:0 auto"></figure>
+
+  <h2>What multitasking really is</h2>
+  <p>When people say they're multitasking, they usually mean one of two things. Sometimes it's doing two things at the very same moment, like reading while listening to a podcast. More often it's switching back and forth: a paragraph of the essay, a quick reply, back to the essay, a glance at your phone.</p>
+  <p>Simple, automatic things can run alongside each other just fine. You can walk and chat. The trouble starts when two tasks both need your thinking, like reading for meaning and writing a message. Then your attention has to take turns, and the switching is where time and focus leak away.</p>
+
+  <h2>The hidden cost of switching</h2>
+  <p>Psychologists have studied this for decades using "task switching" experiments, where people flip between two simple jobs, like sorting shapes one way and then another. The finding is steady: people are slower and make more mistakes right after a switch than when they repeat the same task.<sup><a href="#s1">1</a></sup></p>
+  <p>In a well-known set of experiments, Joshua Rubinstein, David Meyer and Jeffrey Evans found that these switch costs grew when the tasks were more complex or less familiar. Their explanation is that your brain has to change "goals" and load the rules for the new task each time you switch, and that takes time.<sup><a href="#s2">2</a></sup></p>
+  <p>Even more telling: the cost doesn't fully go away when people know a switch is coming and have time to get ready.<sup><a href="#s1">1</a></sup> Each switch is small, often a fraction of a second in the lab. But a real study session might hold dozens or hundreds of them, and real tasks, like an essay, take far more to reload than sorting shapes.</p>
+
+  <h2>What it does to learning</h2>
+  <p>Switching costs don't just slow you down. They can make you take in less. In one study, Faria Sana, Tina Weston and Nicholas Cepeda had university students listen to a lecture and take notes on laptops. Students who were asked to do small online tasks during the lecture scored lower on a test afterwards than those who only took notes.<sup><a href="#s3">3</a></sup></p>
+  <p>The surprising part came in a second experiment. Students who simply sat where they could see a classmate's multitasking screen also scored lower than those who couldn't.<sup><a href="#s3">3</a></sup> Distraction, it seems, can spread to the people around you.</p>
+
+  <h2>What about heavy multitaskers?</h2>
+  <p>You might think lots of practice would make you better at it. A 2009 study by Eyal Ophir, Clifford Nass and Anthony Wagner compared people who use many kinds of media at once a lot with people who do it less. The heavy media multitaskers were more thrown off by things that didn't matter, and they were actually slower at switching between tasks, not faster.<sup><a href="#s4">4</a></sup></p>
+  <p>Here the honest answer is that the picture is mixed. A later review by Melina Uncapher and Anthony Wagner found that heavy media multitaskers often do worse on some tests of attention and memory, but not on every test, and some studies didn't find a difference.<sup><a href="#s5">5</a></sup> These studies also can't show cause and effect. Multitasking might wear down attention, or people who get distracted easily might simply multitask more.</p>
+  <p>A 2020 study from the same lab measured attention moment to moment while people learned new things. When their attention drifted just before trying to remember something, they were more likely to forget it, and heavier media multitaskers tended to drift more.<sup><a href="#s6">6</a></sup> It's one more hint, not a final word.</p>
+
+  <h2>Aren't some people good at it?</h2>
+  <p>A few, yes. In a driving simulator study, Jason Watson and David Strayer found that only 5 of 200 people could talk on a hands-free phone while driving without doing worse at either task. They called them "supertaskers".<sup><a href="#s7">7</a></sup> Almost everyone else got worse at one or both.</p>
+  <p>So it's possible you're one of the rare ones. It's much more likely that multitasking feels productive without actually being so.</p>
+
+  <h2>What to do instead</h2>
+  <p>You don't need to become a monk. Small changes to how you set up a session go a long way. Try one or two.</p>
+  <ul>
+    <li><b>Pick one task per session.</b> Write it down before you start, as a clear action: "draft the methods section", not "work on report". Everything else waits on a list.</li>
+    <li><b>Batch the small stuff.</b> Messages, emails and quick replies go together in one short block, instead of sprinkled through your focus time. <a href="/time-blocking/">Time blocking</a> is one simple way to do this.</li>
+    <li><b>Put your phone out of sight.</b> Face down is good, another room is better. Silence notifications for the length of a session.</li>
+    <li><b>Close the extra tabs.</b> Keep open only what the one task needs. If something else pops into your head, jot it down and get back to work.</li>
+    <li><b>Use a timer with a clear end.</b> Short rounds, like <a href="/pomodoro-technique/">the Pomodoro Technique's</a> 25 minutes, make single-tasking feel doable, because you know a break is coming.</li>
+    <li><b>Save switching for breaks.</b> Want to check something? Do it on your break, then start the next round fresh.</li>
+    <li><b>Mind your seat.</b> If you study near others, pick a spot where you can't see busy screens, and be kind to your neighbors by keeping yours on the work.</li>
+  </ul>
+  <p>For longer stretches of hard, focused work, <a href="/deep-work/">deep work</a> builds on the same idea: fewer switches, more time on one meaningful thing.</p>
+
+  <h2>A note on ADHD</h2>
+  <p>If staying on one task feels much harder for you than for the people around you, and it gets in the way of school, work or home life, it's worth talking to a doctor. These tips are everyday habits, not a treatment for ADHD or any other condition.</p>
+
+  <h2>How Focusland helps</h2>
+  <p>Focusland is set up for doing one thing at a time. You pick a cozy room, sit at a little table next to other studying cats, and write what you're working on in the task box. Then you start a 25 minute, 50 minute or no-timer session. Between rounds there's a 5 minute short break or a 15 minute long break, a natural place to check messages before the next round.</p>
+  <p>Finishing a session earns coins for new rooms and keeps your daily streak going. If something urgent comes up, Hold to Give Up ends the round without breaking your streak.</p>
+  <figure><img class="loop" data-base="/img/HowDuo" src="/img/HowDuo0.webp" alt="Two cats studying side by side at a little table"></figure>
+
+  <div class="card cta">
+    <h2>Pull up a chair.</h2>
+    <p>Focusland is coming soon to the App Store for iPhone.</p>
+    <a class="btn" href="/">See Focusland</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <h3>Is multitasking bad for your brain?</h3>
+  <p>There's no good evidence that it harms your brain. Heavy media multitaskers do tend to score worse on some attention and memory tests, but studies can't yet say whether multitasking causes that, and results are mixed.</p>
+  <h3>Can you study while listening to music?</h3>
+  <p>Background sound isn't the same as switching between tasks, and many people like it. If you notice you're following the lyrics instead of your notes, try music without words or soft ambient sound. Our guide to <a href="/best-sounds-for-focus/">sounds for focus</a> goes into more detail.</p>
+  <h3>Why does multitasking feel productive?</h3>
+  <p>Each switch brings something new, which can feel lively and busy. But busy isn't the same as done. Lab studies show people are slower and make more mistakes right after switching tasks.</p>
+  <h3>How do I stop multitasking?</h3>
+  <p>Start small: one task written down, phone out of sight, a timer for 25 minutes, and messages saved for the break. Once that feels normal, try longer rounds.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ol class="sources">
+    <li id="s1">Monsell, S. (2003). Task switching. <i>Trends in Cognitive Sciences</i>, 7(3), 134–140. <a href="https://doi.org/10.1016/S1364-6613(03)00028-7">doi.org/10.1016/S1364-6613(03)00028-7</a></li>
+    <li id="s2">Rubinstein, J. S., Meyer, D. E., &amp; Evans, J. E. (2001). Executive control of cognitive processes in task switching. <i>Journal of Experimental Psychology: Human Perception and Performance</i>, 27(4), 763–797. <a href="https://doi.org/10.1037/0096-1523.27.4.763">doi.org/10.1037/0096-1523.27.4.763</a></li>
+    <li id="s3">Sana, F., Weston, T., &amp; Cepeda, N. J. (2013). Laptop multitasking hinders classroom learning for both users and nearby peers. <i>Computers &amp; Education</i>, 62, 24–31. <a href="https://doi.org/10.1016/j.compedu.2012.10.003">doi.org/10.1016/j.compedu.2012.10.003</a></li>
+    <li id="s4">Ophir, E., Nass, C., &amp; Wagner, A. D. (2009). Cognitive control in media multitaskers. <i>Proceedings of the National Academy of Sciences</i>, 106(37), 15583–15587. <a href="https://doi.org/10.1073/pnas.0903620106">doi.org/10.1073/pnas.0903620106</a></li>
+    <li id="s5">Uncapher, M. R., &amp; Wagner, A. D. (2018). Minds and brains of media multitaskers: Current findings and future directions. <i>Proceedings of the National Academy of Sciences</i>, 115(40), 9889–9896. <a href="https://doi.org/10.1073/pnas.1611612115">doi.org/10.1073/pnas.1611612115</a></li>
+    <li id="s6">Madore, K. P., Khazenzon, A. M., Backes, C. W., Jiang, J., Uncapher, M. R., Norcia, A. M., &amp; Wagner, A. D. (2020). Memory failure predicted by attention lapsing and media multitasking. <i>Nature</i>, 587(7832), 87–91. <a href="https://doi.org/10.1038/s41586-020-2870-z">doi.org/10.1038/s41586-020-2870-z</a></li>
+    <li id="s7">Watson, J. M., &amp; Strayer, D. L. (2010). Supertaskers: Profiles in extraordinary multitasking ability. <i>Psychonomic Bulletin &amp; Review</i>, 17(4), 479–485. <a href="https://doi.org/10.3758/PBR.17.4.479">doi.org/10.3758/PBR.17.4.479</a></li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap footgrid">
+    <div class="footbrand">
+      <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+      <p>Never focus alone.</p>
+    </div>
+    <nav class="footcol" aria-label="Product">
+      <b>Focusland</b>
+      <a href="/#how">How it works</a>
+      <a href="/#rooms">Rooms</a>
+      <a href="/#plus">Focusland+</a>
+      <a href="/articles/">Articles</a>
+    </nav>
+    <nav class="footcol" aria-label="Help">
+      <b>Help</b>
+      <a href="/support.html">Support</a>
+      <a href="/support.html#contact">Contact</a>
+      <a href="https://dcardines-design.github.io/focusland-legal/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
+      <a href="https://www.instagram.com/focusland.app/" rel="me">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap footbottom">
+    <span>© 2026 Focusland. Made with love by Rosebud Studio.</span>
+    <span class="verse">Matthew 6:34. Live it one day at a time, and trust God for tomorrow.</span>
+  </div>
+</footer>
+
+<script>
+  // Phone menu: the round button opens the links card; tapping a link or anywhere else closes it.
+  (function () {
+    var btn = document.querySelector('.menubtn'), menu = document.getElementById('menu');
+    function set(open) { menu.hidden = !open; btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); set(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
+  (function () {
+    var count = 0;
+    setInterval(function () {
+      document.querySelectorAll('img.loop').forEach(function (img) {
+        if (img._frame === undefined) {
+          img._frame = count++ % 4;
+          for (var k = 0; k < 4; k++) { new Image().src = img.dataset.base + k + '.webp'; }
+        }
+        img._frame = (img._frame + 1) % 4;
+        img.src = img.dataset.base + img._frame + '.webp';
+      });
+    }, 250);
+  })();
+</script>
+</body>
+</html>
