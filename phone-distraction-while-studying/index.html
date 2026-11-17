@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Stop Getting Distracted by Your Phone While Studying | Focusland</title>
+<meta name="description" content="Your phone pulls at your focus even when it stays quiet. Here are 7 small, research-backed ways to keep it out of your study time, without quitting it.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Focusland">
+<meta property="og:url" content="https://focusland.co/phone-distraction-while-studying/">
+<meta property="og:title" content="How to stop getting distracted by your phone while studying">
+<meta property="og:description" content="Why your phone pulls at your attention, and 7 small ways to study without it.">
+<meta property="og:image" content="https://focusland.co/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://focusland.co/phone-distraction-while-studying/">
+<meta name="theme-color" content="#FFF7EA">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to stop getting distracted by your phone while studying",
+  "description": "What research says about phones, notifications and focus, and 7 small ways to keep your phone out of study time.",
+  "image": "https://focusland.co/img/og.png",
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-17",
+  "mainEntityOfPage": "https://focusland.co/phone-distraction-while-studying/",
+  "author": { "@type": "Organization", "name": "Rosebud Studio", "url": "https://focusland.co/" },
+  "publisher": { "@type": "Organization", "name": "Rosebud Studio", "logo": { "@type": "ImageObject", "url": "https://focusland.co/img/icon.png" } }
+}
+</script>
+<style>
+  :root {
+    --ink:#3B2614; --cream:#FFF7EA; --white:#FFFFFF; --orange:#F4A340; --green:#9BD06E;
+    --coin:#F6C443; --sky:#BDE2F2; --soft:#E6D6C1; --muted:#5A3C22;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family:Nunito, system-ui, sans-serif; font-weight:700; line-height:1.55; }
+  h1, h2, h3 { font-family:Fredoka, system-ui, sans-serif; font-weight:700; line-height:1.1; margin:0; }
+  a { color:inherit; }
+  img { display:block; max-width:100%; }
+  .wrap { max-width:760px; margin:0 auto; }
+
+  /* Chunky button, like the app's */
+  .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border:3px solid var(--ink); border-radius:18px;
+         background:var(--orange); color:var(--ink); font-family:Fredoka, sans-serif; font-weight:600; font-size:19px;
+         text-decoration:none; box-shadow:0 6px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  .btn:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--ink); }
+  .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
+
+  /* Header, like the app's: cream, full width, a brown line along the bottom */
+  header { background:var(--cream); border-bottom:3px solid var(--ink); padding:14px 16px; position:sticky; top:0; z-index:10; }
+  nav { max-width:1080px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; position:relative; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:Fredoka, sans-serif; font-size:26px; text-decoration:none; }
+  .logo img { width:42px; height:42px; border-radius:11px; border:2.5px solid var(--ink); }
+  nav .links { display:flex; gap:20px; font-size:15px; }
+  nav .links a { text-decoration:none; }
+  nav .links a[aria-current] { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; }
+  .menubtn { display:none; width:46px; height:46px; border:3px solid var(--ink); border-radius:50%; background:var(--cream); color:var(--ink);
+             box-shadow:0 4px 0 var(--ink); padding:0; place-items:center; cursor:pointer; transition:transform .08s, box-shadow .08s; }
+  .menubtn:active { transform:translateY(3px); box-shadow:0 1px 0 var(--ink); }
+  .menubtn svg { width:22px; height:22px; }
+  .menu { position:absolute; top:58px; right:0; width:min(260px, calc(100vw - 32px)); display:flex; flex-direction:column; text-align:left;
+          background:var(--cream); border:3px solid var(--ink); border-radius:22px; box-shadow:0 6px 0 var(--ink); padding:8px; }
+  .menu[hidden] { display:none; }
+  .menu a { font-family:Fredoka, sans-serif; font-weight:600; font-size:20px; text-decoration:none; padding:12px 14px; border-radius:14px; }
+  .menu a + a { border-top:2px solid var(--soft); border-radius:0 0 14px 14px; }
+  .menu a:active { background:#F1E4D3; }
+  @media (max-width:820px) { nav .links { display:none; } .menubtn { display:grid; } }
+
+  main { padding:56px 16px 96px; }
+  .intro { display:flex; align-items:center; gap:22px; }
+  .intro img { width:120px; flex-shrink:0; }
+  h1 { font-size:clamp(40px, 7vw, 60px); }
+  .intro p { margin:8px 0 0; font-size:18px; color:var(--muted); }
+
+  .card { background:var(--white); border:3px solid var(--ink); border-radius:24px; box-shadow:0 6px 0 var(--ink); padding:22px; }
+  .contact { margin-top:36px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+  .contact h2 { font-size:24px; }
+  .contact p { margin:4px 0 0; color:var(--muted); }
+
+  .contact { scroll-margin-top:96px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn.white { background:var(--white); }
+  .email { color:var(--ink); word-break:break-all; }
+  .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
+  h2.faqhead { font-size:30px; margin:56px 0 16px; }
+  .faq { display:flex; flex-direction:column; gap:14px; }
+  details { background:var(--white); border:3px solid var(--ink); border-radius:20px; box-shadow:0 4px 0 var(--ink); }
+  summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px;
+            padding:16px 18px; font-family:Fredoka, sans-serif; font-weight:600; font-size:19px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:""; width:12px; height:12px; flex-shrink:0; border-right:3px solid var(--ink); border-bottom:3px solid var(--ink);
+                   margin-top:-6px; transform:rotate(45deg); transition:transform .15s; }
+  details[open] summary::after { margin-top:6px; transform:rotate(-135deg); }
+  details .a { border-top:2px solid var(--soft); margin:0 18px; padding:14px 0 18px; }
+  details .a p { margin:0; }
+  details .a p + p { margin-top:10px; }
+  .path { background:#F1E4D3; border-radius:8px; padding:1px 7px; white-space:nowrap; }
+
+  footer { background:var(--ink); color:var(--cream); padding:48px 16px 28px; font-size:15px; }
+  footer .wrap { max-width:1080px; }
+  .footgrid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; }
+  .footbrand .logo { color:var(--cream); }
+  .footbrand .logo img { border-color:var(--cream); }
+  .footbrand p { margin:10px 0 0; color:#E9DCC8; font-size:17px; }
+  .footcol { display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+  .footcol b { font-family:Fredoka, sans-serif; font-size:18px; margin-bottom:4px; }
+  .footcol a { color:#E9DCC8; text-decoration:none; }
+  .footcol a:hover { color:var(--cream); text-decoration:underline; }
+  .footbottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:44px; padding-top:18px; border-top:2px solid rgba(255,247,234,.18); color:#C9BBA6; font-size:14px; }
+  .verse { font-style:italic; }
+  @media (max-width:600px) { .footgrid { grid-template-columns:1fr 1fr; } .footbrand { grid-column:1 / -1; }
+    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .btns { width:100%; flex-direction:column; } .contact .btn { width:100%; justify-content:center; } }
+
+  .article { padding:48px 16px 96px; max-width:700px; }
+  .eyebrow { font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+  .article h1 { font-size:clamp(34px, 6vw, 50px); }
+  .article .lede { font-size:20px; margin:18px 0 0; }
+  .article h2 { font-size:clamp(26px, 4vw, 32px); margin:48px 0 12px; }
+  .article h3 { font-size:21px; margin:26px 0 6px; }
+  .article p, .article li { font-size:18px; }
+  .article p { margin:0 0 14px; }
+  .article ul, .article ol { padding-left:22px; margin:0 0 14px; }
+  .article li { margin-bottom:10px; }
+  .article figure { margin:32px auto; max-width:440px; }
+  .card.cta { text-align:center; margin:40px 0 0; }
+  .card.cta h2 { margin:0 0 6px; }
+  .card.cta p { color:var(--muted); }
+  .byline { font-size:15px; color:var(--muted); margin:12px 0 0 !important; }
+  .article sup { font-size:.7em; line-height:0; }
+  .article sup a { text-decoration:none; color:var(--muted); padding:0 1px; }
+  .article p a, .sources a { text-decoration-thickness:2px; text-underline-offset:3px; }
+  .sources li { font-size:15px !important; color:var(--muted); word-break:break-word; scroll-margin-top:96px; }
+</style>
+<script src="/analytics.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+    <div class="links"><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+    <button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="menu" id="menu" hidden><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+  </nav>
+</header>
+
+<main class="article wrap">
+  <p class="eyebrow"><a href="/articles/">Articles</a></p>
+  <h1>How to stop getting distracted by your phone while studying</h1>
+  <p class="byline">By Rosebud Studio, the makers of Focusland. Updated November 17, 2026.</p>
+  <p class="lede">You sit down to study, and ten minutes later you're somehow watching a video about bread. Your phone is very good at pulling you away, and that isn't a lack of willpower on your part. The kind news is that you don't have to quit your phone. You just have to make it a little harder to reach while you work.</p>
+
+  <figure><img class="loop" data-base="/img/ArtPhoneBasket" src="/img/ArtPhoneBasket0.webp" alt="A happy tabby cat reading a book on the grass, with a phone tucked away in a little woven basket beside it" style="max-width:320px;margin:0 auto"></figure>
+
+  <h2>Why your phone is so hard to ignore</h2>
+  <p>Every buzz or ping is a tiny question: who was that? Even if you don't pick the phone up, part of your mind goes off to wonder. In one experiment, researchers at Florida State University gave people a task that needed steady attention, then secretly sent texts or calls to their phones while they worked. People who got a notification made more mistakes, even though they never touched their phone. The drop was about as big as when people actually used their phones during the task.<sup><a href="#s1">1</a></sup></p>
+  <p>So the problem isn't only scrolling. It's the steady stream of little pulls on your attention, each one asking you to switch away from the page in front of you.</p>
+
+  <h2>Does just having your phone nearby matter?</h2>
+  <p>You may have heard that a phone sitting on your desk drains your brainpower even when it's silent and face down. That idea comes from a well-known 2017 study called "Brain Drain." People who left their phone in another room did better on memory and reasoning tasks than people who kept it on the desk.<sup><a href="#s2">2</a></sup></p>
+  <p>Here's the honest part: when other researchers repeated the main experiment carefully in 2022, they did not find the same effect. Where the phone sat made no difference to people's scores.<sup><a href="#s3">3</a></sup> So the science on a silent, nearby phone is mixed. What is clearer is that notifications and checking break your focus. Putting the phone away still helps, mostly because it stops the buzzing and makes checking take effort.</p>
+
+  <h2>1. Put it out of reach, not just out of sight</h2>
+  <p>The easiest checks are the ones you don't notice yourself doing. If the phone is in your hand's reach, you'll pick it up on autopilot. Put it in a bag, a drawer, another room, or a little basket across the room. The point is a few seconds of effort. That tiny pause is often enough to remind you that you're studying.</p>
+
+  <h2>2. Silence the pings</h2>
+  <p>Since notifications themselves pull your attention away, turn them off for your study time. Use Do Not Disturb or a Focus mode, and let only calls from a few important people through. If you study at the same time most days, set the Focus mode to switch on by itself so you don't have to remember.</p>
+
+  <h2>3. Check in batches, not all the time</h2>
+  <p>You don't have to go dark for the whole day. In a two-week field study, people who got their phone notifications in three batches a day felt more attentive and productive, less stressed and more in control than people who got them as usual. People who switched notifications off completely, though, felt more anxious and worried about missing out.<sup><a href="#s4">4</a></sup> A similar study found that people who checked email only three times a day felt less stressed than people who checked whenever they liked.<sup><a href="#s5">5</a></sup> So plan a few set times to catch up, like at each break, and let yourself relax in between.</p>
+
+  <h2>4. Use timed study blocks</h2>
+  <p>"Don't touch your phone all evening" is hard. "Don't touch it for 25 minutes" is easy. Study in short, timed blocks with a real break at the end, and make the break your phone time. Knowing you'll check soon makes it much easier to wait. That's the heart of <a href="/pomodoro-technique/">the Pomodoro Technique</a>.</p>
+
+  <h2>5. Write down the urge, then go back</h2>
+  <p>Often you reach for your phone because you suddenly remember something: a message to send, a thing to look up. Keep a scrap of paper next to you and jot it down instead. "Text Sam back." "Look up that song." Now your brain can let it go, and you can deal with it on your break.</p>
+
+  <h2>6. Make an if-then plan for the pull</h2>
+  <p>Decide ahead of time what you'll do when the urge to check shows up. For example: "If I want to check my phone, I'll take one deep breath and finish the sentence I'm on." A review of 94 studies found that if-then plans like this gave a medium-to-large boost to actually reaching goals, compared with just meaning to.<sup><a href="#s6">6</a></sup> It works because the decision is already made, so you don't have to win an argument with yourself every time.</p>
+
+  <h2>7. Study next to someone</h2>
+  <p>It's much harder to drift off into your phone when someone is working quietly beside you. A friend at the library, a sibling at the kitchen table or a study room online can all give you a gentle sense that you're in this together. This is called <a href="/what-is-body-doubling/">body doubling</a>, and it pairs nicely with every tip above. For more ways to settle in, see <a href="/how-to-focus-when-studying/">how to focus when studying</a>.</p>
+
+  <h2>What if you need your phone to study?</h2>
+  <p>Lots of people study with flashcard apps, notes or a timer on their phone. That's fine. Try keeping only the study app on screen, turn on a Focus mode that hides everything else, and move your most tempting apps off the home screen so they take a few extra taps to open. If you keep slipping, try a paper notebook or a laptop for part of your session.</p>
+  <p>And if you find you can't stop checking even when it's making you miserable, or it's getting in the way of sleep, school or work, it's worth talking to a doctor or counselor. You're not the only one, and help is out there.</p>
+
+  <h2>How Focusland helps</h2>
+  <p>Focusland is a cozy focus timer built around a few of these ideas. You pick a room, sit down at a little table next to others, type the one thing you're working on into the task box, and start a 25 or 50 minute session, or no timer at all. When the round ends you get a Short break of 5 minutes or a Long break of 15, which makes a good time to check your messages. Finishing sessions earns coins and keeps your daily streak going, and coins unlock new rooms. If you really have to stop early, Hold to Give Up keeps your streak safe.</p>
+  <figure><img class="loop" data-base="/img/HowDuo" src="/img/HowDuo0.webp" alt="Two cats studying side by side at a little table"></figure>
+
+  <div class="card cta">
+    <h2>Pull up a chair.</h2>
+    <p>Focusland is coming soon to the App Store for iPhone.</p>
+    <a class="btn" href="/">See Focusland</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <h3>Should I put my phone in another room while studying?</h3>
+  <p>It's a good idea, mostly because it stops notifications and makes checking take effort. Research on whether a silent phone nearby hurts focus on its own is mixed, but a phone you can't reach can't interrupt you.</p>
+  <h3>Is it bad to check my phone on study breaks?</h3>
+  <p>Not at all. Checking at set times, like on breaks, is a kind middle ground. Just set a timer so a 5 minute break doesn't turn into 40.</p>
+  <h3>Is turning off all notifications the best option?</h3>
+  <p>Not always. In one study, people who switched notifications off completely felt more anxious about missing out. Silencing them while you study and catching up in batches may feel better.</p>
+  <h3>How long does it take to stop reaching for my phone?</h3>
+  <p>It varies a lot from person to person. The reaching is a habit, so it fades with practice. Expect a few slips, and treat each one as a reminder to put the phone a bit farther away.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ol class="sources">
+    <li id="s1">Stothart, C., Mitchum, A., &amp; Yehnert, C. (2015). The attentional cost of receiving a cell phone notification. <i>Journal of Experimental Psychology: Human Perception and Performance</i>, 41(4), 893–897. <a href="https://doi.org/10.1037/xhp0000100">doi.org/10.1037/xhp0000100</a></li>
+    <li id="s2">Ward, A. F., Duke, K., Gneezy, A., &amp; Bos, M. W. (2017). Brain drain: The mere presence of one's own smartphone reduces available cognitive capacity. <i>Journal of the Association for Consumer Research</i>, 2(2), 140–154. <a href="https://doi.org/10.1086/691462">doi.org/10.1086/691462</a></li>
+    <li id="s3">Ruiz Pardo, A. C., &amp; Minda, J. P. (2022). Reexamining the "brain drain" effect: A replication of Ward et al. (2017). <i>Acta Psychologica</i>, 230, 103717. <a href="https://doi.org/10.1016/j.actpsy.2022.103717">doi.org/10.1016/j.actpsy.2022.103717</a></li>
+    <li id="s4">Fitz, N., Kushlev, K., Jagannathan, R., Lewis, T., Paliwal, D., &amp; Ariely, D. (2019). Batching smartphone notifications can improve well-being. <i>Computers in Human Behavior</i>, 101, 84–94. <a href="https://doi.org/10.1016/j.chb.2019.07.016">doi.org/10.1016/j.chb.2019.07.016</a></li>
+    <li id="s5">Kushlev, K., &amp; Dunn, E. W. (2015). Checking email less frequently reduces stress. <i>Computers in Human Behavior</i>, 43, 220–228. <a href="https://doi.org/10.1016/j.chb.2014.11.005">doi.org/10.1016/j.chb.2014.11.005</a></li>
+    <li id="s6">Gollwitzer, P. M., &amp; Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. <i>Advances in Experimental Social Psychology</i>, 38, 69–119. <a href="https://doi.org/10.1016/S0065-2601(06)38002-1">doi.org/10.1016/S0065-2601(06)38002-1</a></li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap footgrid">
+    <div class="footbrand">
+      <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+      <p>Never focus alone.</p>
+    </div>
+    <nav class="footcol" aria-label="Product">
+      <b>Focusland</b>
+      <a href="/#how">How it works</a>
+      <a href="/#rooms">Rooms</a>
+      <a href="/#plus">Focusland+</a>
+      <a href="/articles/">Articles</a>
+    </nav>
+    <nav class="footcol" aria-label="Help">
+      <b>Help</b>
+      <a href="/support.html">Support</a>
+      <a href="/support.html#contact">Contact</a>
+      <a href="https://dcardines-design.github.io/focusland-legal/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
+      <a href="https://www.instagram.com/focusland.app/" rel="me">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap footbottom">
+    <span>© 2026 Focusland. Made with love by Rosebud Studio.</span>
+    <span class="verse">Matthew 6:34. Live it one day at a time, and trust God for tomorrow.</span>
+  </div>
+</footer>
+
+<script>
+  // Phone menu: the round button opens the links card; tapping a link or anywhere else closes it.
+  (function () {
+    var btn = document.querySelector('.menubtn'), menu = document.getElementById('menu');
+    function set(open) { menu.hidden = !open; btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); set(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
+  (function () {
+    var count = 0;
+    setInterval(function () {
+      document.querySelectorAll('img.loop').forEach(function (img) {
+        if (img._frame === undefined) {
+          img._frame = count++ % 4;
+          for (var k = 0; k < 4; k++) { new Image().src = img.dataset.base + k + '.webp'; }
+        }
+        img._frame = (img._frame + 1) % 4;
+        img.src = img.dataset.base + img._frame + '.webp';
+      });
+    }, 250);
+  })();
+</script>
+</body>
+</html>
