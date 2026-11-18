@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parkinson's Law: Why Work Fills the Time You Give It | Focusland</title>
+<meta name="description" content="Parkinson's law says work expands to fill the time you give it. Here's what the research shows, where it falls short, and 7 gentle ways to use it.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Focusland">
+<meta property="og:url" content="https://focusland.co/parkinsons-law/">
+<meta property="og:title" content="Parkinson's law: why work fills the time you give it">
+<meta property="og:description" content="Where Parkinson's law comes from, what the studies found, and 7 kind ways to give your work an edge.">
+<meta property="og:image" content="https://focusland.co/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://focusland.co/parkinsons-law/">
+<meta name="theme-color" content="#FFF7EA">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Parkinson's law: why work fills the time you give it",
+  "description": "What Parkinson's law is, what the research says, and 7 gentle ways to use time limits to focus.",
+  "image": "https://focusland.co/img/og.png",
+  "datePublished": "2026-11-18",
+  "dateModified": "2026-11-18",
+  "mainEntityOfPage": "https://focusland.co/parkinsons-law/",
+  "author": { "@type": "Organization", "name": "Rosebud Studio", "url": "https://focusland.co/" },
+  "publisher": { "@type": "Organization", "name": "Rosebud Studio", "logo": { "@type": "ImageObject", "url": "https://focusland.co/img/icon.png" } }
+}
+</script>
+<style>
+  :root {
+    --ink:#3B2614; --cream:#FFF7EA; --white:#FFFFFF; --orange:#F4A340; --green:#9BD06E;
+    --coin:#F6C443; --sky:#BDE2F2; --soft:#E6D6C1; --muted:#5A3C22;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family:Nunito, system-ui, sans-serif; font-weight:700; line-height:1.55; }
+  h1, h2, h3 { font-family:Fredoka, system-ui, sans-serif; font-weight:700; line-height:1.1; margin:0; }
+  a { color:inherit; }
+  img { display:block; max-width:100%; }
+  .wrap { max-width:760px; margin:0 auto; }
+
+  /* Chunky button, like the app's */
+  .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border:3px solid var(--ink); border-radius:18px;
+         background:var(--orange); color:var(--ink); font-family:Fredoka, sans-serif; font-weight:600; font-size:19px;
+         text-decoration:none; box-shadow:0 6px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  .btn:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--ink); }
+  .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
+
+  /* Header, like the app's: cream, full width, a brown line along the bottom */
+  header { background:var(--cream); border-bottom:3px solid var(--ink); padding:14px 16px; position:sticky; top:0; z-index:10; }
+  nav { max-width:1080px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; position:relative; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:Fredoka, sans-serif; font-size:26px; text-decoration:none; }
+  .logo img { width:42px; height:42px; border-radius:11px; border:2.5px solid var(--ink); }
+  nav .links { display:flex; gap:20px; font-size:15px; }
+  nav .links a { text-decoration:none; }
+  nav .links a[aria-current] { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; }
+  .menubtn { display:none; width:46px; height:46px; border:3px solid var(--ink); border-radius:50%; background:var(--cream); color:var(--ink);
+             box-shadow:0 4px 0 var(--ink); padding:0; place-items:center; cursor:pointer; transition:transform .08s, box-shadow .08s; }
+  .menubtn:active { transform:translateY(3px); box-shadow:0 1px 0 var(--ink); }
+  .menubtn svg { width:22px; height:22px; }
+  .menu { position:absolute; top:58px; right:0; width:min(260px, calc(100vw - 32px)); display:flex; flex-direction:column; text-align:left;
+          background:var(--cream); border:3px solid var(--ink); border-radius:22px; box-shadow:0 6px 0 var(--ink); padding:8px; }
+  .menu[hidden] { display:none; }
+  .menu a { font-family:Fredoka, sans-serif; font-weight:600; font-size:20px; text-decoration:none; padding:12px 14px; border-radius:14px; }
+  .menu a + a { border-top:2px solid var(--soft); border-radius:0 0 14px 14px; }
+  .menu a:active { background:#F1E4D3; }
+  @media (max-width:820px) { nav .links { display:none; } .menubtn { display:grid; } }
+
+  main { padding:56px 16px 96px; }
+  .intro { display:flex; align-items:center; gap:22px; }
+  .intro img { width:120px; flex-shrink:0; }
+  h1 { font-size:clamp(40px, 7vw, 60px); }
+  .intro p { margin:8px 0 0; font-size:18px; color:var(--muted); }
+
+  .card { background:var(--white); border:3px solid var(--ink); border-radius:24px; box-shadow:0 6px 0 var(--ink); padding:22px; }
+  .contact { margin-top:36px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+  .contact h2 { font-size:24px; }
+  .contact p { margin:4px 0 0; color:var(--muted); }
+
+  .contact { scroll-margin-top:96px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn.white { background:var(--white); }
+  .email { color:var(--ink); word-break:break-all; }
+  .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
+  h2.faqhead { font-size:30px; margin:56px 0 16px; }
+  .faq { display:flex; flex-direction:column; gap:14px; }
+  details { background:var(--white); border:3px solid var(--ink); border-radius:20px; box-shadow:0 4px 0 var(--ink); }
+  summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px;
+            padding:16px 18px; font-family:Fredoka, sans-serif; font-weight:600; font-size:19px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:""; width:12px; height:12px; flex-shrink:0; border-right:3px solid var(--ink); border-bottom:3px solid var(--ink);
+                   margin-top:-6px; transform:rotate(45deg); transition:transform .15s; }
+  details[open] summary::after { margin-top:6px; transform:rotate(-135deg); }
+  details .a { border-top:2px solid var(--soft); margin:0 18px; padding:14px 0 18px; }
+  details .a p { margin:0; }
+  details .a p + p { margin-top:10px; }
+  .path { background:#F1E4D3; border-radius:8px; padding:1px 7px; white-space:nowrap; }
+
+  footer { background:var(--ink); color:var(--cream); padding:48px 16px 28px; font-size:15px; }
+  footer .wrap { max-width:1080px; }
+  .footgrid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; }
+  .footbrand .logo { color:var(--cream); }
+  .footbrand .logo img { border-color:var(--cream); }
+  .footbrand p { margin:10px 0 0; color:#E9DCC8; font-size:17px; }
+  .footcol { display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+  .footcol b { font-family:Fredoka, sans-serif; font-size:18px; margin-bottom:4px; }
+  .footcol a { color:#E9DCC8; text-decoration:none; }
+  .footcol a:hover { color:var(--cream); text-decoration:underline; }
+  .footbottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:44px; padding-top:18px; border-top:2px solid rgba(255,247,234,.18); color:#C9BBA6; font-size:14px; }
+  .verse { font-style:italic; }
+  @media (max-width:600px) { .footgrid { grid-template-columns:1fr 1fr; } .footbrand { grid-column:1 / -1; }
+    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .btns { width:100%; flex-direction:column; } .contact .btn { width:100%; justify-content:center; } }
+
+  .article { padding:48px 16px 96px; max-width:700px; }
+  .eyebrow { font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+  .article h1 { font-size:clamp(34px, 6vw, 50px); }
+  .article .lede { font-size:20px; margin:18px 0 0; }
+  .article h2 { font-size:clamp(26px, 4vw, 32px); margin:48px 0 12px; }
+  .article h3 { font-size:21px; margin:26px 0 6px; }
+  .article p, .article li { font-size:18px; }
+  .article p { margin:0 0 14px; }
+  .article ul, .article ol { padding-left:22px; margin:0 0 14px; }
+  .article li { margin-bottom:10px; }
+  .article figure { margin:32px auto; max-width:440px; }
+  .card.cta { text-align:center; margin:40px 0 0; }
+  .card.cta h2 { margin:0 0 6px; }
+  .card.cta p { color:var(--muted); }
+  .byline { font-size:15px; color:var(--muted); margin:12px 0 0 !important; }
+  .article sup { font-size:.7em; line-height:0; }
+  .article sup a { text-decoration:none; color:var(--muted); padding:0 1px; }
+  .article p a, .sources a { text-decoration-thickness:2px; text-underline-offset:3px; }
+  .sources li { font-size:15px !important; color:var(--muted); word-break:break-word; scroll-margin-top:96px; }
+</style>
+<script src="/analytics.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+    <div class="links"><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+    <button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="menu" id="menu" hidden><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+  </nav>
+</header>
+
+<main class="article wrap">
+  <p class="eyebrow"><a href="/articles/">Articles</a></p>
+  <h1>Parkinson's law: why work fills the time you give it</h1>
+  <p class="byline">By Rosebud Studio, the makers of Focusland. Updated November 18, 2026.</p>
+  <p class="lede">You give yourself all afternoon to answer three emails, and somehow it takes all afternoon. You give yourself 25 minutes, and it takes 25 minutes. That pattern has a name: Parkinson's law. Here's where it comes from, what the research actually says, and how to use it kindly, without turning your day into a race.</p>
+
+  <figure><img class="loop" data-base="/img/ArtParkinsonsLaw" src="/img/ArtParkinsonsLaw0.webp" alt="A grey tabby cat writing on a sheet of paper next to a small hourglass" style="max-width:320px;margin:0 auto"></figure>
+
+  <h2>What is Parkinson's law?</h2>
+  <p>Parkinson's law is the idea that "work expands so as to fill the time available for its completion." It comes from a funny essay that the British historian C. Northcote Parkinson wrote for <i>The Economist</i> in 1955.<sup><a href="#s1">1</a></sup> His example was an older lady with a free day who manages to spend all of it writing and sending a single postcard to her niece.</p>
+  <p>The essay was mostly a joke about government offices that keep growing whether or not there's more work to do. But the opening line stuck, because almost everyone recognizes it from their own life. A task with no clear end tends to stretch. It picks up extra checking, extra polishing and extra wandering off.</p>
+
+  <h2>Is Parkinson's law real?</h2>
+  <p>Parkinson wasn't running experiments, but psychologists later tried to test his idea in the lab, and they found something like it.</p>
+  <p>In a 1966 study, psychologists Elliot Aronson and E. Gerard gave students either a short or a long time to prepare a small talk, then gave them a similar task with no time limit. The students who'd had more time on the first task took longer on the second one too, even though nobody was rushing them anymore. The authors called this the "excess time effect."<sup><a href="#s2">2</a></sup> In other words, a roomy deadline seemed to set a slower pace that carried over.</p>
+  <p>Decades later, Laura Brannon and colleagues ran a cleaner test. Students judged sets of photos. Some were told, partway through, that a later set had been cancelled. Those students slowed down on the set in front of them, compared with students who still had the full workload ahead. The effect showed up again when the researchers repeated the study.<sup><a href="#s3">3</a></sup></p>
+  <p>Edwin Locke and Judith Bryan offered a simple way to think about it: Parkinson's law is a goal-setting effect.<sup><a href="#s4">4</a></sup> The time you're given acts like a quiet goal for how hard to push. A loose goal invites a loose pace.</p>
+
+  <h2>What the evidence doesn't show</h2>
+  <p>It's worth being honest here. The studies above are small, mostly done with university students in labs, and some are more than 50 years old. Not every attempt to repeat the original findings has worked. They support the idea that extra time can slow people down on simple tasks, but they don't prove that work always fills every gap, or that tighter deadlines are always better.</p>
+  <p>There's also a pull in the other direction. People are famously bad at guessing how long things take. In a well-known set of studies, Roger Buehler, Dale Griffin and Michael Ross found that students regularly underestimated how long their own projects would take, even when they knew similar projects had run late before.<sup><a href="#s5">5</a></sup> This is called the planning fallacy. So if you squeeze every task too hard, you may just end up rushed, stressed and late. The goal is a deadline that's snug, not impossible.</p>
+
+  <h2>How to use Parkinson's law (gently)</h2>
+  <p>The useful part of Parkinson's law isn't "work faster." It's "give your work an edge." Here are some small ways to do that.</p>
+
+  <h3>1. Give each task a time box</h3>
+  <p>Instead of "work on the essay today," try "outline the essay in 50 minutes." A clear end point makes the task feel smaller and stops it from leaking into everything else. If you like planning your whole day this way, <a href="/time-blocking/">time blocking</a> is the same idea at a bigger scale.</p>
+
+  <h3>2. Make the goal specific</h3>
+  <p>Goal-setting research has found, across many studies, that specific and challenging goals usually lead to better performance than a vague "just do your best."<sup><a href="#s6">6</a></sup> "Read chapter 4 and write five flashcards before the timer ends" gives your brain something to aim at. "Study biology" doesn't.</p>
+
+  <h3>3. Use short rounds, not one long stretch</h3>
+  <p>A whole free afternoon is the perfect setup for Parkinson's postcard. Splitting it into rounds of 25 or 50 minutes, with a short break between, gives you several small deadlines instead of one far away. That's the heart of <a href="/pomodoro-technique/">the Pomodoro Technique</a>.</p>
+
+  <h3>4. Guess, then check your guess</h3>
+  <p>Before you start, write down how long you think the task will take. When you finish, note how long it really took. After a week, you'll know whether you tend to give yourself too much time or too little. That fixes both problems at once: Parkinson's law on one side and the planning fallacy on the other.</p>
+
+  <h3>5. Decide what "done" looks like</h3>
+  <p>Work stretches most in the polishing stage. Before you begin, write one line about what finished means: "three paragraphs, one read-through, send." When you reach it, stop. Good enough and sent beats perfect and still open.</p>
+
+  <h3>6. Leave real slack for the hard stuff</h3>
+  <p>Tight time boxes suit tasks you understand: emails, chores, review, first drafts. Deep, creative or brand-new work often needs more room to think. Use snug deadlines for the small things so you have more calm time left for the big ones.</p>
+
+  <h3>7. Be kind when the timer wins</h3>
+  <p>Some rounds won't finish the task. That's not failure, it's information. Write down where you stopped, take your break, and start the next round from there. If you notice you keep putting the task off altogether, our guide on <a href="/how-to-stop-procrastinating/">how to stop procrastinating</a> may help more than a tighter deadline.</p>
+
+  <h2>How Focusland helps</h2>
+  <p>Focusland gives every session a clear edge. You pick a cozy room, sit down at a little table next to other studying cats, type the task you're working on, and choose 25 minutes, 50 minutes or no timer. Rounds switch between Focus, a 5 minute Short break and a 15 minute Long break, so a long afternoon becomes a few small, friendly deadlines. Finishing a session earns coins and keeps your daily streak, and coins unlock new rooms. If a round isn't working, you can hold to give up, and your streak stays safe.</p>
+  <figure><img class="loop" data-base="/img/HowDuo" src="/img/HowDuo0.webp" alt="Two cats studying side by side at a small table"></figure>
+
+  <div class="card cta">
+    <h2>Pull up a chair.</h2>
+    <p>Focusland is coming soon to the App Store for iPhone.</p>
+    <a class="btn" href="/">See Focusland</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <h3>What is Parkinson's law in simple words?</h3>
+  <p>The more time you give a task, the more time it tends to take. A task with a loose deadline picks up extra steps, extra polishing and extra breaks until it fills the time.</p>
+  <h3>Who came up with Parkinson's law?</h3>
+  <p>C. Northcote Parkinson, a British naval historian, in a humorous essay for <i>The Economist</i> in 1955. He later expanded it into a book.</p>
+  <h3>Is Parkinson's law backed by science?</h3>
+  <p>Partly. A few lab studies found that people given extra time worked more slowly, even on later tasks. The studies are small and old, though, so treat it as a useful pattern, not a law of nature.</p>
+  <h3>Should I give myself less time for everything?</h3>
+  <p>No. Snug deadlines help with simple, familiar tasks. People also tend to underestimate how long work takes, so for big or new tasks, give yourself a realistic window and break it into short rounds.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ol class="sources">
+    <li id="s1">Parkinson, C. N. (1955, November 19). Parkinson's law. <i>The Economist</i>. <a href="https://www.economist.com/news/1955/11/19/parkinsons-law">economist.com/news/1955/11/19/parkinsons-law</a></li>
+    <li id="s2">Aronson, E., &amp; Gerard, E. (1966). Beyond Parkinson's law: The effect of excess time on subsequent performance. <i>Journal of Personality and Social Psychology</i>, 3(3), 336–339. <a href="https://doi.org/10.1037/h0023000">doi.org/10.1037/h0023000</a></li>
+    <li id="s3">Brannon, L. A., Hershberger, P. J., &amp; Brock, T. C. (1999). Timeless demonstrations of Parkinson's first law. <i>Psychonomic Bulletin &amp; Review</i>, 6(1), 148–156. <a href="https://doi.org/10.3758/BF03210823">doi.org/10.3758/BF03210823</a></li>
+    <li id="s4">Bryan, J. F., &amp; Locke, E. A. (1967). Parkinson's law as a goal-setting phenomenon. <i>Organizational Behavior and Human Performance</i>, 2(3), 258–275. <a href="https://doi.org/10.1016/0030-5073(67)90021-9">doi.org/10.1016/0030-5073(67)90021-9</a></li>
+    <li id="s5">Buehler, R., Griffin, D., &amp; Ross, M. (1994). Exploring the "planning fallacy": Why people underestimate their task completion times. <i>Journal of Personality and Social Psychology</i>, 67(3), 366–381. <a href="https://doi.org/10.1037/0022-3514.67.3.366">doi.org/10.1037/0022-3514.67.3.366</a></li>
+    <li id="s6">Locke, E. A., &amp; Latham, G. P. (2002). Building a practically useful theory of goal setting and task motivation: A 35-year odyssey. <i>American Psychologist</i>, 57(9), 705–717. <a href="https://doi.org/10.1037/0003-066X.57.9.705">doi.org/10.1037/0003-066X.57.9.705</a></li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap footgrid">
+    <div class="footbrand">
+      <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+      <p>Never focus alone.</p>
+    </div>
+    <nav class="footcol" aria-label="Product">
+      <b>Focusland</b>
+      <a href="/#how">How it works</a>
+      <a href="/#rooms">Rooms</a>
+      <a href="/#plus">Focusland+</a>
+      <a href="/articles/">Articles</a>
+    </nav>
+    <nav class="footcol" aria-label="Help">
+      <b>Help</b>
+      <a href="/support.html">Support</a>
+      <a href="/support.html#contact">Contact</a>
+      <a href="https://dcardines-design.github.io/focusland-legal/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
+      <a href="https://www.instagram.com/focusland.app/" rel="me">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap footbottom">
+    <span>© 2026 Focusland. Made with love by Rosebud Studio.</span>
+    <span class="verse">Matthew 6:34. Live it one day at a time, and trust God for tomorrow.</span>
+  </div>
+</footer>
+
+<script>
+  // Phone menu: the round button opens the links card; tapping a link or anywhere else closes it.
+  (function () {
+    var btn = document.querySelector('.menubtn'), menu = document.getElementById('menu');
+    function set(open) { menu.hidden = !open; btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); set(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
+  (function () {
+    var count = 0;
+    setInterval(function () {
+      document.querySelectorAll('img.loop').forEach(function (img) {
+        if (img._frame === undefined) {
+          img._frame = count++ % 4;
+          for (var k = 0; k < 4; k++) { new Image().src = img.dataset.base + k + '.webp'; }
+        }
+        img._frame = (img._frame + 1) % 4;
+        img.src = img.dataset.base + img._frame + '.webp';
+      });
+    }, 250);
+  })();
+</script>
+</body>
+</html>
