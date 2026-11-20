@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interleaved Practice: Why Mixing Up Your Study Helps You Learn | Focusland</title>
+<meta name="description" content="What interleaved practice is, what research says about mixing up your study, where it falls short, and 7 simple ways to try it in your next session.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Focusland">
+<meta property="og:url" content="https://focusland.co/interleaved-practice/">
+<meta property="og:title" content="Interleaved practice: why mixing up your study helps you learn">
+<meta property="og:description" content="What mixing up your study does, where it helps, where it doesn't, and how to try it.">
+<meta property="og:image" content="https://focusland.co/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://focusland.co/interleaved-practice/">
+<meta name="theme-color" content="#FFF7EA">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Interleaved practice: why mixing up your study helps you learn",
+  "description": "What interleaved practice is, what the research found, where it falls short, and 7 simple ways to mix up your study.",
+  "image": "https://focusland.co/img/og.png",
+  "datePublished": "2026-11-20",
+  "dateModified": "2026-11-20",
+  "mainEntityOfPage": "https://focusland.co/interleaved-practice/",
+  "author": { "@type": "Organization", "name": "Rosebud Studio", "url": "https://focusland.co/" },
+  "publisher": { "@type": "Organization", "name": "Rosebud Studio", "logo": { "@type": "ImageObject", "url": "https://focusland.co/img/icon.png" } }
+}
+</script>
+<style>
+  :root {
+    --ink:#3B2614; --cream:#FFF7EA; --white:#FFFFFF; --orange:#F4A340; --green:#9BD06E;
+    --coin:#F6C443; --sky:#BDE2F2; --soft:#E6D6C1; --muted:#5A3C22;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family:Nunito, system-ui, sans-serif; font-weight:700; line-height:1.55; }
+  h1, h2, h3 { font-family:Fredoka, system-ui, sans-serif; font-weight:700; line-height:1.1; margin:0; }
+  a { color:inherit; }
+  img { display:block; max-width:100%; }
+  .wrap { max-width:760px; margin:0 auto; }
+
+  /* Chunky button, like the app's */
+  .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border:3px solid var(--ink); border-radius:18px;
+         background:var(--orange); color:var(--ink); font-family:Fredoka, sans-serif; font-weight:600; font-size:19px;
+         text-decoration:none; box-shadow:0 6px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  .btn:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--ink); }
+  .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
+
+  /* Header, like the app's: cream, full width, a brown line along the bottom */
+  header { background:var(--cream); border-bottom:3px solid var(--ink); padding:14px 16px; position:sticky; top:0; z-index:10; }
+  nav { max-width:1080px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; position:relative; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:Fredoka, sans-serif; font-size:26px; text-decoration:none; }
+  .logo img { width:42px; height:42px; border-radius:11px; border:2.5px solid var(--ink); }
+  nav .links { display:flex; gap:20px; font-size:15px; }
+  nav .links a { text-decoration:none; }
+  nav .links a[aria-current] { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; }
+  .menubtn { display:none; width:46px; height:46px; border:3px solid var(--ink); border-radius:50%; background:var(--cream); color:var(--ink);
+             box-shadow:0 4px 0 var(--ink); padding:0; place-items:center; cursor:pointer; transition:transform .08s, box-shadow .08s; }
+  .menubtn:active { transform:translateY(3px); box-shadow:0 1px 0 var(--ink); }
+  .menubtn svg { width:22px; height:22px; }
+  .menu { position:absolute; top:58px; right:0; width:min(260px, calc(100vw - 32px)); display:flex; flex-direction:column; text-align:left;
+          background:var(--cream); border:3px solid var(--ink); border-radius:22px; box-shadow:0 6px 0 var(--ink); padding:8px; }
+  .menu[hidden] { display:none; }
+  .menu a { font-family:Fredoka, sans-serif; font-weight:600; font-size:20px; text-decoration:none; padding:12px 14px; border-radius:14px; }
+  .menu a + a { border-top:2px solid var(--soft); border-radius:0 0 14px 14px; }
+  .menu a:active { background:#F1E4D3; }
+  @media (max-width:820px) { nav .links { display:none; } .menubtn { display:grid; } }
+
+  main { padding:56px 16px 96px; }
+  .intro { display:flex; align-items:center; gap:22px; }
+  .intro img { width:120px; flex-shrink:0; }
+  h1 { font-size:clamp(40px, 7vw, 60px); }
+  .intro p { margin:8px 0 0; font-size:18px; color:var(--muted); }
+
+  .card { background:var(--white); border:3px solid var(--ink); border-radius:24px; box-shadow:0 6px 0 var(--ink); padding:22px; }
+  .contact { margin-top:36px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+  .contact h2 { font-size:24px; }
+  .contact p { margin:4px 0 0; color:var(--muted); }
+
+  .contact { scroll-margin-top:96px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn.white { background:var(--white); }
+  .email { color:var(--ink); word-break:break-all; }
+  .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
+  h2.faqhead { font-size:30px; margin:56px 0 16px; }
+  .faq { display:flex; flex-direction:column; gap:14px; }
+  details { background:var(--white); border:3px solid var(--ink); border-radius:20px; box-shadow:0 4px 0 var(--ink); }
+  summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px;
+            padding:16px 18px; font-family:Fredoka, sans-serif; font-weight:600; font-size:19px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:""; width:12px; height:12px; flex-shrink:0; border-right:3px solid var(--ink); border-bottom:3px solid var(--ink);
+                   margin-top:-6px; transform:rotate(45deg); transition:transform .15s; }
+  details[open] summary::after { margin-top:6px; transform:rotate(-135deg); }
+  details .a { border-top:2px solid var(--soft); margin:0 18px; padding:14px 0 18px; }
+  details .a p { margin:0; }
+  details .a p + p { margin-top:10px; }
+  .path { background:#F1E4D3; border-radius:8px; padding:1px 7px; white-space:nowrap; }
+
+  footer { background:var(--ink); color:var(--cream); padding:48px 16px 28px; font-size:15px; }
+  footer .wrap { max-width:1080px; }
+  .footgrid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; }
+  .footbrand .logo { color:var(--cream); }
+  .footbrand .logo img { border-color:var(--cream); }
+  .footbrand p { margin:10px 0 0; color:#E9DCC8; font-size:17px; }
+  .footcol { display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+  .footcol b { font-family:Fredoka, sans-serif; font-size:18px; margin-bottom:4px; }
+  .footcol a { color:#E9DCC8; text-decoration:none; }
+  .footcol a:hover { color:var(--cream); text-decoration:underline; }
+  .footbottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:44px; padding-top:18px; border-top:2px solid rgba(255,247,234,.18); color:#C9BBA6; font-size:14px; }
+  .verse { font-style:italic; }
+  @media (max-width:600px) { .footgrid { grid-template-columns:1fr 1fr; } .footbrand { grid-column:1 / -1; }
+    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .btns { width:100%; flex-direction:column; } .contact .btn { width:100%; justify-content:center; } }
+
+  .article { padding:48px 16px 96px; max-width:700px; }
+  .eyebrow { font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+  .article h1 { font-size:clamp(34px, 6vw, 50px); }
+  .article .lede { font-size:20px; margin:18px 0 0; }
+  .article h2 { font-size:clamp(26px, 4vw, 32px); margin:48px 0 12px; }
+  .article h3 { font-size:21px; margin:26px 0 6px; }
+  .article p, .article li { font-size:18px; }
+  .article p { margin:0 0 14px; }
+  .article ul, .article ol { padding-left:22px; margin:0 0 14px; }
+  .article li { margin-bottom:10px; }
+  .article figure { margin:32px auto; max-width:440px; }
+  .card.cta { text-align:center; margin:40px 0 0; }
+  .card.cta h2 { margin:0 0 6px; }
+  .card.cta p { color:var(--muted); }
+  .byline { font-size:15px; color:var(--muted); margin:12px 0 0 !important; }
+  .article sup { font-size:.7em; line-height:0; }
+  .article sup a { text-decoration:none; color:var(--muted); padding:0 1px; }
+  .article p a, .sources a { text-decoration-thickness:2px; text-underline-offset:3px; }
+  .sources li { font-size:15px !important; color:var(--muted); word-break:break-word; scroll-margin-top:96px; }
+</style>
+<script src="/analytics.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+    <div class="links"><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+    <button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="menu" id="menu" hidden><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+  </nav>
+</header>
+
+<main class="article wrap">
+  <p class="eyebrow"><a href="/articles/">Articles</a></p>
+  <h1>Interleaved practice: why mixing up your study helps you learn</h1>
+  <p class="byline">By Rosebud Studio, the makers of Focusland. Updated November 20, 2026.</p>
+  <p class="lede">Most of us study in neat blocks: twenty problems of one kind, then twenty of the next. It feels smooth, and you leave the desk feeling sure of yourself. Interleaved practice does the opposite. You mix different kinds of problems or topics together, so each one is a small surprise. It feels harder, and that's partly the point. Here's what interleaving is, what the research found, where it doesn't help, and how to try it this week.</p>
+
+  <figure><img class="loop" data-base="/img/ArtInterleaving" src="/img/ArtInterleaving0.webp" alt="An orange tabby cat holding a fan of blue, yellow and pink study cards next to a mixed stack of cards on a round rug" style="max-width:320px;margin:0 auto"></figure>
+
+  <h2>What is interleaved practice?</h2>
+  <p>Interleaving means mixing related things inside one study session instead of finishing one before you start the next.</p>
+  <p>Say you're learning three kinds of math problems: A, B and C. Blocked practice looks like AAAA, BBBB, CCCC. Interleaved practice looks like ABCB, CACB, BACA. You still do the same number of problems. Only the order changes.</p>
+  <p>The difference sounds small, but it changes what your brain has to do. In a block, you already know which method to use, because the last five problems used it too. In a mixed set, every problem starts with a question: what kind of problem is this, and which tool fits? On a real exam, that question is often the hardest part.</p>
+
+  <h2>What the research says</h2>
+  <p>In one early study, college students learned how to find the volume of different shapes. One group practiced each shape in its own block. Another group did the same problems shuffled together. The shuffled group did worse during practice, but clearly better on a later test.<sup><a href="#s1">1</a></sup> That pattern, worse while practicing and better afterward, shows up again and again.</p>
+  <p>It isn't only math. In another study, people looked at paintings by different artists, either one artist at a time or with the artists mixed together. Afterward they were shown new paintings and asked who painted each one. The mixed group was better at it. The surprising part: most people still rated the one-artist-at-a-time way as more effective, even after their own test results showed the opposite.<sup><a href="#s2">2</a></sup> Blocking feels like learning. Mixing often is learning.</p>
+  <p>The idea has also been tested in real classrooms. In a study with 126 seventh graders over about three months, students got the same practice problems, either blocked or interleaved. On a surprise test one day later, the interleaved material scored higher. On a test 30 days later, the gap was even bigger.<sup><a href="#s3">3</a></sup></p>
+  <p>A large review pulled together 59 studies and found a moderate overall benefit for interleaving.<sup><a href="#s4">4</a></sup> A well-known review of study techniques rated interleaved practice as "moderate utility," promising but tested on a narrower range of material than some other methods.<sup><a href="#s5">5</a></sup></p>
+
+  <h2>Why it might work</h2>
+  <p>Researchers have two main ideas, and they likely work together.</p>
+  <p>First, mixing makes you choose. When problems come in a block, you can skip the step of deciding which method to use. Interleaving makes you practice that decision every time.</p>
+  <p>Second, mixing helps you notice differences. When two similar things sit side by side, like two painters with similar styles or two formulas that look alike, you start to see what sets them apart.</p>
+  <p>Interleaving also spaces things out a little. Your next problem of type A comes a few minutes later instead of right away, which ties it closely to <a href="/spaced-repetition/">spaced repetition</a>.</p>
+
+  <h2>Where the evidence is mixed</h2>
+  <p>Interleaving is not a magic switch, and it's worth being honest about where it falls short.</p>
+  <ul>
+    <li><strong>It helps most with things that are easy to confuse.</strong> The big review found the strongest effects for paintings and other visual material, and for categories that look alike.<sup><a href="#s4">4</a></sup></li>
+    <li><strong>It can backfire for some material.</strong> For learning words, the same review found blocking worked better than mixing, and it advised caution with long reading texts too.<sup><a href="#s4">4</a></sup></li>
+    <li><strong>Math results vary.</strong> The overall effect for math was small and the studies differed a lot. Some of the strongest classroom results come from one research group.</li>
+    <li><strong>You need the basics first.</strong> Most studies mix topics that learners have already been introduced to. If you've never seen a topic, a little blocked practice to get started makes sense.</li>
+  </ul>
+
+  <h2>How to use interleaved practice</h2>
+
+  <h3>1. Learn it in a block, then mix it up</h3>
+  <p>When something is brand new, do a few examples in a row until you understand the steps. Once you can do it with your notes closed, start mixing it with older topics.</p>
+
+  <h3>2. Shuffle your practice problems</h3>
+  <p>Take problems from the last three chapters and mix them up. Cover the chapter headings so the page doesn't tell you which method to use. Working out which kind of problem it is should be part of the work.</p>
+
+  <h3>3. Mix things that look alike</h3>
+  <p>Interleaving pays off most when topics are easy to mix up. Two types of equations, two periods of history, two similar diseases, two grammar tenses. Put them next to each other on purpose.</p>
+
+  <h3>4. Shuffle your flash cards</h3>
+  <p>If your flash cards are sorted by chapter, mix the decks. This pairs nicely with <a href="/active-recall/">active recall</a>: you're testing yourself, and you don't know which topic comes next.</p>
+
+  <h3>5. Rotate subjects across study rounds</h3>
+  <p>You don't have to switch every minute. One gentle way is to change topics between focus rounds: one round on chemistry problems, the next on physics, then back. This keeps each round calm while still mixing over the day.</p>
+
+  <h3>6. Expect it to feel harder</h3>
+  <p>This is the most important tip. Mixed practice usually feels slower and messier, and you'll get more wrong while practicing. That's normal. Judge it by how you do a week later, not by how smooth today felt.</p>
+
+  <h3>7. Keep vocabulary simple</h3>
+  <p>Since the research doesn't support mixing for word learning, it's fine to keep vocabulary lists and long readings in blocks. Save interleaving for problems and categories.</p>
+
+  <p>When an exam is coming, interleaving fits right into a calm plan. You can read more in <a href="/how-to-study-for-exams-without-cramming/">how to study for exams without cramming</a>.</p>
+
+  <h2>How Focusland helps</h2>
+  <p>Mixed practice is easier when the rest of studying feels easy. In Focusland you pick a room, sit down at a little table next to other studying cats, and write what you're working on in the task box, like "Mixed problems, chapters 4 to 6." Choose 25 minutes, 50 minutes or no timer, and move between Focus, a 5 minute Short break and a 15 minute Long break. Rotating a topic each round is simple when each round has a clear start and end. Finishing a session earns coins and keeps your daily streak, and coins unlock new rooms. If a round isn't working, you can hold to give up, and your streak stays safe.</p>
+  <figure><img class="loop" data-base="/img/StudyOrange" src="/img/StudyOrange0.webp" alt="An orange cat studying at a small table"></figure>
+
+  <div class="card cta">
+    <h2>Pull up a chair.</h2>
+    <p>Focusland is coming soon to the App Store for iPhone.</p>
+    <a class="btn" href="/">See Focusland</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <h3>What is interleaved practice in simple words?</h3>
+  <p>It's studying by mixing different types of problems or topics in one session, instead of doing all of one type before moving on.</p>
+  <h3>Is interleaving better than blocked practice?</h3>
+  <p>For telling similar things apart and remembering how to solve problems later, studies often say yes. Blocked practice usually feels better in the moment and can still be useful when something is brand new or when you're learning vocabulary.</p>
+  <h3>Is interleaving the same as spaced repetition?</h3>
+  <p>No, but they overlap. Spaced repetition is about spreading reviews over days and weeks. Interleaving is about mixing topics within a session, which also adds a little spacing between problems of the same kind.</p>
+  <h3>How often should I switch topics?</h3>
+  <p>There's no proven perfect number. Mixing problem types within a set is the most studied version. Switching topics between focus rounds is a gentler start if constant switching feels like too much.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ol class="sources">
+    <li id="s1">Rohrer, D., &amp; Taylor, K. (2007). The shuffling of mathematics problems improves learning. <i>Instructional Science</i>, 35(6), 481–498. <a href="https://doi.org/10.1007/s11251-007-9015-8">doi.org/10.1007/s11251-007-9015-8</a></li>
+    <li id="s2">Kornell, N., &amp; Bjork, R. A. (2008). Learning concepts and categories: Is spacing the "enemy of induction"? <i>Psychological Science</i>, 19(6), 585–592. <a href="https://doi.org/10.1111/j.1467-9280.2008.02127.x">doi.org/10.1111/j.1467-9280.2008.02127.x</a></li>
+    <li id="s3">Rohrer, D., Dedrick, R. F., &amp; Stershic, S. (2015). Interleaved practice improves mathematics learning. <i>Journal of Educational Psychology</i>, 107(3), 900–908. <a href="https://doi.org/10.1037/edu0000001">doi.org/10.1037/edu0000001</a></li>
+    <li id="s4">Brunmair, M., &amp; Richter, T. (2019). Similarity matters: A meta-analysis of interleaved learning and its moderators. <i>Psychological Bulletin</i>, 145(11), 1029–1052. <a href="https://doi.org/10.1037/bul0000209">doi.org/10.1037/bul0000209</a></li>
+    <li id="s5">Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., &amp; Willingham, D. T. (2013). Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. <i>Psychological Science in the Public Interest</i>, 14(1), 4–58. <a href="https://doi.org/10.1177/1529100612453266">doi.org/10.1177/1529100612453266</a></li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap footgrid">
+    <div class="footbrand">
+      <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+      <p>Never focus alone.</p>
+    </div>
+    <nav class="footcol" aria-label="Product">
+      <b>Focusland</b>
+      <a href="/#how">How it works</a>
+      <a href="/#rooms">Rooms</a>
+      <a href="/#plus">Focusland+</a>
+      <a href="/articles/">Articles</a>
+    </nav>
+    <nav class="footcol" aria-label="Help">
+      <b>Help</b>
+      <a href="/support.html">Support</a>
+      <a href="/support.html#contact">Contact</a>
+      <a href="https://dcardines-design.github.io/focusland-legal/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
+      <a href="https://www.instagram.com/focusland.app/" rel="me">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap footbottom">
+    <span>© 2026 Focusland. Made with love by Rosebud Studio.</span>
+    <span class="verse">Matthew 6:34. Live it one day at a time, and trust God for tomorrow.</span>
+  </div>
+</footer>
+
+<script>
+  // Phone menu: the round button opens the links card; tapping a link or anywhere else closes it.
+  (function () {
+    var btn = document.querySelector('.menubtn'), menu = document.getElementById('menu');
+    function set(open) { menu.hidden = !open; btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); set(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
+  (function () {
+    var count = 0;
+    setInterval(function () {
+      document.querySelectorAll('img.loop').forEach(function (img) {
+        if (img._frame === undefined) {
+          img._frame = count++ % 4;
+          for (var k = 0; k < 4; k++) { new Image().src = img.dataset.base + k + '.webp'; }
+        }
+        img._frame = (img._frame + 1) % 4;
+        img.src = img.dataset.base + img._frame + '.webp';
+      });
+    }, 250);
+  })();
+</script>
+</body>
+</html>
