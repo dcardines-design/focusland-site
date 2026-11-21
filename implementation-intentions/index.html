@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>If-Then Plans: The Small Trick That Helps You Actually Start | Focusland</title>
+<meta name="description" content="If-then plans, or implementation intentions, turn good intentions into action. Here's what the research says and how to write one that helps you start studying.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Focusland">
+<meta property="og:url" content="https://focusland.co/implementation-intentions/">
+<meta property="og:title" content="If-then plans: the small trick that helps you actually start">
+<meta property="og:description" content="What implementation intentions are, what the research says, and how to write an if-then plan that helps you start.">
+<meta property="og:image" content="https://focusland.co/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://focusland.co/implementation-intentions/">
+<meta name="theme-color" content="#FFF7EA">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "If-then plans: the small trick that helps you actually start",
+  "description": "If-then plans, or implementation intentions, turn good intentions into action. Here's what the research says and how to write one that helps you start studying.",
+  "image": "https://focusland.co/img/og.png",
+  "datePublished": "2026-11-21",
+  "dateModified": "2026-11-21",
+  "mainEntityOfPage": "https://focusland.co/implementation-intentions/",
+  "author": { "@type": "Organization", "name": "Rosebud Studio", "url": "https://focusland.co/" },
+  "publisher": { "@type": "Organization", "name": "Rosebud Studio", "logo": { "@type": "ImageObject", "url": "https://focusland.co/img/icon.png" } }
+}
+</script>
+<style>
+  :root {
+    --ink:#3B2614; --cream:#FFF7EA; --white:#FFFFFF; --orange:#F4A340; --green:#9BD06E;
+    --coin:#F6C443; --sky:#BDE2F2; --soft:#E6D6C1; --muted:#5A3C22;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family:Nunito, system-ui, sans-serif; font-weight:700; line-height:1.55; }
+  h1, h2, h3 { font-family:Fredoka, system-ui, sans-serif; font-weight:700; line-height:1.1; margin:0; }
+  a { color:inherit; }
+  img { display:block; max-width:100%; }
+  .wrap { max-width:760px; margin:0 auto; }
+
+  /* Chunky button, like the app's */
+  .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border:3px solid var(--ink); border-radius:18px;
+         background:var(--orange); color:var(--ink); font-family:Fredoka, sans-serif; font-weight:600; font-size:19px;
+         text-decoration:none; box-shadow:0 6px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  .btn:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--ink); }
+  .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
+
+  /* Header, like the app's: cream, full width, a brown line along the bottom */
+  header { background:var(--cream); border-bottom:3px solid var(--ink); padding:14px 16px; position:sticky; top:0; z-index:10; }
+  nav { max-width:1080px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; position:relative; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:Fredoka, sans-serif; font-size:26px; text-decoration:none; }
+  .logo img { width:42px; height:42px; border-radius:11px; border:2.5px solid var(--ink); }
+  nav .links { display:flex; gap:20px; font-size:15px; }
+  nav .links a { text-decoration:none; }
+  nav .links a[aria-current] { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; }
+  .menubtn { display:none; width:46px; height:46px; border:3px solid var(--ink); border-radius:50%; background:var(--cream); color:var(--ink);
+             box-shadow:0 4px 0 var(--ink); padding:0; place-items:center; cursor:pointer; transition:transform .08s, box-shadow .08s; }
+  .menubtn:active { transform:translateY(3px); box-shadow:0 1px 0 var(--ink); }
+  .menubtn svg { width:22px; height:22px; }
+  .menu { position:absolute; top:58px; right:0; width:min(260px, calc(100vw - 32px)); display:flex; flex-direction:column; text-align:left;
+          background:var(--cream); border:3px solid var(--ink); border-radius:22px; box-shadow:0 6px 0 var(--ink); padding:8px; }
+  .menu[hidden] { display:none; }
+  .menu a { font-family:Fredoka, sans-serif; font-weight:600; font-size:20px; text-decoration:none; padding:12px 14px; border-radius:14px; }
+  .menu a + a { border-top:2px solid var(--soft); border-radius:0 0 14px 14px; }
+  .menu a:active { background:#F1E4D3; }
+  @media (max-width:820px) { nav .links { display:none; } .menubtn { display:grid; } }
+
+  main { padding:56px 16px 96px; }
+  .intro { display:flex; align-items:center; gap:22px; }
+  .intro img { width:120px; flex-shrink:0; }
+  h1 { font-size:clamp(40px, 7vw, 60px); }
+  .intro p { margin:8px 0 0; font-size:18px; color:var(--muted); }
+
+  .card { background:var(--white); border:3px solid var(--ink); border-radius:24px; box-shadow:0 6px 0 var(--ink); padding:22px; }
+  .contact { margin-top:36px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+  .contact h2 { font-size:24px; }
+  .contact p { margin:4px 0 0; color:var(--muted); }
+
+  .contact { scroll-margin-top:96px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn.white { background:var(--white); }
+  .email { color:var(--ink); word-break:break-all; }
+  .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
+  h2.faqhead { font-size:30px; margin:56px 0 16px; }
+  .faq { display:flex; flex-direction:column; gap:14px; }
+  details { background:var(--white); border:3px solid var(--ink); border-radius:20px; box-shadow:0 4px 0 var(--ink); }
+  summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px;
+            padding:16px 18px; font-family:Fredoka, sans-serif; font-weight:600; font-size:19px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:""; width:12px; height:12px; flex-shrink:0; border-right:3px solid var(--ink); border-bottom:3px solid var(--ink);
+                   margin-top:-6px; transform:rotate(45deg); transition:transform .15s; }
+  details[open] summary::after { margin-top:6px; transform:rotate(-135deg); }
+  details .a { border-top:2px solid var(--soft); margin:0 18px; padding:14px 0 18px; }
+  details .a p { margin:0; }
+  details .a p + p { margin-top:10px; }
+  .path { background:#F1E4D3; border-radius:8px; padding:1px 7px; white-space:nowrap; }
+
+  footer { background:var(--ink); color:var(--cream); padding:48px 16px 28px; font-size:15px; }
+  footer .wrap { max-width:1080px; }
+  .footgrid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; }
+  .footbrand .logo { color:var(--cream); }
+  .footbrand .logo img { border-color:var(--cream); }
+  .footbrand p { margin:10px 0 0; color:#E9DCC8; font-size:17px; }
+  .footcol { display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+  .footcol b { font-family:Fredoka, sans-serif; font-size:18px; margin-bottom:4px; }
+  .footcol a { color:#E9DCC8; text-decoration:none; }
+  .footcol a:hover { color:var(--cream); text-decoration:underline; }
+  .footbottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:44px; padding-top:18px; border-top:2px solid rgba(255,247,234,.18); color:#C9BBA6; font-size:14px; }
+  .verse { font-style:italic; }
+  @media (max-width:600px) { .footgrid { grid-template-columns:1fr 1fr; } .footbrand { grid-column:1 / -1; }
+    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .btns { width:100%; flex-direction:column; } .contact .btn { width:100%; justify-content:center; } }
+
+  .article { padding:48px 16px 96px; max-width:700px; }
+  .eyebrow { font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+  .article h1 { font-size:clamp(34px, 6vw, 50px); }
+  .article .lede { font-size:20px; margin:18px 0 0; }
+  .article h2 { font-size:clamp(26px, 4vw, 32px); margin:48px 0 12px; }
+  .article h3 { font-size:21px; margin:26px 0 6px; }
+  .article p, .article li { font-size:18px; }
+  .article p { margin:0 0 14px; }
+  .article ul, .article ol { padding-left:22px; margin:0 0 14px; }
+  .article li { margin-bottom:10px; }
+  .article figure { margin:32px auto; max-width:440px; }
+  .card.cta { text-align:center; margin:40px 0 0; }
+  .card.cta h2 { margin:0 0 6px; }
+  .card.cta p { color:var(--muted); }
+  .byline { font-size:15px; color:var(--muted); margin:12px 0 0 !important; }
+  .article sup { font-size:.7em; line-height:0; }
+  .article sup a { text-decoration:none; color:var(--muted); padding:0 1px; }
+  .article p a, .sources a { text-decoration-thickness:2px; text-underline-offset:3px; }
+  .sources li { font-size:15px !important; color:var(--muted); word-break:break-word; scroll-margin-top:96px; }
+</style>
+<script src="/analytics.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+    <div class="links"><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+    <button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="menu" id="menu" hidden><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+  </nav>
+</header>
+
+<main class="article wrap">
+  <p class="eyebrow"><a href="/articles/">Articles</a></p>
+  <h1>If-then plans: the small trick that helps you actually start</h1>
+  <p class="byline">By Rosebud Studio, the makers of Focusland. Updated November 21, 2026.</p>
+  <p class="lede">You meant to study tonight. You really did. Then dinner ran long, a video autoplayed, and suddenly it was bedtime. Wanting to do something and actually doing it are two different steps. Psychologists have a name for a simple plan that helps bridge them: an implementation intention, or more plainly, an if-then plan. Here's what it is, what the research says, and how to write one that works for you.</p>
+
+  <figure><img class="loop" data-base="/img/ArtIfThen" src="/img/ArtIfThen0.webp" alt="An orange tabby cat with one paw on a little alarm clock, next to an open notebook, a pencil and a cup of tea" style="max-width:320px;margin:0 auto"></figure>
+
+  <h2>What is an if-then plan?</h2>
+  <p>Most goals sound like this: "I want to study more." That's a goal intention. It says what you want, but not when, where or how you'll do it.</p>
+  <p>An if-then plan adds those missing pieces. It links a specific moment to a specific action, in this shape:</p>
+  <p><b>If</b> (situation), <b>then</b> I will (action).</p>
+  <p>For example: "If I finish dinner on a weekday, then I will sit at my desk and open my biology notes." Or: "If I pick up my phone during a study session, then I will put it face down in the other room."</p>
+  <p>The psychologist Peter Gollwitzer described these plans in the 1990s. His idea was that by deciding ahead of time, you hand the choice over to the situation. When the moment arrives, you don't have to weigh it up again. The cue reminds you, and the action follows more easily.<sup><a href="#s1">1</a></sup></p>
+
+  <h2>Why good intentions aren't enough</h2>
+  <p>If wanting something were enough, nobody would procrastinate. Researchers call the space between them the intention-behavior gap. In a large review of experiments, Thomas Webb and Paschal Sheeran looked at studies that changed people's intentions and then checked what people actually did. Bigger intentions did lead to some change in behavior, but the change in behavior was noticeably smaller than the change in intentions.<sup><a href="#s2">2</a></sup></p>
+  <p>In other words, getting more motivated helps a little. But a lot of good intentions still never turn into action. If-then plans are aimed right at that gap.</p>
+
+  <h2>What the research says</h2>
+  <p>If-then plans are one of the better-studied tricks in this area.</p>
+  <ul>
+    <li><b>Hard goals got done more often.</b> In an early study by Gollwitzer and Veronika Brandstätter, people listed a difficult project they wanted to finish over the holidays. Those who had also made a plan for when and where to start completed their goal about three times as often as those who hadn't.<sup><a href="#s3">3</a></sup></li>
+    <li><b>The effect shows up across many studies.</b> A 2006 meta-analysis by Gollwitzer and Sheeran combined 94 independent tests. If-then plans had a medium-to-large positive effect on reaching goals (an effect size of d = .65), across areas like health, study and everyday tasks.<sup><a href="#s4">4</a></sup></li>
+    <li><b>Planning helped where motivation alone didn't.</b> In a study on exercise, Sarah Milne and colleagues found that a motivation-boosting message on its own did little to change whether people exercised. When people also wrote down when and where they would exercise, far more of them actually did it.<sup><a href="#s5">5</a></sup></li>
+    <li><b>It works for students, too.</b> Angela Duckworth and colleagues taught high school students preparing for the PSAT a short exercise that paired picturing obstacles with writing if-then plans. Those students completed more practice questions over the summer than students who did a control exercise.<sup><a href="#s6">6</a></sup></li>
+  </ul>
+  <p>A few honest notes. Many of these studies were run by the same group of researchers, and in lab or short-term settings. Effects in real life may be smaller, and published research tends to lean toward positive results. An if-then plan also can't create a goal you don't care about. It works best when you already want to do the thing and just keep not starting.</p>
+
+  <h2>How to write a good if-then plan</h2>
+  <p>A plan works best when the "if" is easy to notice and the "then" is easy to do. Here's a simple way to build one.</p>
+  <ul>
+    <li><b>Pick one goal.</b> Start with a single thing you keep putting off, like reviewing a chapter or answering an email. One plan you use beats ten you forget.</li>
+    <li><b>Choose a clear cue.</b> Good cues are moments that happen anyway: "when I sit down on the bus", "after I brush my teeth", "when my 3 pm class ends". Avoid fuzzy cues like "when I have time".</li>
+    <li><b>Make the action small and concrete.</b> "Then I will study" is vague. "Then I will open my notes and do the first three practice problems" is clear. A tiny first step is easier to start, which is the same idea behind <a href="/two-minute-rule/">the two-minute rule</a>.</li>
+    <li><b>Say where.</b> Adding a place helps: "at the kitchen table", "in the library on the second floor".</li>
+    <li><b>Plan for the obstacle, too.</b> Think of what usually derails you and write a plan for it. "If I feel like checking my phone, then I will write the urge on a sticky note and keep going." "If I get stuck on a problem, then I will skip it and come back after the next one."</li>
+    <li><b>Write it down.</b> Put it somewhere you'll see it: on a sticky note on your desk, or at the top of your task list.</li>
+  </ul>
+  <p>Here are a few ready-made examples to adapt:</p>
+  <ul>
+    <li>If it's 7 pm on a weekday, then I will sit at my desk and start a 25 minute study round.</li>
+    <li>If I open my laptop to study, then I will close every tab that isn't for this task.</li>
+    <li>If my study round ends, then I will stand up, stretch and drink some water before checking messages.</li>
+    <li>If I notice I've reread the same page twice, then I will close the book and quiz myself on what I remember.</li>
+  </ul>
+  <p>That last one pairs well with <a href="/active-recall/">active recall</a>, one of the better-supported ways to study.</p>
+
+  <h2>Why it might work</h2>
+  <p>Gollwitzer's explanation has two parts. First, picking a cue ahead of time makes that moment stand out, so you're more likely to notice it when it comes. Second, linking the cue to an action means you don't have to decide in the moment, when you're tired or tempted. The plan has already done the deciding.<sup><a href="#s1">1</a></sup></p>
+  <p>There's a calming side to it as well. A clear plan for when you'll do something can make an unfinished task tug at you less, a link we covered in our piece on <a href="/zeigarnik-effect/">the Zeigarnik effect</a>.</p>
+
+  <h2>When it doesn't work</h2>
+  <p>If-then plans aren't magic. They tend to struggle when:</p>
+  <ul>
+    <li><b>The cue never happens.</b> "If I have a free afternoon" may never come. Tie your plan to something that's already part of your day.</li>
+    <li><b>You make too many at once.</b> A long list of plans is hard to remember. Start with one or two.</li>
+    <li><b>You don't really want the goal.</b> A plan helps you act on a goal you care about. It won't make you care.</li>
+    <li><b>Something bigger is going on.</b> If starting tasks feels impossible most days, or you're dealing with ADHD, anxiety or low mood, these tips are not a treatment. It's worth talking to a doctor or counselor about what's going on.</li>
+  </ul>
+
+  <h2>How Focusland helps</h2>
+  <p>Focusland can be the "then" in your plan. Make your if-then something like "If I finish dinner, then I will open Focusland and sit down for one round." You pick a cozy room, take a seat at a little table next to other studying cats, and write the one task you're starting in the task box.</p>
+  <p>Then you run a 25 minute, 50 minute or no-timer session, with a 5 minute short break or a 15 minute long break in between. Finishing a session earns coins, which unlock new rooms, and keeps your daily streak going. If you need to stop early, Hold to Give Up ends the round and keeps your streak safe, so one rough evening doesn't undo your habit.</p>
+  <figure><img class="loop" data-base="/img/HowCoins" src="/img/HowCoins0.webp" alt="A happy white cat sitting on a pile of coins next to a little streak flame"></figure>
+
+  <div class="card cta">
+    <h2>Pull up a chair.</h2>
+    <p>Focusland is coming soon to the App Store for iPhone.</p>
+    <a class="btn" href="/">See Focusland</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <h3>What is an example of an implementation intention?</h3>
+  <p>"If I get home from class, then I will sit at my desk and review my notes for 25 minutes." It names a clear moment (getting home) and a specific action (reviewing notes at the desk).</p>
+  <h3>Do if-then plans really work?</h3>
+  <p>A 2006 meta-analysis of 94 tests found a medium-to-large positive effect on reaching goals. Real-life effects may be smaller than in the lab, but for a free, two-minute trick, the evidence is fairly good.</p>
+  <h3>How many if-then plans should I make?</h3>
+  <p>Start with one or two. A single plan you remember and use is more helpful than a long list you forget.</p>
+  <h3>Is an if-then plan the same as habit stacking?</h3>
+  <p>They're close cousins. Habit stacking ties a new habit to something you already do ("after I pour my coffee, I will..."), which is one kind of if-then plan. If-then plans can also cover obstacles, like what you'll do when you feel the urge to check your phone.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ol class="sources">
+    <li id="s1">Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. <i>American Psychologist</i>, 54(7), 493–503. <a href="https://doi.org/10.1037/0003-066X.54.7.493">doi.org/10.1037/0003-066X.54.7.493</a></li>
+    <li id="s2">Webb, T. L., &amp; Sheeran, P. (2006). Does changing behavioral intentions engender behavior change? A meta-analysis of the experimental evidence. <i>Psychological Bulletin</i>, 132(2), 249–268. <a href="https://doi.org/10.1037/0033-2909.132.2.249">doi.org/10.1037/0033-2909.132.2.249</a></li>
+    <li id="s3">Gollwitzer, P. M., &amp; Brandstätter, V. (1997). Implementation intentions and effective goal pursuit. <i>Journal of Personality and Social Psychology</i>, 73(1), 186–199. <a href="https://doi.org/10.1037/0022-3514.73.1.186">doi.org/10.1037/0022-3514.73.1.186</a></li>
+    <li id="s4">Gollwitzer, P. M., &amp; Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. <i>Advances in Experimental Social Psychology</i>, 38, 69–119. <a href="https://doi.org/10.1016/S0065-2601(06)38002-1">doi.org/10.1016/S0065-2601(06)38002-1</a></li>
+    <li id="s5">Milne, S., Orbell, S., &amp; Sheeran, P. (2002). Combining motivational and volitional interventions to promote exercise participation: Protection motivation theory and implementation intentions. <i>British Journal of Health Psychology</i>, 7(2), 163–184. <a href="https://doi.org/10.1348/135910702169420">doi.org/10.1348/135910702169420</a></li>
+    <li id="s6">Duckworth, A. L., Grant, H., Loew, B., Oettingen, G., &amp; Gollwitzer, P. M. (2011). Self-regulation strategies improve self-discipline in adolescents: Benefits of mental contrasting and implementation intentions. <i>Educational Psychology</i>, 31(1), 17–26. <a href="https://doi.org/10.1080/01443410.2010.506003">doi.org/10.1080/01443410.2010.506003</a></li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap footgrid">
+    <div class="footbrand">
+      <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+      <p>Never focus alone.</p>
+    </div>
+    <nav class="footcol" aria-label="Product">
+      <b>Focusland</b>
+      <a href="/#how">How it works</a>
+      <a href="/#rooms">Rooms</a>
+      <a href="/#plus">Focusland+</a>
+      <a href="/articles/">Articles</a>
+    </nav>
+    <nav class="footcol" aria-label="Help">
+      <b>Help</b>
+      <a href="/support.html">Support</a>
+      <a href="/support.html#contact">Contact</a>
+      <a href="https://dcardines-design.github.io/focusland-legal/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
+      <a href="https://www.instagram.com/focusland.app/" rel="me">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap footbottom">
+    <span>© 2026 Focusland. Made with love by Rosebud Studio.</span>
+    <span class="verse">Matthew 6:34. Live it one day at a time, and trust God for tomorrow.</span>
+  </div>
+</footer>
+
+<script>
+  // Phone menu: the round button opens the links card; tapping a link or anywhere else closes it.
+  (function () {
+    var btn = document.querySelector('.menubtn'), menu = document.getElementById('menu');
+    function set(open) { menu.hidden = !open; btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); set(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
+  (function () {
+    var count = 0;
+    setInterval(function () {
+      document.querySelectorAll('img.loop').forEach(function (img) {
+        if (img._frame === undefined) {
+          img._frame = count++ % 4;
+          for (var k = 0; k < 4; k++) { new Image().src = img.dataset.base + k + '.webp'; }
+        }
+        img._frame = (img._frame + 1) % 4;
+        img.src = img.dataset.base + img._frame + '.webp';
+      });
+    }, 250);
+  })();
+</script>
+</body>
+</html>
