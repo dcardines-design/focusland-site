@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Feynman Technique: Learn Anything by Explaining It Simply | Focusland</title>
+<meta name="description" content="The Feynman technique helps you find gaps by explaining ideas in plain words. What the research on self-explanation shows, and 7 ways to use it.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Focusland">
+<meta property="og:url" content="https://focusland.co/feynman-technique/">
+<meta property="og:title" content="The Feynman technique: learn anything by explaining it simply">
+<meta property="og:description" content="Explain it simply, find the gaps, try again. What the research says and how to use it.">
+<meta property="og:image" content="https://focusland.co/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://focusland.co/feynman-technique/">
+<meta name="theme-color" content="#FFF7EA">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Feynman technique: learn anything by explaining it simply",
+  "description": "The Feynman technique helps you find gaps by explaining ideas in plain words. What the research on self-explanation shows, and 7 ways to use it.",
+  "image": "https://focusland.co/img/og.png",
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "mainEntityOfPage": "https://focusland.co/feynman-technique/",
+  "author": { "@type": "Organization", "name": "Rosebud Studio", "url": "https://focusland.co/" },
+  "publisher": { "@type": "Organization", "name": "Rosebud Studio", "logo": { "@type": "ImageObject", "url": "https://focusland.co/img/icon.png" } }
+}
+</script>
+<style>
+  :root {
+    --ink:#3B2614; --cream:#FFF7EA; --white:#FFFFFF; --orange:#F4A340; --green:#9BD06E;
+    --coin:#F6C443; --sky:#BDE2F2; --soft:#E6D6C1; --muted:#5A3C22;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family:Nunito, system-ui, sans-serif; font-weight:700; line-height:1.55; }
+  h1, h2, h3 { font-family:Fredoka, system-ui, sans-serif; font-weight:700; line-height:1.1; margin:0; }
+  a { color:inherit; }
+  img { display:block; max-width:100%; }
+  .wrap { max-width:760px; margin:0 auto; }
+
+  /* Chunky button, like the app's */
+  .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border:3px solid var(--ink); border-radius:18px;
+         background:var(--orange); color:var(--ink); font-family:Fredoka, sans-serif; font-weight:600; font-size:19px;
+         text-decoration:none; box-shadow:0 6px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  .btn:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--ink); }
+  .btn:active { transform:translateY(5px); box-shadow:0 1px 0 var(--ink); }
+
+  /* Header, like the app's: cream, full width, a brown line along the bottom */
+  header { background:var(--cream); border-bottom:3px solid var(--ink); padding:14px 16px; position:sticky; top:0; z-index:10; }
+  nav { max-width:1080px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; position:relative; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:Fredoka, sans-serif; font-size:26px; text-decoration:none; }
+  .logo img { width:42px; height:42px; border-radius:11px; border:2.5px solid var(--ink); }
+  nav .links { display:flex; gap:20px; font-size:15px; }
+  nav .links a { text-decoration:none; }
+  nav .links a[aria-current] { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; }
+  .menubtn { display:none; width:46px; height:46px; border:3px solid var(--ink); border-radius:50%; background:var(--cream); color:var(--ink);
+             box-shadow:0 4px 0 var(--ink); padding:0; place-items:center; cursor:pointer; transition:transform .08s, box-shadow .08s; }
+  .menubtn:active { transform:translateY(3px); box-shadow:0 1px 0 var(--ink); }
+  .menubtn svg { width:22px; height:22px; }
+  .menu { position:absolute; top:58px; right:0; width:min(260px, calc(100vw - 32px)); display:flex; flex-direction:column; text-align:left;
+          background:var(--cream); border:3px solid var(--ink); border-radius:22px; box-shadow:0 6px 0 var(--ink); padding:8px; }
+  .menu[hidden] { display:none; }
+  .menu a { font-family:Fredoka, sans-serif; font-weight:600; font-size:20px; text-decoration:none; padding:12px 14px; border-radius:14px; }
+  .menu a + a { border-top:2px solid var(--soft); border-radius:0 0 14px 14px; }
+  .menu a:active { background:#F1E4D3; }
+  @media (max-width:820px) { nav .links { display:none; } .menubtn { display:grid; } }
+
+  main { padding:56px 16px 96px; }
+  .intro { display:flex; align-items:center; gap:22px; }
+  .intro img { width:120px; flex-shrink:0; }
+  h1 { font-size:clamp(40px, 7vw, 60px); }
+  .intro p { margin:8px 0 0; font-size:18px; color:var(--muted); }
+
+  .card { background:var(--white); border:3px solid var(--ink); border-radius:24px; box-shadow:0 6px 0 var(--ink); padding:22px; }
+  .contact { margin-top:36px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+  .contact h2 { font-size:24px; }
+  .contact p { margin:4px 0 0; color:var(--muted); }
+
+  .contact { scroll-margin-top:96px; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn.white { background:var(--white); }
+  .email { color:var(--ink); word-break:break-all; }
+  .copy { font:inherit; font-size:14px; color:var(--ink); background:#F1E4D3; border:2px solid var(--ink); border-radius:999px; padding:1px 12px; margin-left:4px; cursor:pointer; }
+  h2.faqhead { font-size:30px; margin:56px 0 16px; }
+  .faq { display:flex; flex-direction:column; gap:14px; }
+  details { background:var(--white); border:3px solid var(--ink); border-radius:20px; box-shadow:0 4px 0 var(--ink); }
+  summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px;
+            padding:16px 18px; font-family:Fredoka, sans-serif; font-weight:600; font-size:19px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:""; width:12px; height:12px; flex-shrink:0; border-right:3px solid var(--ink); border-bottom:3px solid var(--ink);
+                   margin-top:-6px; transform:rotate(45deg); transition:transform .15s; }
+  details[open] summary::after { margin-top:6px; transform:rotate(-135deg); }
+  details .a { border-top:2px solid var(--soft); margin:0 18px; padding:14px 0 18px; }
+  details .a p { margin:0; }
+  details .a p + p { margin-top:10px; }
+  .path { background:#F1E4D3; border-radius:8px; padding:1px 7px; white-space:nowrap; }
+
+  footer { background:var(--ink); color:var(--cream); padding:48px 16px 28px; font-size:15px; }
+  footer .wrap { max-width:1080px; }
+  .footgrid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; }
+  .footbrand .logo { color:var(--cream); }
+  .footbrand .logo img { border-color:var(--cream); }
+  .footbrand p { margin:10px 0 0; color:#E9DCC8; font-size:17px; }
+  .footcol { display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+  .footcol b { font-family:Fredoka, sans-serif; font-size:18px; margin-bottom:4px; }
+  .footcol a { color:#E9DCC8; text-decoration:none; }
+  .footcol a:hover { color:var(--cream); text-decoration:underline; }
+  .footbottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:44px; padding-top:18px; border-top:2px solid rgba(255,247,234,.18); color:#C9BBA6; font-size:14px; }
+  .verse { font-style:italic; }
+  @media (max-width:600px) { .footgrid { grid-template-columns:1fr 1fr; } .footbrand { grid-column:1 / -1; }
+    .intro { flex-direction:column; align-items:flex-start; gap:12px; } .intro img { width:110px; } .btns { width:100%; flex-direction:column; } .contact .btn { width:100%; justify-content:center; } }
+
+  .article { padding:48px 16px 96px; max-width:700px; }
+  .eyebrow { font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+  .article h1 { font-size:clamp(34px, 6vw, 50px); }
+  .article .lede { font-size:20px; margin:18px 0 0; }
+  .article h2 { font-size:clamp(26px, 4vw, 32px); margin:48px 0 12px; }
+  .article h3 { font-size:21px; margin:26px 0 6px; }
+  .article p, .article li { font-size:18px; }
+  .article p { margin:0 0 14px; }
+  .article ul, .article ol { padding-left:22px; margin:0 0 14px; }
+  .article li { margin-bottom:10px; }
+  .article figure { margin:32px auto; max-width:440px; }
+  .card.cta { text-align:center; margin:40px 0 0; }
+  .card.cta h2 { margin:0 0 6px; }
+  .card.cta p { color:var(--muted); }
+  .byline { font-size:15px; color:var(--muted); margin:12px 0 0 !important; }
+  .article sup { font-size:.7em; line-height:0; }
+  .article sup a { text-decoration:none; color:var(--muted); padding:0 1px; }
+  .article p a, .sources a { text-decoration-thickness:2px; text-underline-offset:3px; }
+  .sources li { font-size:15px !important; color:var(--muted); word-break:break-word; scroll-margin-top:96px; }
+</style>
+<script src="/analytics.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+    <div class="links"><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+    <button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="menu" id="menu" hidden><a href="/#how">How it works</a><a href="/#rooms">Rooms</a><a href="/#plus">Focusland+</a><a href="/articles/">Articles</a><a href="/support.html">Support</a></div>
+  </nav>
+</header>
+
+<main class="article wrap">
+  <p class="eyebrow"><a href="/articles/">Articles</a></p>
+  <h1>The Feynman technique: learn anything by explaining it simply</h1>
+  <p class="byline">By Rosebud Studio, the makers of Focusland. Updated November 26, 2026.</p>
+  <p class="lede">You read the chapter, you nod along, and it all makes sense. Then someone asks you a simple question about it and your mind goes blank. The Feynman technique is a gentle way to catch that moment early: you try to explain the idea in plain words, and wherever you get stuck is exactly what to study next.</p>
+
+  <figure><img class="loop" data-base="/img/ArtFeynman" src="/img/ArtFeynman0.webp" alt="An orange cat explaining a lightbulb drawing on a little chalkboard to a grey cat sitting on the grass" style="max-width:320px;margin:0 auto"></figure>
+
+  <h2>What is the Feynman technique?</h2>
+  <p>The Feynman technique is a study method named after Richard Feynman, the physicist who was known for explaining hard ideas in simple, playful ways. The idea is that you only really understand something when you can explain it to someone who doesn't know it yet.</p>
+  <p>One honest note: Feynman never wrote down a four-step "technique." The popular version is a modern summary inspired by how he learned and taught. That's fine. What matters is whether the steps help, and the ideas behind them have been studied for decades under other names.</p>
+  <p>The usual version goes like this:</p>
+  <ol>
+    <li><b>Pick a topic.</b> Write its name at the top of a blank page.</li>
+    <li><b>Explain it simply.</b> Write or say an explanation as if you were teaching a curious 12-year-old. No jargon, no copying from your notes.</li>
+    <li><b>Find the gaps.</b> Notice where you got stuck, went vague, or reached for a fancy word you can't define. Go back to the source and relearn just those parts.</li>
+    <li><b>Simplify and try again.</b> Rewrite your explanation more clearly, with a small example or comparison, until it flows from start to finish.</li>
+  </ol>
+
+  <h2>Why it works: what the research says</h2>
+  <p>No study we could find tests the Feynman technique by name. But each part of it lines up with ideas that researchers have tested.</p>
+
+  <h3>We think we understand more than we do</h3>
+  <p>In a set of studies by Leonid Rozenblit and Frank Keil, people rated how well they understood everyday things like zippers and flush toilets. Then they were asked to write a step-by-step explanation of how each one works. After trying, most people rated their own understanding lower than before. The researchers called this the illusion of explanatory depth.<sup><a href="#s1">1</a></sup> Rereading and highlighting feed this illusion. Trying to explain breaks it, kindly and quickly.</p>
+
+  <h3>Explaining to yourself helps you learn</h3>
+  <p>In a classic study, Michelene Chi and her colleagues had eighth graders read a text about the human circulatory system. Some students were asked to explain each sentence to themselves as they read. They understood the material better than students who read the same text twice, and the students who explained more learned the most.<sup><a href="#s2">2</a></sup> A later review that pooled many studies on prompting learners to self-explain found a moderate benefit on average, though the size varied a lot between studies and subjects.<sup><a href="#s3">3</a></sup></p>
+
+  <h3>Preparing to teach changes how you study</h3>
+  <p>When John Nestojko and colleagues told students they would have to teach a passage to someone else, those students later recalled more of it, especially the main ideas, and their recall was better organized than students who simply expected a test.<sup><a href="#s4">4</a></sup> Logan Fiorella and Richard Mayer found something similar, with a twist: expecting to teach helped on a test right away, but students who actually taught the lesson out loud on video did better on a test a week later.<sup><a href="#s5">5</a></sup> Saying the explanation, not just planning it, seems to matter.</p>
+
+  <h3>Where the evidence is thinner</h3>
+  <p>Most of these studies were short, done in labs or classrooms, and used reading passages rather than whole courses. The "explain it to a 12-year-old" step hasn't been tested on its own. And explaining takes more time than rereading, so it's best saved for ideas you need to truly understand, not lists of facts to memorize. For facts, plain <a href="/active-recall/">active recall</a> with flash cards is often quicker.</p>
+
+  <h2>How to use the Feynman technique</h2>
+
+  <h3>1. Start with one small idea</h3>
+  <p>"Biology" is too big. "How the heart moves blood around the body" is just right. Pick something you could explain in about a page.</p>
+
+  <h3>2. Close your notes first</h3>
+  <p>Write your explanation from memory. If you keep peeking, you're copying, not explaining. The blank spots are useful information, so let them show up.</p>
+
+  <h3>3. Use an imaginary listener</h3>
+  <p>Picture a younger cousin, a friend from another class, or a pet on the rug. Explaining to someone specific makes you choose simpler words. Saying it out loud works even better than writing, since the studies above found actual teaching helped more than only planning to.</p>
+
+  <h3>4. Circle every wobble</h3>
+  <p>Mark each place where you wrote "basically," "somehow," or a term you can't define in your own words. Those circles are your study list. Go back to the book or lecture and fix only those parts.</p>
+
+  <h3>5. Add one example</h3>
+  <p>A good explanation usually has a small example or comparison: "The heart is like two pumps side by side." If you can't think of one, that's another sign to dig a little deeper.</p>
+
+  <h3>6. Come back another day</h3>
+  <p>Explain it again tomorrow or in a few days, without looking at yesterday's version. Mixing this with <a href="/spaced-repetition/">spaced repetition</a> helps the understanding stick, and it fits neatly into a plan for <a href="/how-to-study-for-exams-without-cramming/">studying for exams without cramming</a>.</p>
+
+  <h3>7. Give it one focus round</h3>
+  <p>The Feynman technique fits well into a single 25 minute focus round: about 10 minutes to write your explanation, 10 to fix the gaps, and 5 to write the clean version. Then take a real break.</p>
+
+  <h2>How Focusland helps</h2>
+  <p>Focusland gives your explaining sessions a cozy place to happen. You pick a room, sit down at a little table next to other studying cats, and type your task, like "Explain photosynthesis simply." Choose 25 minutes, 50 minutes or no timer, and move between Focus, a 5 minute Short break and a 15 minute Long break. Checking off a task gives you a little "Nice one!" Finishing a session earns coins and keeps your daily streak, and coins unlock new rooms. If a round isn't working, you can hold to give up, and your streak stays safe.</p>
+  <figure><img class="loop" data-base="/img/HowDuo" src="/img/HowDuo0.webp" alt="Two cats studying side by side at a small table"></figure>
+
+  <div class="card cta">
+    <h2>Pull up a chair.</h2>
+    <p>Focusland is coming soon to the App Store for iPhone.</p>
+    <a class="btn" href="/">See Focusland</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <h3>Does the Feynman technique actually work?</h3>
+  <p>The method itself hasn't been tested by name, but its parts have. Studies on self-explanation and learning by teaching show real, moderate benefits for understanding, mostly in short lab and classroom studies.</p>
+  <h3>Do I need another person to explain it to?</h3>
+  <p>No. An imaginary listener works, and talking out loud to an empty room still gets you most of the way. A real person can help by asking questions and telling you when something isn't clear.</p>
+  <h3>Is the Feynman technique good for memorizing facts?</h3>
+  <p>Not really. It shines for ideas and processes you need to understand. For vocabulary, dates or formulas, quick self-quizzing with flash cards is usually faster.</p>
+  <h3>How is it different from active recall?</h3>
+  <p>They overlap. Active recall is pulling information out of memory, like answering a flash card. The Feynman technique is a kind of active recall where you rebuild a whole explanation in your own words, which also shows you how the pieces connect.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ol class="sources">
+    <li id="s1">Rozenblit, L., &amp; Keil, F. (2002). The misunderstood limits of folk science: An illusion of explanatory depth. <i>Cognitive Science</i>, 26(5), 521–562. <a href="https://doi.org/10.1207/s15516709cog2605_1">doi.org/10.1207/s15516709cog2605_1</a></li>
+    <li id="s2">Chi, M. T. H., De Leeuw, N., Chiu, M.-H., &amp; Lavancher, C. (1994). Eliciting self-explanations improves understanding. <i>Cognitive Science</i>, 18(3), 439–477. <a href="https://doi.org/10.1207/s15516709cog1803_3">doi.org/10.1207/s15516709cog1803_3</a></li>
+    <li id="s3">Bisra, K., Liu, Q., Nesbit, J. C., Salimi, F., &amp; Winne, P. H. (2018). Inducing self-explanation: A meta-analysis. <i>Educational Psychology Review</i>, 30(3), 703–725. <a href="https://doi.org/10.1007/s10648-018-9434-x">doi.org/10.1007/s10648-018-9434-x</a></li>
+    <li id="s4">Nestojko, J. F., Bui, D. C., Kornell, N., &amp; Bjork, E. L. (2014). Expecting to teach enhances learning and organization of knowledge in free recall of text passages. <i>Memory &amp; Cognition</i>, 42(7), 1038–1048. <a href="https://doi.org/10.3758/s13421-014-0416-z">doi.org/10.3758/s13421-014-0416-z</a></li>
+    <li id="s5">Fiorella, L., &amp; Mayer, R. E. (2013). The relative benefits of learning by teaching and teaching expectancy. <i>Contemporary Educational Psychology</i>, 38(4), 281–288. <a href="https://doi.org/10.1016/j.cedpsych.2013.06.001">doi.org/10.1016/j.cedpsych.2013.06.001</a></li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap footgrid">
+    <div class="footbrand">
+      <a class="logo" href="/"><img src="/img/icon.png" alt="">Focusland</a>
+      <p>Never focus alone.</p>
+    </div>
+    <nav class="footcol" aria-label="Product">
+      <b>Focusland</b>
+      <a href="/#how">How it works</a>
+      <a href="/#rooms">Rooms</a>
+      <a href="/#plus">Focusland+</a>
+      <a href="/articles/">Articles</a>
+    </nav>
+    <nav class="footcol" aria-label="Help">
+      <b>Help</b>
+      <a href="/support.html">Support</a>
+      <a href="/support.html#contact">Contact</a>
+      <a href="https://dcardines-design.github.io/focusland-legal/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
+      <a href="https://www.instagram.com/focusland.app/" rel="me">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap footbottom">
+    <span>© 2026 Focusland. Made with love by Rosebud Studio.</span>
+    <span class="verse">Matthew 6:34. Live it one day at a time, and trust God for tomorrow.</span>
+  </div>
+</footer>
+
+<script>
+  // Phone menu: the round button opens the links card; tapping a link or anywhere else closes it.
+  (function () {
+    var btn = document.querySelector('.menubtn'), menu = document.getElementById('menu');
+    function set(open) { menu.hidden = !open; btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); set(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Plays each picture's 4 hand-drawn frames at 4 frames a second, like the app.
+  (function () {
+    var count = 0;
+    setInterval(function () {
+      document.querySelectorAll('img.loop').forEach(function (img) {
+        if (img._frame === undefined) {
+          img._frame = count++ % 4;
+          for (var k = 0; k < 4; k++) { new Image().src = img.dataset.base + k + '.webp'; }
+        }
+        img._frame = (img._frame + 1) % 4;
+        img.src = img.dataset.base + img._frame + '.webp';
+      });
+    }, 250);
+  })();
+</script>
+</body>
+</html>
